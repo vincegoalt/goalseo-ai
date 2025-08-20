@@ -63,6 +63,9 @@ export default function LocationServices({ location }: LocationServicesProps) {
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Comprehensive SEO solutions tailored for businesses in {location.city} and {location.county ? `${location.county} County` : 'surrounding areas'}
+            {location.industries && location.industries.length > 0 && (
+              <>. Specializing in {location.industries.slice(0, 3).join(', ')} industries</>
+            )}
           </p>
         </div>
 
@@ -99,6 +102,40 @@ export default function LocationServices({ location }: LocationServicesProps) {
             )
           })}
         </div>
+
+        {location.businessStats && (
+          <div className="mt-12 bg-gradient-to-r from-primary-50 to-electric-50 rounded-xl p-8">
+            <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">
+              {location.city} Business Landscape
+            </h3>
+            <div className="grid md:grid-cols-3 gap-6 text-center">
+              {location.businessStats.totalBusinesses && (
+                <div>
+                  <div className="text-3xl font-bold text-primary-600">
+                    {location.businessStats.totalBusinesses.toLocaleString()}+
+                  </div>
+                  <div className="text-sm text-gray-600">Active Businesses</div>
+                </div>
+              )}
+              {location.businessStats.growthRate && (
+                <div>
+                  <div className="text-3xl font-bold text-primary-600">
+                    {location.businessStats.growthRate}
+                  </div>
+                  <div className="text-sm text-gray-600">Annual Growth</div>
+                </div>
+              )}
+              {location.businessStats.topIndustries && (
+                <div>
+                  <div className="text-lg font-bold text-primary-600">
+                    {location.businessStats.topIndustries[0]}
+                  </div>
+                  <div className="text-sm text-gray-600">Leading Industry</div>
+                </div>
+              )}
+            </div>
+          </div>
+        )}
 
         <div className="mt-12 text-center">
           <Link

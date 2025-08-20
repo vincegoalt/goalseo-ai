@@ -756,22 +756,46 @@ export default function HeaderNew() {
                 </button>
                 
                 <nav className="mt-8 space-y-4">
-                  <Link href="/features" className="block py-2 text-lg font-medium text-gray-900">
+                  <Link 
+                    href="/features" 
+                    className="block py-2 text-lg font-medium text-gray-900"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
                     Features
                   </Link>
-                  <Link href="/industries" className="block py-2 text-lg font-medium text-gray-900">
+                  <Link 
+                    href="/industries" 
+                    className="block py-2 text-lg font-medium text-gray-900"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
                     Industries
                   </Link>
-                  <Link href="/pricing" className="block py-2 text-lg font-medium text-gray-900">
+                  <Link 
+                    href="/pricing" 
+                    className="block py-2 text-lg font-medium text-gray-900"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
                     Pricing
                   </Link>
-                  <Link href="/case-studies" className="block py-2 text-lg font-medium text-gray-900">
+                  <Link 
+                    href="/case-studies" 
+                    className="block py-2 text-lg font-medium text-gray-900"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
                     Case Studies
                   </Link>
-                  <Link href="/blog" className="block py-2 text-lg font-medium text-gray-900">
+                  <Link 
+                    href="/blog" 
+                    className="block py-2 text-lg font-medium text-gray-900"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
                     Blog
                   </Link>
-                  <Link href="/about" className="block py-2 text-lg font-medium text-gray-900">
+                  <Link 
+                    href="/about" 
+                    className="block py-2 text-lg font-medium text-gray-900"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
                     About
                   </Link>
                   
@@ -779,12 +803,14 @@ export default function HeaderNew() {
                     <Link
                       href="/login"
                       className="block py-2 text-lg font-medium text-gray-900"
+                      onClick={() => setIsMobileMenuOpen(false)}
                     >
                       Login
                     </Link>
                     <Link
                       href="/free-audit"
                       className="block mt-4 w-full py-3 bg-gradient-to-r from-pink-500 to-rose-500 text-white text-center rounded-full font-semibold"
+                      onClick={() => setIsMobileMenuOpen(false)}
                     >
                       Join Waitlist
                     </Link>

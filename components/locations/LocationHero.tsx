@@ -40,9 +40,18 @@ export default function LocationHero({ location }: LocationHeroProps) {
             </h1>
 
             <p className="text-xl text-gray-600 mb-8">
-              Dominate local search results in {location.city} with our proven SEO strategies. 
-              We help businesses in {location.county ? `${location.county} County` : location.city} achieve 
-              top rankings, more traffic, and increased revenue.
+              {location.description ? (
+                <>
+                  {location.description}. Dominate local search results with our proven SEO strategies 
+                  tailored for {location.nickname ? `"${location.nickname}"` : location.city}.
+                </>
+              ) : (
+                <>
+                  Dominate local search results in {location.city} with our proven SEO strategies. 
+                  We help businesses in {location.county ? `${location.county} County` : location.city} achieve 
+                  top rankings, more traffic, and increased revenue.
+                </>
+              )}
             </p>
 
             <div className="space-y-4 mb-8">
@@ -145,6 +154,17 @@ export default function LocationHero({ location }: LocationHeroProps) {
                       +{location.neighborhoods.length - 6} more
                     </span>
                   )}
+                </div>
+              </div>
+            )}
+            
+            {location.landmarks && location.landmarks.length > 0 && (
+              <div className="mt-4">
+                <h3 className="text-sm font-semibold text-gray-900 mb-2">
+                  Near Famous {location.city} Landmarks:
+                </h3>
+                <div className="text-xs text-gray-600">
+                  {location.landmarks.slice(0, 3).join(' • ')}
                 </div>
               </div>
             )}

@@ -106,6 +106,7 @@ export default function Header() {
                               key={dropdownItem.name}
                               href={dropdownItem.href}
                               className="block px-4 py-3 text-sm text-gray-700 hover:bg-primary-50 hover:text-primary-600 transition-colors"
+                              onClick={() => setDropdownOpen(null)}
                             >
                               {dropdownItem.name}
                             </Link>
