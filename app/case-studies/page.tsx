@@ -282,8 +282,24 @@ export default function CaseStudiesPage() {
                       <div className="text-sm text-gray-600">{study.results.traffic.label}</div>
                     </div>
                     <div className="bg-white rounded-xl p-6 text-center border border-gray-200">
-                      <div className="text-3xl font-bold text-success-600">{study.results.revenue.value}</div>
-                      <div className="text-sm text-gray-600">{study.results.revenue.label}</div>
+                      <div className="text-3xl font-bold text-success-600">
+                        {(study.results as any).revenue?.value || 
+                         (study.results as any).appointments?.value || 
+                         (study.results as any).trials?.value || 
+                         (study.results as any).leads?.value || 
+                         (study.results as any).cases?.value || 
+                         (study.results as any).members?.value || 
+                         (study.results as any).sales?.value}
+                      </div>
+                      <div className="text-sm text-gray-600">
+                        {(study.results as any).revenue?.label || 
+                         (study.results as any).appointments?.label || 
+                         (study.results as any).trials?.label || 
+                         (study.results as any).leads?.label || 
+                         (study.results as any).cases?.label || 
+                         (study.results as any).members?.label || 
+                         (study.results as any).sales?.label}
+                      </div>
                     </div>
                     <div className="bg-white rounded-xl p-6 text-center border border-gray-200">
                       <div className="text-3xl font-bold text-electric-600">{study.results.roi.value}</div>
