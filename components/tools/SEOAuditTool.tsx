@@ -1,7 +1,8 @@
 "use client"
 
 import { useState } from 'react'
-import { Search, Loader2, CheckCircle, XCircle, AlertCircle, ArrowRight, Download } from 'lucide-react'
+import Link from 'next/link'
+import { Search, Loader2, CheckCircle, XCircle, AlertCircle, ArrowRight, Download, Mail, Lock, TrendingUp, Sparkles } from 'lucide-react'
 
 interface AuditResult {
   score: number
@@ -11,12 +12,19 @@ interface AuditResult {
     impact: 'high' | 'medium' | 'low'
   }[]
   recommendations: string[]
+  competitors: {
+    domain: string
+    score: number
+  }[]
 }
 
 export default function SEOAuditTool() {
   const [url, setUrl] = useState('')
+  const [email, setEmail] = useState('')
   const [isAnalyzing, setIsAnalyzing] = useState(false)
   const [result, setResult] = useState<AuditResult | null>(null)
+  const [showEmailCapture, setShowEmailCapture] = useState(false)
+  const [emailCaptured, setEmailCaptured] = useState(false)
 
   const handleAudit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -46,11 +54,37 @@ export default function SEOAuditTool() {
         'Improve page speed by minifying CSS and JavaScript',
         'Add alt text to all images for better accessibility',
         'Increase content length on key pages',
+      ],
+      competitors: [
+        { domain: 'competitor1.com', score: 85 },
+        { domain: 'competitor2.com', score: 78 },
+        { domain: url.replace('https://', '').replace('http://', ''), score: 72 },
+        { domain: 'competitor3.com', score: 69 },
       ]
     }
     
     setResult(mockResult)
     setIsAnalyzing(false)
+    
+    // Show email capture after analysis if not already captured
+    if (!emailCaptured) {
+      setShowEmailCapture(true)
+    }
+  }
+
+  const handleEmailSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    if (!email) return
+    
+    // In production, this would save the lead to your database
+    // and potentially trigger an email sequence
+    console.log('Lead captured:', { email, url })
+    
+    setEmailCaptured(true)
+    setShowEmailCapture(false)
+    
+    // Optionally redirect to signup with pre-filled email
+    // window.location.href = `/signup?email=${encodeURIComponent(email)}&source=audit`
   }
 
   const getScoreColor = (score: number) => {
@@ -121,6 +155,66 @@ export default function SEOAuditTool() {
         </div>
       )}
 
+      {/* Email Capture Modal */}
+      {showEmailCapture && result && (
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+          <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full p-8">
+            <div className="text-center mb-6">
+              <div className="w-16 h-16 bg-gradient-to-br from-primary-100 to-electric-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Mail className="h-8 w-8 text-primary-600" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                Your SEO Audit is Ready!
+              </h3>
+              <p className="text-gray-600">
+                Enter your email to unlock your full audit report and get:
+              </p>
+            </div>
+            
+            <ul className="space-y-2 mb-6">
+              <li className="flex items-start gap-2">
+                <CheckCircle className="h-5 w-5 text-success-500 flex-shrink-0 mt-0.5" />
+                <span className="text-sm text-gray-700">Complete technical SEO analysis</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle className="h-5 w-5 text-success-500 flex-shrink-0 mt-0.5" />
+                <span className="text-sm text-gray-700">Personalized action plan</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle className="h-5 w-5 text-success-500 flex-shrink-0 mt-0.5" />
+                <span className="text-sm text-gray-700">Competitor comparison</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle className="h-5 w-5 text-success-500 flex-shrink-0 mt-0.5" />
+                <span className="text-sm text-gray-700">14-day free trial of GoalSEO AI</span>
+              </li>
+            </ul>
+            
+            <form onSubmit={handleEmailSubmit} className="space-y-4">
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Enter your email"
+                required
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+              />
+              <button
+                type="submit"
+                className="w-full bg-gradient-to-r from-primary-500 to-primary-600 text-white py-3 rounded-lg font-semibold hover:from-primary-600 hover:to-primary-700 transition-all"
+              >
+                Get My Full Audit Report
+              </button>
+            </form>
+            
+            <p className="text-xs text-center text-gray-500 mt-4">
+              <Lock className="h-3 w-3 inline mr-1" />
+              We respect your privacy. No spam, ever.
+            </p>
+          </div>
+        </div>
+      )}
+
       {/* Results */}
       {result && !isAnalyzing && (
         <div className="mt-8 space-y-8">
@@ -134,6 +228,25 @@ export default function SEOAuditTool() {
               <p className={`text-lg font-semibold ${getScoreColor(result.score)}`}>
                 {getScoreLabel(result.score)}
               </p>
+              
+              {/* Competitor Comparison */}
+              {emailCaptured && result.competitors && (
+                <div className="mt-6 pt-6 border-t">
+                  <p className="text-sm text-gray-600 mb-3">How you compare:</p>
+                  <div className="space-y-2">
+                    {result.competitors.sort((a, b) => b.score - a.score).map((comp, idx) => (
+                      <div key={idx} className="flex items-center justify-between text-sm">
+                        <span className={comp.domain === url.replace('https://', '').replace('http://', '') ? 'font-semibold' : ''}>
+                          {comp.domain}
+                        </span>
+                        <span className={`font-medium ${getScoreColor(comp.score)}`}>
+                          {comp.score}/100
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
           </div>
 
@@ -184,23 +297,51 @@ export default function SEOAuditTool() {
 
           {/* CTA */}
           <div className="bg-gradient-to-r from-primary-500 to-electric-500 rounded-2xl p-8 text-center text-white">
-            <h3 className="text-2xl font-bold mb-4">Want a Complete SEO Analysis?</h3>
-            <p className="text-white/90 mb-6">
-              Get a detailed audit with 50+ checks, competitor analysis, and a custom action plan.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="inline-flex items-center justify-center gap-2 bg-white text-primary-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all">
-                <Download className="h-5 w-5" />
-                Download Full Report
-              </button>
-              <a
-                href="/contact"
-                className="inline-flex items-center justify-center gap-2 bg-transparent text-white border-2 border-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all"
-              >
-                Get Professional Audit
-                <ArrowRight className="h-5 w-5" />
-              </a>
-            </div>
+            {emailCaptured ? (
+              <>
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-full mb-4">
+                  <TrendingUp className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold mb-4">Ready to Fix These Issues?</h3>
+                <p className="text-white/90 mb-6 max-w-2xl mx-auto">
+                  GoalSEO AI can automatically fix {result.issues.filter(i => i.type === 'error' || i.type === 'warning').length} of these issues 
+                  and improve your score to 90+ within 30 days. Start your free trial today.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Link
+                    href={`/signup?email=${encodeURIComponent(email)}&plan=growth&source=audit`}
+                    className="inline-flex items-center justify-center gap-2 bg-white text-primary-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all"
+                  >
+                    <Sparkles className="h-5 w-5" />
+                    Start 14-Day Free Trial
+                  </Link>
+                  <button 
+                    onClick={() => window.print()}
+                    className="inline-flex items-center justify-center gap-2 bg-transparent text-white border-2 border-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all"
+                  >
+                    <Download className="h-5 w-5" />
+                    Download Report
+                  </button>
+                </div>
+                <p className="text-white/70 text-sm mt-4">
+                  No credit card required • Cancel anytime
+                </p>
+              </>
+            ) : (
+              <>
+                <h3 className="text-2xl font-bold mb-4">Unlock Your Full SEO Audit</h3>
+                <p className="text-white/90 mb-6">
+                  See detailed recommendations and start fixing issues immediately
+                </p>
+                <button
+                  onClick={() => setShowEmailCapture(true)}
+                  className="inline-flex items-center justify-center gap-2 bg-white text-primary-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all"
+                >
+                  <Mail className="h-5 w-5" />
+                  Get Full Report
+                </button>
+              </>
+            )}
           </div>
         </div>
       )}

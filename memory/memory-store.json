@@ -1,0 +1,10 @@
+{
+  "default": [
+    {
+      "key": "test-key",
+      "value": "Claude Flow is successfully installed and working!",
+      "namespace": "default",
+      "timestamp": 1755639144353
+    }
+  ]
+}

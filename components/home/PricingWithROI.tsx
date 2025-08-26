@@ -187,18 +187,19 @@ export default function PricingWithROI() {
                   ))}
                 </ul>
 
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className={`w-full py-3 rounded-xl font-semibold transition-all flex items-center justify-center gap-2 ${
-                    plan.popular
-                      ? 'bg-gradient-to-r from-primary-500 to-electric-500 text-white hover:from-primary-600 hover:to-electric-600'
-                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                  }`}
-                >
-                  {plan.price === 0 ? 'Contact Sales' : 'Start Free Trial'}
-                  <ArrowRight className="h-4 w-4" />
-                </motion.button>
+                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                  <Link
+                    href={plan.price === 0 ? '/contact?type=enterprise' : `/signup?plan=${plan.id}&trial=true`}
+                    className={`w-full py-3 rounded-xl font-semibold transition-all flex items-center justify-center gap-2 ${
+                      plan.popular
+                        ? 'bg-gradient-to-r from-primary-500 to-electric-500 text-white hover:from-primary-600 hover:to-electric-600'
+                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    }`}
+                  >
+                    {plan.price === 0 ? 'Contact Sales' : 'Start 14-Day Free Trial'}
+                    <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </motion.div>
 
                 {plan.popular && (
                   <p className="text-xs text-center text-gray-500 mt-3">
@@ -350,15 +351,15 @@ export default function PricingWithROI() {
                 </div>
               </div>
 
-              <motion.a
-                href="/free-audit"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="w-full bg-gradient-to-r from-primary-500 to-electric-500 text-white py-3 rounded-xl font-semibold hover:from-primary-600 hover:to-electric-600 transition-all flex items-center justify-center gap-2 mt-4"
-              >
-                Start Capturing This ROI
-                <Sparkles className="h-5 w-5" />
-              </motion.a>
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <Link
+                  href="/signup?plan=growth&trial=true"
+                  className="w-full bg-gradient-to-r from-primary-500 to-electric-500 text-white py-3 rounded-xl font-semibold hover:from-primary-600 hover:to-electric-600 transition-all flex items-center justify-center gap-2 mt-4 block"
+                >
+                  Start Capturing This ROI
+                  <Sparkles className="h-5 w-5" />
+                </Link>
+              </motion.div>
             </div>
           </div>
         </motion.div>

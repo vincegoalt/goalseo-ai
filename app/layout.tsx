@@ -5,6 +5,7 @@ import { siteConfig } from "@/config/site";
 import HeaderNew from "@/components/layout/HeaderNew";
 import Footer from "@/components/layout/Footer";
 import { Analytics } from "@vercel/analytics/react";
+import { Toaster } from "sonner";
 
 const inter = Inter({ 
   subsets: ["latin"],
@@ -98,6 +99,7 @@ export default function RootLayout({
         </main>
         <Footer />
         <Analytics />
+        <Toaster position="top-right" />
       </body>
     </html>
   );

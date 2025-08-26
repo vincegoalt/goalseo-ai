@@ -8,13 +8,19 @@ import {
   BarChart3, Users, Bot, Zap, Search, Target, Shield,
   Code, Database, Gauge, Brain, FileText, Link2,
   ShoppingBag, Palette, Home, Gamepad2, Heart, Pizza,
-  Gem, Leaf, Dog, Mountain, Briefcase, X, Menu, Award
+  Gem, Leaf, Dog, Mountain, Briefcase, X, Menu, Award,
+  User, LogOut
 } from 'lucide-react'
+import { authClient } from "@/lib/auth-client"
+import { useRouter } from 'next/navigation'
 
 export default function HeaderNew() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [user, setUser] = useState<any>(null)
+  const [loading, setLoading] = useState(true)
+  const router = useRouter()
   
   useEffect(() => {
     const handleScroll = () => {
@@ -23,6 +29,31 @@ export default function HeaderNew() {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+  
+  useEffect(() => {
+    const checkAuth = async () => {
+      try {
+        const session = await authClient.getSession()
+        setUser(session.data?.user || null)
+      } catch (error) {
+        console.error('Auth check failed:', error)
+        setUser(null)
+      } finally {
+        setLoading(false)
+      }
+    }
+    checkAuth()
+  }, [])
+  
+  const handleSignOut = async () => {
+    try {
+      await authClient.signOut()
+      setUser(null)
+      router.push('/')
+    } catch (error) {
+      console.error('Sign out failed:', error)
+    }
+  }
   
   const solutions = {
     byFeature: [
@@ -165,18 +196,42 @@ export default function HeaderNew() {
             
             {/* CTA Buttons */}
             <div className="hidden lg:flex items-center gap-3">
-              <Link
-                href="/login"
-                className="px-4 py-2 text-gray-700 hover:text-gray-900 font-medium transition-colors"
-              >
-                Login
-              </Link>
-              <Link
-                href="/free-audit"
-                className="px-6 py-2.5 bg-gradient-to-r from-pink-500 to-rose-500 text-white rounded-full font-semibold hover:from-pink-600 hover:to-rose-600 transition-all shadow-md hover:shadow-lg"
-              >
-                Join Waitlist
-              </Link>
+              {!loading && (
+                user ? (
+                  <>
+                    <Link
+                      href="/dashboard"
+                      className="px-4 py-2 text-gray-700 hover:text-gray-900 font-medium transition-colors flex items-center gap-2"
+                    >
+                      <User className="h-4 w-4" />
+                      Dashboard
+                    </Link>
+                    <button
+                      onClick={handleSignOut}
+                      className="px-4 py-2 text-gray-700 hover:text-gray-900 font-medium transition-colors flex items-center gap-2"
+                    >
+                      <LogOut className="h-4 w-4" />
+                      Sign Out
+                    </button>
+                  </>
+                ) : (
+                  <>
+                    <Link
+                      href="/login"
+                      className="px-4 py-2 text-gray-700 hover:text-gray-900 font-medium transition-colors"
+                    >
+                      Login
+                    </Link>
+                    <Link
+                      href="/signup?plan=growth&trial=true"
+                      className="px-6 py-2.5 bg-gradient-to-r from-primary-500 to-electric-500 text-white rounded-full font-semibold hover:from-primary-600 hover:to-electric-600 transition-all shadow-md hover:shadow-lg"
+                    >
+                      Start Free Trial
+                      <ArrowRight className="inline-block ml-2 h-4 w-4" />
+                    </Link>
+                  </>
+                )
+              )}
             </div>
             
             {/* Mobile Menu Button */}
@@ -800,20 +855,45 @@ export default function HeaderNew() {
                   </Link>
                   
                   <div className="pt-4 border-t">
-                    <Link
-                      href="/login"
-                      className="block py-2 text-lg font-medium text-gray-900"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      Login
-                    </Link>
-                    <Link
-                      href="/free-audit"
-                      className="block mt-4 w-full py-3 bg-gradient-to-r from-pink-500 to-rose-500 text-white text-center rounded-full font-semibold"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      Join Waitlist
-                    </Link>
+                    {!loading && (
+                      user ? (
+                        <>
+                          <Link
+                            href="/dashboard"
+                            className="block py-2 text-lg font-medium text-gray-900"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                          >
+                            Dashboard
+                          </Link>
+                          <button
+                            onClick={() => {
+                              handleSignOut()
+                              setIsMobileMenuOpen(false)
+                            }}
+                            className="block w-full text-left py-2 text-lg font-medium text-gray-900"
+                          >
+                            Sign Out
+                          </button>
+                        </>
+                      ) : (
+                        <>
+                          <Link
+                            href="/login"
+                            className="block py-2 text-lg font-medium text-gray-900"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                          >
+                            Login
+                          </Link>
+                          <Link
+                            href="/signup?plan=growth&trial=true"
+                            className="block mt-4 w-full py-3 bg-gradient-to-r from-primary-500 to-electric-500 text-white text-center rounded-full font-semibold"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                          >
+                            Start Free Trial
+                          </Link>
+                        </>
+                      )
+                    )}
                   </div>
                 </nav>
               </div>

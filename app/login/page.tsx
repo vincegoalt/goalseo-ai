@@ -6,17 +6,53 @@ import {
   Mail, Lock, Eye, EyeOff, ArrowRight,
   Chrome, Github, Apple, Zap, Shield
 } from 'lucide-react'
-import { useState } from 'react'
+import { useState, Suspense } from 'react'
+import { authClient } from "@/lib/auth-client"
+import { useRouter, useSearchParams } from 'next/navigation'
+import { toast } from "sonner"
 
-export default function LoginPage() {
+function LoginContent() {
   const [showPassword, setShowPassword] = useState(false)
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  const [loading, setLoading] = useState(false)
+  const router = useRouter()
+  const searchParams = useSearchParams()
+  const returnTo = searchParams.get("returnTo")
+
+  const handleGoogleLogin = async () => {
+    try {
+      setLoading(true)
+      await authClient.signIn.social(
+        {
+          provider: "google",
+          callbackURL: returnTo || "/dashboard",
+        },
+        {
+          onRequest: () => {
+            setLoading(true)
+          },
+          onResponse: () => {
+            setLoading(false)
+          },
+          onError: (ctx) => {
+            setLoading(false)
+            console.error("Sign-in failed:", ctx.error)
+            toast.error("Authentication failed. Please try again.")
+          },
+        },
+      )
+    } catch (error) {
+      setLoading(false)
+      console.error("Authentication error:", error)
+      toast.error("Something went wrong. Please try again.")
+    }
+  }
 
   const socialLogins = [
-    { name: 'Google', icon: Chrome, color: 'bg-red-500 hover:bg-red-600' },
-    { name: 'GitHub', icon: Github, color: 'bg-gray-900 hover:bg-gray-800' },
-    { name: 'Apple', icon: Apple, color: 'bg-gray-900 hover:bg-gray-800' }
+    { name: 'Google', icon: Chrome, color: 'bg-red-500 hover:bg-red-600', action: handleGoogleLogin },
+    { name: 'GitHub', icon: Github, color: 'bg-gray-900 hover:bg-gray-800', action: () => toast.info("GitHub login coming soon!") },
+    { name: 'Apple', icon: Apple, color: 'bg-gray-900 hover:bg-gray-800', action: () => toast.info("Apple login coming soon!") }
   ]
 
   const features = [
@@ -85,11 +121,13 @@ export default function LoginPage() {
               return (
                 <button
                   key={provider.name}
-                  className="w-full flex items-center justify-center gap-3 px-4 py-3 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
+                  onClick={provider.action}
+                  disabled={loading}
+                  className="w-full flex items-center justify-center gap-3 px-4 py-3 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   <Icon className="h-5 w-5" />
                   <span className="font-medium text-gray-700">
-                    Continue with {provider.name}
+                    {loading && provider.name === 'Google' ? 'Connecting...' : `Continue with ${provider.name}`}
                   </span>
                 </button>
               )
@@ -249,5 +287,17 @@ export default function LoginPage() {
         </motion.div>
       </div>
     </div>
+  )
+}
+
+export default function LoginPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary-600"></div>
+      </div>
+    }>
+      <LoginContent />
+    </Suspense>
   )
 }
