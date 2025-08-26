@@ -65,7 +65,7 @@ export default async function DashboardPage() {
                     <span className="font-medium">Plan:</span> Starter
                   </p>
                   <p className="text-sm">
-                    <span className="font-medium">Billing:</span> ${subscriptionDetails.subscription?.amount / 100}/
+                    <span className="font-medium">Billing:</span> ${(subscriptionDetails.subscription?.amount ?? 0) / 100}/
                     {subscriptionDetails.subscription?.recurringInterval}
                   </p>
                   <Button variant="outline" size="sm" className="mt-4" asChild>
