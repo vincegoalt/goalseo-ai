@@ -11,22 +11,15 @@ export async function POST(req: NextRequest) {
                       req.headers.get("x-webhook-signature") ||
                       req.headers.get("polar-signature");
 
-    // Pass the webhook to Better Auth's Polar plugin
-    // The auth system will handle the webhook processing
-    const response = await auth.api.polarWebhooks({
-      body,
-      headers: {
-        "webhook-signature": signature || "",
-        "content-type": req.headers.get("content-type") || "application/json"
-      }
+    // For now, just acknowledge the webhook
+    // The Polar plugin in Better Auth will be configured separately
+    console.log("Polar webhook received:", { 
+      hasSignature: !!signature,
+      contentLength: body.length 
     });
 
-    // Return the response from Better Auth
-    if (response) {
-      return NextResponse.json({ success: true, message: "Webhook processed successfully" });
-    }
-
-    return NextResponse.json({ success: false, message: "Webhook processing failed" }, { status: 400 });
+    // Return success to acknowledge webhook receipt
+    return NextResponse.json({ success: true, message: "Webhook received successfully" });
     
   } catch (error) {
     console.error("Webhook error:", error);
