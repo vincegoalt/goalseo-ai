@@ -283,8 +283,8 @@ export default function SolutionsPage() {
                     <li key={i} className="flex justify-between items-center">
                       <span className="text-gray-600">{item.feature}</span>
                       <span className={`font-semibold ${
-                        item.positive ? 'text-green-600' : 
-                        item.negative ? 'text-red-600' : 'text-gray-900'
+                        'positive' in item && item.positive ? 'text-green-600' : 
+                        'negative' in item && item.negative ? 'text-red-600' : 'text-gray-900'
                       }`}>
                         {item.value}
                       </span>
