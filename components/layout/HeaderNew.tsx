@@ -112,11 +112,16 @@ export default function HeaderNew() {
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
             <Link href="/" className="flex items-center group">
-              <img 
-                src="/goalseologo.png" 
-                alt="GoalSEO.ai" 
-                className="h-12 w-auto"
-              />
+              <div className="flex items-center">
+                <span className="text-3xl font-bold">
+                  <span className="bg-gradient-to-r from-green-600 via-emerald-500 to-teal-500 bg-clip-text text-transparent">Goal</span>
+                  <span className="text-gray-900">SEO</span>
+                </span>
+                <div className="ml-2 flex items-center">
+                  <div className="w-2 h-2 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full animate-pulse"></div>
+                  <span className="ml-1.5 text-2xl font-medium bg-gradient-to-r from-teal-500 to-green-500 bg-clip-text text-transparent">ai</span>
+                </div>
+              </div>
             </Link>
             
             {/* Desktop Navigation */}

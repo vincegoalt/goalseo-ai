@@ -65,12 +65,17 @@ export default function Header() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link href="/" className="flex items-center gap-2 group">
-              <img 
-                src="/goalseologo.png" 
-                alt="GoalSEO.ai" 
-                className="h-10 w-auto"
-              />
+            <Link href="/" className="flex items-center group">
+              <div className="flex items-center">
+                <span className="text-2xl font-bold">
+                  <span className="bg-gradient-to-r from-primary-600 via-primary-500 to-electric-500 bg-clip-text text-transparent">Goal</span>
+                  <span className="text-gray-900">SEO</span>
+                </span>
+                <div className="ml-1.5 flex items-center">
+                  <div className="w-1.5 h-1.5 bg-gradient-to-r from-primary-500 to-electric-500 rounded-full"></div>
+                  <span className="ml-1 text-xl font-medium bg-gradient-to-r from-electric-500 to-primary-500 bg-clip-text text-transparent">ai</span>
+                </div>
+              </div>
             </Link>
           </div>
 
