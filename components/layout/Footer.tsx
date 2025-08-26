@@ -6,6 +6,7 @@ const footerLinks = {
   services: [
     { name: 'Local SEO', href: '/services/local-seo' },
     { name: 'National SEO', href: '/services/national-seo' },
+    { name: 'International SEO', href: '/services/international-seo' },
     { name: 'E-commerce SEO', href: '/services/ecommerce-seo' },
     { name: 'Enterprise SEO', href: '/services/enterprise-seo' },
     { name: 'Technical SEO', href: '/services/technical-seo' },

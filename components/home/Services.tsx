@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { MapPin, Globe, ShoppingCart, Building, Code, FileText, Link as LinkIcon, Store, ArrowRight } from 'lucide-react'
+import { MapPin, Globe, Globe2, ShoppingCart, Building, Code, FileText, Link as LinkIcon, Store, ArrowRight } from 'lucide-react'
 import { services } from '@/data/services'
 
 const featuredServices = [
@@ -17,22 +17,27 @@ const featuredServices = [
     gradient: 'from-primary-500 to-electric-500',
   },
   {
-    ...services[2], // E-commerce SEO
+    ...services[2], // International SEO
+    icon: Globe2,
+    gradient: 'from-amber-500 to-yellow-500',
+  },
+  {
+    ...services[3], // E-commerce SEO
     icon: ShoppingCart,
     gradient: 'from-purple-500 to-pink-500',
   },
   {
-    ...services[3], // Enterprise SEO
+    ...services[4], // Enterprise SEO
     icon: Building,
     gradient: 'from-orange-500 to-red-500',
   },
   {
-    ...services[4], // Technical SEO
+    ...services[5], // Technical SEO
     icon: Code,
     gradient: 'from-green-500 to-teal-500',
   },
   {
-    ...services[5], // Content SEO
+    ...services[6], // Content SEO
     icon: FileText,
     gradient: 'from-indigo-500 to-purple-500',
   },

@@ -68,6 +68,36 @@ export const services: Service[] = [
     category: 'core'
   },
   {
+    id: 'international-seo',
+    slug: 'international-seo',
+    title: 'International SEO',
+    shortDescription: 'Expand your reach across global markets with precision',
+    description: 'Comprehensive international SEO strategies to help your business succeed in multiple countries and languages. We handle hreflang implementation, international keyword research, and cultural content optimization.',
+    icon: 'Globe2',
+    features: [
+      'Hreflang Tag Implementation',
+      'Multi-Language Keyword Research',
+      'International Site Structure',
+      'Cultural Content Localization',
+      'Country-Specific Link Building',
+      'International Technical SEO',
+      'Global Market Analysis',
+      'Multi-Region Reporting'
+    ],
+    benefits: [
+      'Enter new international markets',
+      'Increase global organic traffic by 500%',
+      'Proper language and region targeting',
+      'Avoid duplicate content issues'
+    ],
+    category: 'core',
+    price: {
+      starting: 2999,
+      currency: 'USD',
+      period: 'month'
+    }
+  },
+  {
     id: 'ecommerce-seo',
     slug: 'ecommerce-seo',
     title: 'E-commerce SEO',
