@@ -278,7 +278,7 @@
 
 /* Blog post content styling */
 .blog-content {
-  @apply prose prose-lg max-w-none;
+  @apply text-lg leading-relaxed text-gray-700 max-w-none;
 }
 
 .blog-content h2 {
