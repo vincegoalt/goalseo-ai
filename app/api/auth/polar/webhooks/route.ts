@@ -13,7 +13,7 @@ export async function POST(req: NextRequest) {
 
     // Pass the webhook to Better Auth's Polar plugin
     // The auth system will handle the webhook processing
-    const response = await auth.api.polarWebhook({
+    const response = await auth.api.polarWebhooks({
       body,
       headers: {
         "webhook-signature": signature || "",
