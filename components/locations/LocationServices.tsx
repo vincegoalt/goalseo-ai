@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { MapPin, Globe, ShoppingCart, Building, TrendingUp, Users } from 'lucide-react'
+import { MapPin, Globe, ShoppingCart, Building, TrendingUp, Users, Code, Link as LinkIcon } from 'lucide-react'
 import { Location } from '@/data/locations'
 
 interface LocationServicesProps {
@@ -12,6 +12,7 @@ export default function LocationServices({ location }: LocationServicesProps) {
       icon: MapPin,
       title: `Local SEO in ${location.city}`,
       description: `Dominate local search results and Google Maps in ${location.city}`,
+      slug: 'local-seo',
       features: [
         'Google My Business optimization',
         'Local citation building',
@@ -20,9 +21,34 @@ export default function LocationServices({ location }: LocationServicesProps) {
       ]
     },
     {
+      icon: Globe,
+      title: `National SEO from ${location.city}`,
+      description: `Expand beyond ${location.city} to reach national markets`,
+      slug: 'national-seo',
+      features: [
+        'National keyword targeting',
+        'Content strategy',
+        'Authority link building',
+        'Brand visibility'
+      ]
+    },
+    {
+      icon: Globe,
+      title: `International SEO`,
+      description: `Go global from ${location.city} with multilingual SEO strategies`,
+      slug: 'international-seo',
+      features: [
+        'Hreflang implementation',
+        'Multi-language optimization',
+        'Global market research',
+        'Cultural localization'
+      ]
+    },
+    {
       icon: ShoppingCart,
-      title: 'E-commerce SEO',
+      title: `E-commerce SEO in ${location.city}`,
       description: `Help ${location.city} online stores increase sales and visibility`,
+      slug: 'ecommerce-seo',
       features: [
         'Product page optimization',
         'Category optimization',
@@ -32,24 +58,38 @@ export default function LocationServices({ location }: LocationServicesProps) {
     },
     {
       icon: Building,
-      title: 'Small Business SEO',
-      description: `Affordable SEO solutions for ${location.city} small businesses`,
+      title: `Enterprise SEO Solutions`,
+      description: `Large-scale SEO solutions for ${location.city} enterprises`,
+      slug: 'enterprise-seo',
       features: [
-        'Competitor analysis',
-        'Keyword research',
-        'On-page optimization',
-        'Monthly reporting'
+        'Multi-site management',
+        'Dedicated account teams',
+        'Custom reporting',
+        'Advanced integrations'
       ]
     },
     {
-      icon: Globe,
-      title: 'National SEO',
-      description: `Expand beyond ${location.city} to reach national markets`,
+      icon: Code,
+      title: `Technical SEO in ${location.city}`,
+      description: `Fix technical issues that prevent ${location.city} sites from ranking`,
+      slug: 'technical-seo',
       features: [
-        'National keyword targeting',
-        'Content strategy',
-        'Link building',
-        'Brand visibility'
+        'Core Web Vitals optimization',
+        'Technical audits',
+        'Site speed improvements',
+        'Crawl optimization'
+      ]
+    },
+    {
+      icon: LinkIcon,
+      title: `Link Building Services`,
+      description: `Build high-authority backlinks for ${location.city} businesses`,
+      slug: 'link-building',
+      features: [
+        'Authority link acquisition',
+        'Digital PR campaigns',
+        'Guest posting',
+        'Brand mentions'
       ]
     }
   ]
@@ -69,26 +109,27 @@ export default function LocationServices({ location }: LocationServicesProps) {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {localServices.map((service, index) => {
             const Icon = service.icon
             return (
-              <div
+              <Link
                 key={index}
-                className="bg-gray-50 rounded-xl p-6 hover:bg-primary-50 transition-colors"
+                href={`/locations/${location.slug}/services/${service.slug}`}
+                className="block bg-gray-50 rounded-xl p-6 hover:bg-primary-50 hover:shadow-lg transition-all duration-300 group"
               >
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-primary-500 to-electric-500 rounded-lg flex items-center justify-center text-white flex-shrink-0">
+                  <div className="w-12 h-12 bg-gradient-to-r from-primary-500 to-electric-500 rounded-lg flex items-center justify-center text-white flex-shrink-0 group-hover:scale-110 transition-transform">
                     <Icon className="h-6 w-6" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition-colors">
                       {service.title}
                     </h3>
                     <p className="text-gray-600 mb-4">
                       {service.description}
                     </p>
-                    <ul className="space-y-2">
+                    <ul className="space-y-2 mb-4">
                       {service.features.map((feature, i) => (
                         <li key={i} className="flex items-start gap-2 text-sm text-gray-600">
                           <span className="text-primary-500 mt-0.5">✓</span>
@@ -96,9 +137,12 @@ export default function LocationServices({ location }: LocationServicesProps) {
                         </li>
                       ))}
                     </ul>
+                    <div className="text-primary-600 font-semibold text-sm group-hover:text-primary-700 transition-colors">
+                      Learn More →
+                    </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             )
           })}
         </div>
