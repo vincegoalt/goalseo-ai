@@ -66,17 +66,11 @@ export default function Header() {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center gap-2 group">
-              <div className="relative">
-                <div className="absolute -inset-1 bg-gradient-to-r from-primary-500 to-electric-500 rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-200"></div>
-                <div className="relative bg-white rounded-lg p-2">
-                  <svg className="h-8 w-8 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
-              </div>
-              <span className="text-xl font-bold bg-gradient-to-r from-primary-500 to-electric-500 bg-clip-text text-transparent">
-                GoalSEO.ai
-              </span>
+              <img 
+                src="/goalseologo.png" 
+                alt="GoalSEO.ai" 
+                className="h-10 w-auto"
+              />
             </Link>
           </div>
 

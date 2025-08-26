@@ -47,7 +47,8 @@ export default function LocationsPage() {
     { name: 'Portland', state: 'OR', slug: 'portland', ranking: 'Creative Industries' },
     { name: 'Detroit', state: 'MI', slug: 'detroit', ranking: 'Manufacturing SEO' },
     { name: 'Nashville', state: 'TN', slug: 'nashville', ranking: 'Music Industry' },
-    { name: 'Charlotte', state: 'NC', slug: 'charlotte', ranking: 'Finance Sector' }
+    { name: 'Charlotte', state: 'NC', slug: 'charlotte', ranking: 'Finance Sector' },
+    { name: 'Tulsa', state: 'OK', slug: 'tulsa', ranking: 'Oil & Energy SEO' }
   ]
 
   const states = [

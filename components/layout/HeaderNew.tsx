@@ -111,31 +111,12 @@ export default function HeaderNew() {
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-2.5 group">
-              <div className="relative">
-                <div className="absolute -inset-1 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-200"></div>
-                <div className="relative">
-                  <svg className="h-9 w-9" viewBox="0 0 40 40" fill="none">
-                    <rect width="40" height="40" rx="10" fill="url(#logo-gradient)"/>
-                    <path d="M20 8L12 20L20 32L28 20L20 8Z" fill="white" fillOpacity="0.9"/>
-                    <path d="M20 14L16 20L20 26L24 20L20 14Z" fill="url(#logo-inner)"/>
-                    <defs>
-                      <linearGradient id="logo-gradient" x1="0" y1="0" x2="40" y2="40">
-                        <stop stopColor="#10B981"/>
-                        <stop offset="1" stopColor="#059669"/>
-                      </linearGradient>
-                      <linearGradient id="logo-inner" x1="16" y1="14" x2="24" y2="26">
-                        <stop stopColor="#059669"/>
-                        <stop offset="1" stopColor="#047857"/>
-                      </linearGradient>
-                    </defs>
-                  </svg>
-                </div>
-              </div>
-              <span className="text-[26px] font-bold tracking-tight">
-                <span className="text-gray-900">Goal</span>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-emerald-600">SEO</span>
-              </span>
+            <Link href="/" className="flex items-center group">
+              <img 
+                src="/goalseologo.png" 
+                alt="GoalSEO.ai" 
+                className="h-12 w-auto"
+              />
             </Link>
             
             {/* Desktop Navigation */}

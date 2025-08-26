@@ -1995,6 +1995,44 @@ export const locations: Location[] = [
       topIndustries: ['Healthcare', 'Education', 'Manufacturing'],
       growthRate: '8.5%'
     }
+  },
+  {
+    id: 'tulsa',
+    slug: 'tulsa',
+    city: 'Tulsa',
+    state: 'Oklahoma',
+    stateAbbr: 'OK',
+    county: 'Tulsa',
+    population: 413066,
+    tier: 1,
+    coordinates: { lat: 36.1540, lng: -95.9928 },
+    neighborhoods: [
+      'Downtown',
+      'Brookside',
+      'Cherry Street',
+      'Pearl District',
+      'Brady Arts District',
+      'Greenwood District',
+      'Riverside',
+      'Utica Square'
+    ],
+    landmarks: [
+      'Philbrook Museum of Art',
+      'Tulsa Air and Space Museum',
+      'BOK Center',
+      'Gathering Place',
+      'Gilcrease Museum',
+      'Golden Driller',
+      'Boston Avenue Methodist Church'
+    ],
+    industries: ['Energy', 'Oil & Gas', 'Aerospace', 'Healthcare', 'Manufacturing', 'Technology'],
+    nickname: 'Oil Capital of the World',
+    description: 'Historic oil and energy hub with thriving arts scene and growing tech sector',
+    businessStats: {
+      totalBusinesses: 35000,
+      topIndustries: ['Energy', 'Oil & Gas', 'Aerospace'],
+      growthRate: '10.2%'
+    }
   }
 ]
 
