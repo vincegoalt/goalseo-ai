@@ -57,7 +57,7 @@ function SignUpContent() {
                         onResponse: () => {
                           setLoading(false);
                         },
-                        onError: (ctx) => {
+                        onError: (ctx: any) => {
                           setLoading(false);
                           console.error("Sign-up failed:", ctx.error);
                         },

@@ -35,7 +35,7 @@ function LoginContent() {
           onResponse: () => {
             setLoading(false)
           },
-          onError: (ctx) => {
+          onError: (ctx: any) => {
             setLoading(false)
             console.error("Sign-in failed:", ctx.error)
             toast.error("Authentication failed. Please try again.")

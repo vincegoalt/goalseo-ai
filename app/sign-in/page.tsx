@@ -57,7 +57,7 @@ function SignInContent() {
                         onResponse: () => {
                           setLoading(false);
                         },
-                        onError: (ctx) => {
+                        onError: (ctx: any) => {
                           setLoading(false);
                           console.error("Sign-in failed:", ctx.error);
                         },
