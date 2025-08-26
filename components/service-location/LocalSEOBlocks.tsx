@@ -31,7 +31,7 @@ export const LocalSEOHero: React.FC<LocalSEOBlocksProps> = ({ location }) => {
                 Get Free Local SEO Audit
               </button>
               <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-gray-900 transition-colors">
-                Call Now: (555) 123-4567
+                Call Now: (562) 682-9403
               </button>
             </div>
           </div>

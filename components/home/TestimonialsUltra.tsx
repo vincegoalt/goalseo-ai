@@ -16,8 +16,8 @@ export default function TestimonialsUltra() {
   const testimonials = [
     {
       id: 1,
-      name: 'Sarah Chen',
-      role: 'CEO',
+      name: 'Michael Burk',
+      role: 'CMO',
       company: 'TechFlow Solutions',
       image: '👩‍💼',
       video: true,

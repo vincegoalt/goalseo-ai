@@ -29,7 +29,7 @@ export const blogCategories = [
 ]
 
 export const blogAuthors = {
-  'Vincent Chen': {
+  'Vincent Pivard': {
     role: 'CEO & Founder',
     bio: 'Vincent is the founder of GoalSEO and a recognized expert in AI-powered SEO. With over 10 years of experience in digital marketing, he pioneered the use of artificial intelligence for automated search optimization.',
     avatar: 'VC'
@@ -57,9 +57,9 @@ export const blogPosts: BlogPost[] = [
     title: 'How AI is Revolutionizing SEO in 2025: The Complete Guide',
     excerpt: 'Discover how artificial intelligence is transforming search engine optimization and why traditional SEO agencies are becoming obsolete. Learn the strategies that are working now.',
     category: 'AI & Technology',
-    author: 'Vincent Chen',
-    authorRole: blogAuthors['Vincent Chen'].role,
-    authorBio: blogAuthors['Vincent Chen'].bio,
+    author: 'Vincent Pivard',
+    authorRole: blogAuthors['Vincent Pivard'].role,
+    authorBio: blogAuthors['Vincent Pivard'].bio,
     date: '2025-01-26',
     readTime: '12 min',
     featured: true,

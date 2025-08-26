@@ -52,8 +52,8 @@ const milestones = [
 
 const team = [
   {
-    name: 'Vincent Chen',
-    role: 'Founder & CEO',
+    name: 'Vincent Pivard',
+    role: 'President & CEO',
     bio: 'Former Google engineer with 15+ years in SEO and AI',
     avatar: '👨‍💼'
   },
@@ -159,7 +159,7 @@ export default function AboutPage() {
               
               <div className="space-y-4 text-gray-600">
                 <p>
-                  In 2020, our founder Vincent Chen left Google with a vision: democratize SEO through AI. 
+                  In 2020, our founder Vincent Pivard left Google with a vision: democratize SEO through AI. 
                   After years of seeing businesses struggle with overpriced agencies delivering mediocre results, 
                   he knew there had to be a better way.
                 </p>

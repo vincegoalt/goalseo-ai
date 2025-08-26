@@ -94,7 +94,7 @@ export default function PressPage() {
 
   const teamMembers = [
     {
-      name: "Sarah Chen",
+      name: "Vincent Pivard",
       role: "CEO & Co-founder",
       bio: "Former VP of Product at Google Search, 15+ years in AI and search technology",
       image: "/team/sarah-chen.jpg"

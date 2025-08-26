@@ -11,10 +11,10 @@ import {
 export default function TeamPage() {
   const team = [
     {
-      name: 'Sarah Chen',
-      role: 'CEO & Co-Founder',
-      bio: 'Former Google AI researcher with 15+ years in SEO and machine learning.',
-      image: '/team/sarah.jpg',
+      name: 'Vincent Pivard',
+      role: 'President & CEO',
+      bio: 'Former Google engineer with 15+ years in SEO and AI innovation.',
+      image: '/team/vincent.jpg',
       linkedin: '#',
       twitter: '#'
     },
