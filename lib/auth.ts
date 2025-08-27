@@ -25,7 +25,7 @@ const polarClient = new Polar({
 });
 
 export const auth = betterAuth({
-  trustedOrigins: [`${process.env.NEXT_PUBLIC_APP_URL}`],
+  trustedOrigins: [`${process.env.NEXT_PUBLIC_APP_URL}`, 'https://goalseo.ai', 'https://www.goalseo.ai'],
   allowedDevOrigins: [`${process.env.NEXT_PUBLIC_APP_URL}`],
   cookieCache: {
     enabled: true,
