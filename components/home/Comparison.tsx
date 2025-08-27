@@ -19,7 +19,7 @@ const comparisonData: ComparisonItem[] = [
     feature: "Monthly Cost",
     cheapTools: "$29-99",
     agencies: "$3,000-8,000",
-    goalSeo: "$99-499"
+    goalSeo: "$199-499"
   },
   {
     feature: "24/7 Automation",
@@ -231,7 +231,7 @@ export default function Comparison() {
                   <h3 className="text-xl font-bold text-gray-900">GoalSEO AI</h3>
                   <div className="text-lg font-semibold">
                     <span className="line-through text-gray-400">$499</span>
-                    <span className="text-primary-600 ml-2">$99/mo</span>
+                    <span className="text-primary-600 ml-2">$199/mo</span>
                   </div>
                 </div>
                 

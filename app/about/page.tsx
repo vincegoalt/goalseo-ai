@@ -325,7 +325,7 @@ export default function AboutPage() {
               <ul className="space-y-3">
                 <li className="flex items-start gap-2">
                   <CheckCircle className="h-5 w-5 text-success-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm text-gray-700">10X cheaper ($99 vs $5,000/mo)</span>
+                  <span className="text-sm text-gray-700">25X cheaper ($199 vs $5,000/mo)</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="h-5 w-5 text-success-500 flex-shrink-0 mt-0.5" />

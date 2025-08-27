@@ -56,7 +56,7 @@ export default function WhyAIPage() {
       feature: 'Cost Efficiency',
       ai: true,
       agency: false,
-      aiText: '$99-499/month',
+      aiText: '$199-499/month',
       agencyText: '$3,000-8,000/month'
     },
     {
@@ -324,7 +324,7 @@ export default function WhyAIPage() {
                 company: 'LocalBiz Network',
                 industry: 'Services',
                 before: '$3,000/mo agency',
-                after: '$99/mo AI',
+                after: '$199/mo AI',
                 results: '+567% leads',
                 savings: '$34,800/year saved'
               }

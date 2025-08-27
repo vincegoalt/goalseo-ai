@@ -140,7 +140,7 @@ export default function PricingTable({
             <CardDescription>Perfect for small businesses</CardDescription>
             <div className="mt-4">
               <span className="text-gray-400 line-through text-xl">$299</span>
-              <span className="text-4xl font-bold ml-2">$99</span>
+              <span className="text-4xl font-bold ml-2">$199</span>
               <span className="text-muted-foreground">/month</span>
             </div>
           </CardHeader>

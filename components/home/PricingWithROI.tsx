@@ -27,7 +27,7 @@ const pricingPlans: PricingPlan[] = [
     id: 'starter',
     name: 'Starter',
     description: 'Perfect for small businesses',
-    price: 99,
+    price: 199,
     originalPrice: 299,
     period: 'month',
     color: 'gray',

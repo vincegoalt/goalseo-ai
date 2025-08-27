@@ -17,7 +17,7 @@ export default function ComparisonAdvanced() {
       title: 'vs Traditional Agencies',
       us: {
         name: 'GoalSEO AI',
-        price: '$99-499/mo',
+        price: '$199-499/mo',
         features: [
           { text: '24/7 AI optimization', status: true },
           { text: 'Results in 7 days', status: true },
@@ -48,7 +48,7 @@ export default function ComparisonAdvanced() {
       title: 'vs SEO Tools',
       us: {
         name: 'GoalSEO AI',
-        price: '$99-499/mo',
+        price: '$199-499/mo',
         features: [
           { text: 'Fully automated', status: true },
           { text: 'AI does the work', status: true },
@@ -62,7 +62,7 @@ export default function ComparisonAdvanced() {
       },
       them: {
         name: 'SEO Tools (Ahrefs, SEMrush)',
-        price: '$99-399/mo',
+        price: '$199-399/mo',
         features: [
           { text: 'Manual operation required', status: false },
           { text: 'You do all the work', status: false },
@@ -79,7 +79,7 @@ export default function ComparisonAdvanced() {
       title: 'vs In-House Team',
       us: {
         name: 'GoalSEO AI',
-        price: '$99-499/mo',
+        price: '$199-499/mo',
         features: [
           { text: 'No hiring needed', status: true },
           { text: 'Instant deployment', status: true },
