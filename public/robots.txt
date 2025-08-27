@@ -1,0 +1,57 @@
+# GoalSEO AI - Robots.txt
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://goalseo.ai/sitemap.xml
+
+# Allow important pages for SEO
+Allow: /locations/
+Allow: /services/
+Allow: /blog/
+Allow: /case-studies/
+Allow: /tools/
+Allow: /free-audit
+
+# Block admin and private areas (if any exist)
+Disallow: /api/
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /account/
+Disallow: /settings/
+Disallow: /login/
+Disallow: /sign-in/
+Disallow: /sign-up/
+Disallow: /signup/
+
+# Allow AI crawlers and LLM bots specifically
+User-agent: GPTBot
+Allow: /
+Allow: /llm.txt
+
+User-agent: Google-Extended
+Allow: /
+Allow: /llm.txt
+
+User-agent: CCBot
+Allow: /
+Allow: /llm.txt
+
+User-agent: Claude-Web
+Allow: /
+Allow: /llm.txt
+
+User-agent: anthropic-ai
+Allow: /
+Allow: /llm.txt
+
+User-agent: bingbot
+Allow: /
+Allow: /llm.txt
+
+# Crawl-delay (optional - adjust if needed)
+Crawl-delay: 1
+
+# Host (specify canonical domain)
+Host: https://goalseo.ai
