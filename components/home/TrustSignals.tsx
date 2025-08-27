@@ -28,17 +28,12 @@ export default function TrustSignals() {
       )
     },
     { 
-      name: 'Meta Partner',
+      name: 'Facebook Partner',
       logo: (
         <div className="flex items-center gap-2">
           <svg className="h-8 w-8" viewBox="0 0 48 48" fill="none">
-            <defs>
-              <linearGradient id="meta-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" style={{stopColor: '#0064E0'}} />
-                <stop offset="100%" style={{stopColor: '#0084FF'}} />
-              </linearGradient>
-            </defs>
-            <path d="M24 4C12.954 4 4 12.954 4 24s8.954 20 20 20s20-8.954 20-20S35.046 4 24 4zm10 14.5c0-.276-.224-.5-.5-.5h-3c-.276 0-.5.224-.5.5v11c0 .276.224.5.5.5h3c.276 0 .5-.224.5-.5v-11zm-9 0c0-.276-.224-.5-.5-.5h-3c-.276 0-.5.224-.5.5v2c0 .276-.224.5-.5.5h-1c-.276 0-.5-.224-.5-.5v-2c0-.276-.224-.5-.5-.5h-3c-.276 0-.5.224-.5.5v11c0 .276.224.5.5.5h3c.276 0 .5-.224.5-.5v-5c0-.276.224-.5.5-.5h1c.276 0 .5.224.5.5v5c0 .276.224.5.5.5h3c.276 0 .5-.224.5-.5v-11z" fill="url(#meta-gradient)"/>
+            <circle cx="24" cy="24" r="20" fill="#1877F2"/>
+            <path d="M29.5 24.5H26V36H21V24.5H18V20H21V17.5C21 14.5 23 12 26 12H29V16H27.5C26.5 16 26 16.5 26 17.5V20H29L29.5 24.5Z" fill="white"/>
           </svg>
           <span className="text-gray-700 font-medium">Partner</span>
         </div>
