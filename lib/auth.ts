@@ -53,12 +53,16 @@ export const auth = betterAuth({
       createCustomerOnSignUp: true,
       use: [
         checkout({
-          products: process.env.NEXT_PUBLIC_STARTER_TIER ? [
-            {
+          products: [
+            ...(process.env.NEXT_PUBLIC_STARTER_TIER ? [{
               productId: process.env.NEXT_PUBLIC_STARTER_TIER,
               slug: process.env.NEXT_PUBLIC_STARTER_SLUG || "starter",
-            },
-          ] : [],
+            }] : []),
+            ...(process.env.NEXT_PUBLIC_PRO_TIER ? [{
+              productId: process.env.NEXT_PUBLIC_PRO_TIER,
+              slug: process.env.NEXT_PUBLIC_PRO_SLUG || "pro",
+            }] : []),
+          ],
           successUrl: `${process.env.NEXT_PUBLIC_APP_URL}/${process.env.POLAR_SUCCESS_URL || "success"}`,
           authenticatedUsersOnly: true,
         }),
