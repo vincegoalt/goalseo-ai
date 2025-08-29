@@ -13,19 +13,43 @@ const navigation = [
     href: '/services',
     hasDropdown: true,
     dropdownItems: [
-      { name: 'Local SEO', href: '/services/local-seo' },
-      { name: 'National SEO', href: '/services/national-seo' },
-      { name: 'E-commerce SEO', href: '/services/ecommerce-seo' },
-      { name: 'Enterprise SEO', href: '/services/enterprise-seo' },
+      { name: '🚀 GEO (Generative Engine Optimization)', href: '/future-of-seo' },
+      { name: '🎯 AEO (Answer Engine Optimization)', href: '/future-of-seo' },
+      { name: 'Local SEO - Long Beach', href: '/local-seo-long-beach' },
+      { name: 'WordPress SEO', href: '/wordpress-seo-masters' },
+      { name: 'Shopify SEO', href: '/shopify-seo-experts' },
       { name: 'Technical SEO', href: '/services/technical-seo' },
       { name: 'Link Building', href: '/services/link-building' },
+      { name: 'All Services', href: '/services' },
     ]
   },
-  { name: 'Industries', href: '/industries' },
+  {
+    name: 'Industries',
+    href: '/industries',
+    hasDropdown: true,
+    dropdownItems: [
+      { name: 'E-commerce', href: '/industries/e-commerce' },
+      { name: 'SaaS', href: '/industries/saas' },
+      { name: 'Healthcare', href: '/industries/healthcare' },
+      { name: 'Real Estate', href: '/industries/real-estate' },
+      { name: 'Legal', href: '/industries/legal' },
+      { name: 'Restaurant', href: '/industries/restaurant' },
+      { name: 'All Industries', href: '/industries' },
+    ]
+  },
+  {
+    name: 'Why Us',
+    href: '/about',
+    hasDropdown: true,
+    dropdownItems: [
+      { name: 'How We Use AI', href: '/how-we-use-ai' },
+      { name: 'Meet the Team', href: '/team' },
+      { name: 'About GoalSEO', href: '/about' },
+      { name: 'Awards & Recognition', href: '/awards' },
+    ]
+  },
   { name: 'Case Studies', href: '/case-studies' },
-  { name: 'Tools', href: '/tools' },
-  { name: 'About', href: '/about' },
-  { name: 'Blog', href: '/blog' },
+  { name: 'Free Audit', href: '/free-audit' },
 ]
 
 export default function Header() {

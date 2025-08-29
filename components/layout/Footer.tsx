@@ -1,50 +1,79 @@
 import Link from 'next/link'
 import { siteConfig } from '@/config/site'
-import { MapPin, Phone, Mail, Facebook, Twitter, Linkedin, Instagram, ArrowRight } from 'lucide-react'
+import { MapPin, Phone, Mail, Facebook, Twitter, Linkedin, Instagram, ArrowRight, Award, Shield, CheckCircle, Star } from 'lucide-react'
 
 const footerLinks = {
   services: [
-    { name: 'Local SEO', href: '/services/local-seo' },
-    { name: 'National SEO', href: '/services/national-seo' },
-    { name: 'International SEO', href: '/services/international-seo' },
-    { name: 'E-commerce SEO', href: '/services/ecommerce-seo' },
-    { name: 'Enterprise SEO', href: '/services/enterprise-seo' },
+    { name: 'GEO (Generative Engine Optimization)', href: '/future-of-seo' },
+    { name: 'AEO (Answer Engine Optimization)', href: '/future-of-seo' },
+    { name: 'Local SEO Long Beach', href: '/local-seo-long-beach' },
+    { name: 'WordPress SEO', href: '/wordpress-seo-masters' },
+    { name: 'Shopify SEO', href: '/shopify-seo-experts' },
     { name: 'Technical SEO', href: '/services/technical-seo' },
     { name: 'Link Building', href: '/services/link-building' },
   ],
+  industries: [
+    { name: 'E-commerce', href: '/industries/e-commerce' },
+    { name: 'SaaS', href: '/industries/saas' },
+    { name: 'Healthcare', href: '/industries/healthcare' },
+    { name: 'Real Estate', href: '/industries/real-estate' },
+    { name: 'Legal', href: '/industries/legal' },
+    { name: 'Restaurant', href: '/industries/restaurant' },
+  ],
   company: [
+    { name: 'How We Use AI', href: '/how-we-use-ai' },
+    { name: 'Meet the Team', href: '/team' },
     { name: 'About Us', href: '/about' },
     { name: 'Case Studies', href: '/case-studies' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Careers', href: '/careers' },
     { name: 'Contact', href: '/contact' },
   ],
   resources: [
     { name: 'Free SEO Audit', href: '/free-audit' },
     { name: 'SEO Tools', href: '/tools' },
-    { name: 'SEO Guide', href: '/guide' },
+    { name: 'ROI Calculator', href: '/tools/roi-calculator' },
     { name: 'Pricing', href: '/pricing' },
-    { name: 'FAQ', href: '/faq' },
-  ],
-  locations: [
-    { name: 'Long Beach', href: '/locations/long-beach' },
-    { name: 'Los Angeles', href: '/locations/los-angeles' },
-    { name: 'Orange County', href: '/locations/orange-county' },
-    { name: 'San Diego', href: '/locations/san-diego' },
-    { name: 'View All Locations', href: '/locations' },
+    { name: 'Blog', href: '/blog' },
   ],
 }
 
 export default function Footer() {
   return (
     <footer className="bg-navy text-white">
+      {/* Trust Signals Bar */}
+      <div className="bg-gray-900 border-b border-gray-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+          <div className="flex flex-wrap justify-center items-center gap-8 text-sm">
+            <div className="flex items-center gap-2">
+              <Award className="h-5 w-5 text-yellow-500" />
+              <span className="text-gray-400">10+ Years Experience</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Shield className="h-5 w-5 text-blue-500" />
+              <span className="text-gray-400">BBB A+ Rating</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <CheckCircle className="h-5 w-5 text-green-500" />
+              <span className="text-gray-400">500+ Success Stories</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Star className="h-5 w-5 text-yellow-500" />
+              <span className="text-gray-400">4.9/5 Client Rating</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <MapPin className="h-5 w-5 text-red-500" />
+              <span className="text-gray-400">Long Beach, CA Based</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* CTA Section */}
       <div className="bg-gradient-to-r from-primary-500 to-electric-500">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div>
-              <h2 className="text-3xl font-bold mb-2">Ready to Achieve Your SEO Goals?</h2>
-              <p className="text-primary-100">Get your free SEO audit and custom strategy today.</p>
+              <h2 className="text-3xl font-bold mb-2">Ready to Dominate with AI + Human SEO?</h2>
+              <p className="text-primary-100">Get your free audit and see how we combine AI power with human expertise.</p>
             </div>
             <Link
               href="/free-audit"
@@ -73,7 +102,7 @@ export default function Footer() {
               </div>
             </Link>
             <p className="text-gray-400 mb-6">
-              AI-powered SEO solutions that deliver measurable results and achieve your business goals.
+              AI-enhanced human expertise. Masters of GEO, AEO, and traditional SEO. Based in Long Beach, serving nationwide.
             </p>
             <div className="space-y-3">
               <a href={`tel:${siteConfig.phone}`} className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors">
@@ -136,11 +165,11 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Locations */}
+          {/* Industries */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">Locations</h3>
+            <h3 className="text-lg font-semibold mb-6">Industries</h3>
             <ul className="space-y-3">
-              {footerLinks.locations.map((link) => (
+              {footerLinks.industries.map((link) => (
                 <li key={link.name}>
                   <Link href={link.href} className="text-gray-400 hover:text-white transition-colors">
                     {link.name}
