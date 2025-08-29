@@ -17,8 +17,7 @@ export default function HeroUltra() {
     roi: 0
   })
   
-  const [activeWord, setActiveWord] = useState(0)
-  const words = ['Human Excellence', 'Rankings', 'Traffic', 'Growth']
+  // Removed word rotation - now static
   
   const containerRef = useRef<HTMLDivElement>(null)
   const { scrollYProgress } = useScroll({
@@ -47,13 +46,7 @@ export default function HeroUltra() {
     }
   }, [])
   
-  // Word rotation
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveWord((prev) => (prev + 1) % words.length)
-    }, 2000)
-    return () => clearInterval(interval)
-  }, [words.length])
+  // Word rotation removed - now static
   
   // Live activity feed
   const activities = [
@@ -139,17 +132,9 @@ export default function HeroUltra() {
             className="text-5xl lg:text-7xl font-bold text-gray-900 mb-6"
           >
             AI-Powered SEO with{' '}
-            <div className="relative inline-block ml-4">
-              <motion.span
-                key={activeWord}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                className="bg-gradient-to-r from-primary-500 to-electric-500 bg-clip-text text-transparent"
-              >
-                {words[activeWord]}
-              </motion.span>
-            </div>
+            <span className="bg-gradient-to-r from-primary-500 to-electric-500 bg-clip-text text-transparent">
+              Human Excellence
+            </span>
           </motion.h1>
           
           <motion.p
