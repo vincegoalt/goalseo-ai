@@ -1,329 +1,249 @@
 "use client"
 
-import { motion, useAnimation } from 'framer-motion'
-import { useState, useEffect } from 'react'
+import { motion } from 'framer-motion'
 import { 
-  Brain, Cpu, Globe, Search, FileText, Link2, 
-  TrendingUp, BarChart3, Users, Zap, Shield, 
-  Sparkles, Target, Activity, Code, Database,
-  Bot, Gauge, Award
+  Brain, Search, BarChart3, Globe, Database, Zap, 
+  Users, Link2, Edit3, MessageSquare, TrendingUp, Award,
+  CheckCircle, ArrowRight, Sparkles, HandshakeIcon
 } from 'lucide-react'
+import Link from 'next/link'
 
 export default function AIFeaturesShowcase() {
-  const [activeFeature, setActiveFeature] = useState(0)
-  const [progress, setProgress] = useState(0)
-  
-  const features = [
+  const aiCapabilities = [
     {
-      id: 'content-ai',
-      title: 'Content AI Engine',
-      icon: FileText,
-      color: 'from-purple-500 to-pink-500',
-      description: 'Generates 1,000+ SEO-optimized articles monthly',
-      metrics: {
-        speed: '50x faster than humans',
-        quality: '98% unique content',
-        languages: '120+ languages'
-      },
-      demo: {
-        input: 'Best project management software',
-        output: 'Creating comprehensive guide with 2,500+ words, competitor analysis, and FAQ section...'
-      }
+      icon: BarChart3,
+      title: "Analyzes 10,000+ ranking factors 24/7",
+      description: "Continuous monitoring and analysis of all ranking signals"
     },
     {
-      id: 'link-builder',
-      title: 'Autonomous Link Builder',
-      icon: Link2,
-      color: 'from-blue-500 to-cyan-500',
-      description: 'Secures high-authority backlinks automatically',
-      metrics: {
-        dr: 'DR 50+ domains',
-        success: '73% outreach success',
-        links: '100+ links/month'
-      },
-      demo: {
-        input: 'Technology blog outreach',
-        output: 'Found 847 relevant sites, personalizing outreach to top 100...'
-      }
-    },
-    {
-      id: 'rank-tracker',
-      title: 'Real-Time Rank Tracker',
-      icon: TrendingUp,
-      color: 'from-green-500 to-emerald-500',
-      description: 'Monitors 50,000+ keywords across all search engines',
-      metrics: {
-        updates: 'Every 6 hours',
-        accuracy: '99.9% accurate',
-        alerts: 'Instant notifications'
-      },
-      demo: {
-        input: 'Monitor competitor rankings',
-        output: 'Tracking 12,847 keywords, detected 234 ranking changes today...'
-      }
-    },
-    {
-      id: 'technical-seo',
-      title: 'Technical SEO Autopilot',
-      icon: Code,
-      color: 'from-orange-500 to-red-500',
-      description: 'Fixes technical issues before they impact rankings',
-      metrics: {
-        issues: '127 checks',
-        speed: 'Real-time fixes',
-        monitoring: '24/7 scanning'
-      },
-      demo: {
-        input: 'Site health check',
-        output: 'Fixed 23 issues: schema markup, Core Web Vitals, mobile optimization...'
-      }
-    },
-    {
-      id: 'competitor-intel',
-      title: 'Competitor Intelligence',
       icon: Search,
-      color: 'from-indigo-500 to-purple-500',
-      description: 'Reverse-engineers competitor strategies in real-time',
-      metrics: {
-        competitors: 'Unlimited tracking',
-        insights: 'Daily updates',
-        gaps: 'Opportunity finder'
-      },
-      demo: {
-        input: 'Analyze top 3 competitors',
-        output: 'Found 156 content gaps and 89 easy-win keywords...'
-      }
+      title: "Monitors competitors in real-time",
+      description: "Instant alerts when competitors make moves"
     },
     {
-      id: 'conversion-optimizer',
-      title: 'Conversion Optimizer',
-      icon: Target,
-      color: 'from-pink-500 to-rose-500',
-      description: 'A/B tests and optimizes for maximum conversions',
-      metrics: {
-        testing: 'Multivariate tests',
-        lift: '+156% avg improvement',
-        personalization: 'AI-driven'
-      },
-      demo: {
-        input: 'Optimize landing pages',
-        output: 'Running 12 tests, winner showing +234% conversion rate...'
-      }
+      icon: Database,
+      title: "Identifies content gaps instantly",
+      description: "Discovers opportunities faster than any human could"
+    },
+    {
+      icon: TrendingUp,
+      title: "Tracks algorithm changes",
+      description: "Adapts strategies immediately to ranking updates"
+    },
+    {
+      icon: Globe,
+      title: "Processes millions of keywords",
+      description: "Analyzes search volume, difficulty, and intent at scale"
+    },
+    {
+      icon: Zap,
+      title: "Automates technical audits",
+      description: "Continuous scanning for technical SEO issues"
     }
   ]
-  
-  // Auto-rotate features
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveFeature((prev) => (prev + 1) % features.length)
-      setProgress(0)
-    }, 5000)
-    
-    return () => clearInterval(interval)
-  }, [])
-  
-  // Progress animation
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setProgress(prev => Math.min(prev + 2, 100))
-    }, 100)
-    
-    return () => clearInterval(interval)
-  }, [activeFeature])
-  
-  const activeFeatureData = features[activeFeature]
-  const Icon = activeFeatureData.icon
-  
+
+  const humanExpertise = [
+    {
+      icon: Edit3,
+      title: "Craft compelling, E-E-A-T compliant content",
+      description: "Original, authoritative content that resonates with readers"
+    },
+    {
+      icon: Link2,
+      title: "Build genuine relationships for links",
+      description: "Real outreach and partnerships that last"
+    },
+    {
+      icon: Brain,
+      title: "Create custom strategies for your industry",
+      description: "Tailored approaches based on deep industry knowledge"
+    },
+    {
+      icon: MessageSquare,
+      title: "Ensure brand voice consistency",
+      description: "Maintain your unique tone across all content"
+    },
+    {
+      icon: Award,
+      title: "Navigate complex Google updates",
+      description: "Expert interpretation and strategic adjustments"
+    },
+    {
+      icon: HandshakeIcon,
+      title: "Provide strategic business insights",
+      description: "Connect SEO to your broader business goals"
+    }
+  ]
+
   return (
-    <section className="py-20 bg-gradient-to-b from-white to-gray-50 overflow-hidden">
+    <section className="py-20 bg-gradient-to-b from-white via-gray-50 to-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-12"
+          className="text-center mb-16"
         >
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-primary-100 to-electric-100 text-primary-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
-            <Brain className="h-4 w-4" />
-            <span>AI Features</span>
+            <Sparkles className="h-4 w-4" />
+            <span>Why Choose GoalSEO</span>
           </div>
           
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-            6 AI Agents Working{' '}
-            <span className="bg-gradient-to-r from-primary-500 to-electric-500 bg-clip-text text-transparent">
-              24/7 For You
-            </span>
+            AI-Enhanced Human Expertise: The Perfect Formula
           </h2>
           
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Each AI agent is an expert in its domain, working together to dominate search results
+            We combine the processing power of AI with the creativity, strategy, and relationship-building that only humans can provide.
           </p>
         </motion.div>
-        
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Feature Selector */}
-          <div className="space-y-4">
-            {features.map((feature, index) => {
-              const FeatureIcon = feature.icon
-              return (
-                <motion.button
-                  key={feature.id}
-                  onClick={() => {
-                    setActiveFeature(index)
-                    setProgress(0)
-                  }}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className={`w-full text-left p-4 rounded-xl transition-all ${
-                    activeFeature === index
-                      ? 'bg-white shadow-xl border-2 border-primary-200'
-                      : 'bg-gray-50 hover:bg-white hover:shadow-lg border border-transparent'
-                  }`}
-                >
-                  <div className="flex items-center gap-4">
-                    <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center text-white`}>
-                      <FeatureIcon className="h-6 w-6" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="font-semibold text-gray-900">{feature.title}</h3>
-                      <p className="text-sm text-gray-600 mt-1">{feature.description}</p>
-                    </div>
-                    {activeFeature === index && (
-                      <div className="w-12 h-12 rounded-full bg-gradient-to-r from-primary-500 to-electric-500 flex items-center justify-center">
-                        <Activity className="h-6 w-6 text-white animate-pulse" />
-                      </div>
-                    )}
-                  </div>
-                  
-                  {activeFeature === index && (
-                    <motion.div
-                      initial={{ scaleX: 0 }}
-                      animate={{ scaleX: 1 }}
-                      className="mt-3 h-1 bg-gradient-to-r from-primary-500 to-electric-500 rounded-full origin-left"
-                      style={{ transform: `scaleX(${progress / 100})` }}
-                    />
-                  )}
-                </motion.button>
-              )
-            })}
-          </div>
-          
-          {/* Feature Demo */}
+
+        {/* Two Column Comparison */}
+        <div className="grid lg:grid-cols-2 gap-8 mb-16">
+          {/* AI Column */}
           <motion.div
-            key={activeFeature}
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-            className="relative"
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 border border-blue-100"
           >
-            <div className="absolute -inset-4 bg-gradient-to-r from-primary-500/20 to-electric-500/20 rounded-2xl blur-xl" />
-            <div className="relative bg-white rounded-2xl shadow-2xl border border-gray-200 p-8">
-              {/* Header */}
-              <div className="flex items-center justify-between mb-6">
-                <div className="flex items-center gap-3">
-                  <div className={`w-10 h-10 rounded-lg bg-gradient-to-r ${activeFeatureData.color} flex items-center justify-center text-white`}>
-                    <Icon className="h-5 w-5" />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900">{activeFeatureData.title}</h3>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-                  <span className="text-sm text-gray-500">Live</span>
-                </div>
+            <div className="flex items-center gap-3 mb-8">
+              <div className="p-3 bg-blue-500 rounded-xl">
+                <Brain className="h-6 w-6 text-white" />
               </div>
-              
-              {/* Metrics */}
-              <div className="grid grid-cols-3 gap-4 mb-6">
-                {Object.entries(activeFeatureData.metrics).map(([key, value], index) => (
+              <h3 className="text-2xl font-bold text-gray-900">What AI Does Best</h3>
+            </div>
+            
+            <div className="space-y-4">
+              {aiCapabilities.map((capability, index) => {
+                const Icon = capability.icon
+                return (
                   <motion.div
-                    key={key}
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.1 }}
-                    className="text-center p-3 bg-gray-50 rounded-lg"
+                    key={index}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.3 + index * 0.1 }}
+                    className="flex gap-4 items-start"
                   >
-                    <div className="text-sm font-semibold text-gray-900">{value}</div>
-                    <div className="text-xs text-gray-600 capitalize">{key}</div>
+                    <div className="flex-shrink-0 mt-1">
+                      <Icon className="h-5 w-5 text-blue-600" />
+                    </div>
+                    <div>
+                      <div className="font-semibold text-gray-900 mb-1">
+                        {capability.title}
+                      </div>
+                      <div className="text-sm text-gray-600">
+                        {capability.description}
+                      </div>
+                    </div>
                   </motion.div>
-                ))}
+                )
+              })}
+            </div>
+          </motion.div>
+
+          {/* Human Column */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8 border border-green-100"
+          >
+            <div className="flex items-center gap-3 mb-8">
+              <div className="p-3 bg-green-500 rounded-xl">
+                <Users className="h-6 w-6 text-white" />
               </div>
-              
-              {/* Demo Terminal */}
-              <div className="bg-gray-900 rounded-lg p-4">
-                <div className="flex items-center gap-2 mb-3">
-                  <div className="flex gap-1">
-                    <div className="w-3 h-3 bg-red-500 rounded-full" />
-                    <div className="w-3 h-3 bg-yellow-500 rounded-full" />
-                    <div className="w-3 h-3 bg-green-500 rounded-full" />
-                  </div>
-                  <span className="text-xs text-gray-400">AI Terminal</span>
-                </div>
-                
-                <div className="space-y-2">
-                  <div className="text-green-400 font-mono text-sm">
-                    $ {activeFeatureData.demo.input}
-                  </div>
+              <h3 className="text-2xl font-bold text-gray-900">What Our Experts Do Best</h3>
+            </div>
+            
+            <div className="space-y-4">
+              {humanExpertise.map((expertise, index) => {
+                const Icon = expertise.icon
+                return (
                   <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 0.5 }}
-                    className="text-gray-300 font-mono text-sm"
+                    key={index}
+                    initial={{ opacity: 0, x: 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.3 + index * 0.1 }}
+                    className="flex gap-4 items-start"
                   >
-                    <span className="text-blue-400">AI:</span> {activeFeatureData.demo.output}
+                    <div className="flex-shrink-0 mt-1">
+                      <Icon className="h-5 w-5 text-green-600" />
+                    </div>
+                    <div>
+                      <div className="font-semibold text-gray-900 mb-1">
+                        {expertise.title}
+                      </div>
+                      <div className="text-sm text-gray-600">
+                        {expertise.description}
+                      </div>
+                    </div>
                   </motion.div>
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 1 }}
-                    className="flex items-center gap-2 text-yellow-400 font-mono text-sm"
-                  >
-                    <Activity className="h-4 w-4 animate-pulse" />
-                    Processing...
-                  </motion.div>
-                </div>
-              </div>
-              
-              {/* Action Button */}
-              <button className="mt-6 w-full bg-gradient-to-r from-primary-500 to-primary-600 text-white py-3 rounded-xl font-semibold hover:from-primary-600 hover:to-primary-700 transition-all flex items-center justify-center gap-2">
-                <Sparkles className="h-5 w-5" />
-                See This Feature in Action
-              </button>
+                )
+              })}
             </div>
           </motion.div>
         </div>
-        
-        {/* Stats Bar */}
+
+        {/* Bottom CTA */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-16 grid md:grid-cols-4 gap-6"
+          transition={{ delay: 0.6 }}
+          className="text-center"
         >
-          {[
-            { icon: Bot, label: 'AI Agents', value: '6 Active', color: 'text-purple-600' },
-            { icon: Gauge, label: 'Processing Speed', value: '50x Faster', color: 'text-blue-600' },
-            { icon: Database, label: 'Data Analyzed', value: '10TB Daily', color: 'text-green-600' },
-            { icon: Award, label: 'Success Rate', value: '98.7%', color: 'text-orange-600' }
-          ].map((stat, index) => {
-            const StatIcon = stat.icon
-            return (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-white rounded-xl p-6 text-center border border-gray-200 hover:shadow-lg transition-all"
+          <div className="bg-gradient-to-r from-primary-50 to-electric-50 rounded-2xl p-8 border border-primary-100">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              Get the Best of Both Worlds
+            </h3>
+            <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+              Our unique approach combines AI efficiency with human creativity to deliver results that pure AI tools or traditional agencies can't match.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/free-audit"
+                className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-primary-500 to-primary-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-primary-600 hover:to-primary-700 transition-all shadow-lg hover:shadow-xl group"
               >
-                <StatIcon className={`h-8 w-8 ${stat.color} mx-auto mb-3`} />
-                <div className="text-2xl font-bold text-gray-900">{stat.value}</div>
-                <div className="text-sm text-gray-600">{stat.label}</div>
-              </motion.div>
-            )
-          })}
+                <Sparkles className="h-5 w-5" />
+                Get Your Free AI + Human Audit
+                <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              
+              <Link
+                href="/how-we-use-ai"
+                className="inline-flex items-center justify-center gap-2 bg-white text-primary-600 border-2 border-primary-200 px-8 py-4 rounded-xl font-semibold hover:bg-primary-50 transition-all"
+              >
+                Learn More About Our Approach
+              </Link>
+            </div>
+            
+            {/* Trust Indicators */}
+            <div className="flex flex-wrap items-center justify-center gap-6 mt-8 text-sm text-gray-600">
+              <div className="flex items-center gap-2">
+                <CheckCircle className="h-4 w-4 text-green-500" />
+                <span>No contracts required</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle className="h-4 w-4 text-green-500" />
+                <span>387% average ROI</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle className="h-4 w-4 text-green-500" />
+                <span>Results in 30-60 days</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle className="h-4 w-4 text-green-500" />
+                <span>Money-back guarantee</span>
+              </div>
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>

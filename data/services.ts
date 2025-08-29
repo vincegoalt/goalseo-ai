@@ -16,6 +16,127 @@ export interface Service {
 }
 
 export const services: Service[] = [
+  // Cutting-Edge SEO Services
+  {
+    id: 'geo-optimization',
+    slug: 'geo-optimization',
+    title: 'Generative Engine Optimization (GEO)',
+    shortDescription: 'Position your brand for AI-powered search engines like ChatGPT, Perplexity, and Google\'s SGE',
+    description: 'Be first to market with Generative Engine Optimization. We optimize your content for AI models, ensuring your brand appears in ChatGPT responses, Google\'s AI snapshots, and other AI-powered search experiences.',
+    icon: 'Brain',
+    features: [
+      'AI Model Training Data Optimization',
+      'Featured Snippet Optimization',
+      'Structured Data for AI Consumption',
+      'Brand Mention Strategies',
+      'Authoritative Source Positioning',
+      'Entity SEO Implementation',
+      'AI Citation Building',
+      'Knowledge Graph Optimization'
+    ],
+    benefits: [
+      'Appear in ChatGPT responses',
+      'Featured in Google SGE snapshots',
+      'Cited by Perplexity AI',
+      'Future-proof your SEO strategy'
+    ],
+    category: 'specialized',
+    price: {
+      starting: 1999,
+      currency: 'USD',
+      period: 'month'
+    }
+  },
+  {
+    id: 'aeo-optimization',
+    slug: 'aeo-optimization',
+    title: 'Answer Engine Optimization (AEO)',
+    shortDescription: 'Dominate zero-click searches and voice assistants',
+    description: 'Win the zero-click search game with Answer Engine Optimization. We help you capture featured snippets, People Also Ask boxes, and voice search results to maximize visibility even when users don\'t click.',
+    icon: 'MessageSquare',
+    features: [
+      'Featured Snippet Optimization',
+      'People Also Ask Domination',
+      'Voice Search Optimization',
+      'Siri & Alexa Compatibility',
+      'Quick Answer Positioning',
+      'FAQ Schema Implementation',
+      'Rich Results Eligibility',
+      'Natural Language Processing'
+    ],
+    benefits: [
+      'Win 50% more featured snippets',
+      'Dominate voice search results',
+      'Capture zero-click traffic',
+      'Increase brand visibility by 300%'
+    ],
+    category: 'specialized',
+    price: {
+      starting: 1499,
+      currency: 'USD',
+      period: 'month'
+    }
+  },
+  {
+    id: 'reddit-seo',
+    slug: 'reddit-seo',
+    title: 'Reddit SEO Strategy',
+    shortDescription: 'Tap into Reddit\'s explosive search growth',
+    description: 'Leverage Reddit\'s newfound prominence in Google search results. We create authentic engagement strategies that drive traffic from Reddit while building genuine community presence.',
+    icon: 'Users',
+    features: [
+      'Subreddit Keyword Research',
+      'Authentic Engagement Strategies',
+      'Reddit-to-Website Funnel',
+      'Community Building Tactics',
+      'Reddit Ads Integration',
+      'Content Seeding Strategies',
+      'Reputation Management',
+      'Performance Tracking'
+    ],
+    benefits: [
+      'Tap into Reddit\'s search dominance',
+      'Build authentic community presence',
+      'Drive qualified traffic',
+      'Improve brand reputation'
+    ],
+    category: 'marketing',
+    price: {
+      starting: 999,
+      currency: 'USD',
+      period: 'month'
+    }
+  },
+  {
+    id: 'ai-content-optimization',
+    slug: 'ai-content-optimization',
+    title: 'AI Content Optimization',
+    shortDescription: 'Human-crafted content enhanced by AI insights',
+    description: 'The perfect blend of AI efficiency and human creativity. We use AI for research and optimization while ensuring every piece of content is human-written, E-E-A-T compliant, and Google-friendly.',
+    icon: 'Sparkles',
+    features: [
+      'AI Research, Human Writing',
+      'E-E-A-T Compliance Guaranteed',
+      'Google-Friendly AI Content',
+      'Expert Review Process',
+      'Original Research Inclusion',
+      'Brand Voice Consistency',
+      'Fact-Checking & Verification',
+      'Performance Optimization'
+    ],
+    benefits: [
+      'Create 10x more content',
+      '100% Google compliant',
+      'Maintain brand authenticity',
+      'Scale without sacrificing quality'
+    ],
+    category: 'marketing',
+    price: {
+      starting: 1299,
+      currency: 'USD',
+      period: 'month'
+    }
+  },
   // Core SEO Services
   {
     id: 'local-seo',

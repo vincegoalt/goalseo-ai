@@ -18,7 +18,7 @@ export default function HeroUltra() {
   })
   
   const [activeWord, setActiveWord] = useState(0)
-  const words = ['Rankings', 'Traffic', 'Revenue', 'Growth']
+  const words = ['Human Excellence', 'Rankings', 'Traffic', 'Growth']
   
   const containerRef = useRef<HTMLDivElement>(null)
   const { scrollYProgress } = useScroll({
@@ -138,7 +138,7 @@ export default function HeroUltra() {
             transition={{ duration: 0.8 }}
             className="text-5xl lg:text-7xl font-bold text-gray-900 mb-6"
           >
-            AI That Gets You{' '}
+            AI-Powered SEO with{' '}
             <div className="relative inline-block ml-4">
               <motion.span
                 key={activeWord}
@@ -156,12 +156,21 @@ export default function HeroUltra() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-xl lg:text-2xl text-gray-600 max-w-3xl mx-auto mb-12"
+            className="text-xl lg:text-2xl text-gray-600 max-w-3xl mx-auto mb-8"
           >
-            Replace your $5,000/mo agency with AI that actually works.
+            We combine cutting-edge AI with 10+ years of expertise to deliver results agencies charging $5,000/mo can't match.
             <span className="block mt-2 text-lg">
               <span className="font-semibold text-gray-900">387% average ROI</span> in 90 days or your money back.
             </span>
+          </motion.p>
+          
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
+            className="text-lg text-primary-600 font-semibold max-w-3xl mx-auto mb-12"
+          >
+            Masters of Generative Engine Optimization (GEO), Answer Engine Optimization (AEO), and Traditional SEO
           </motion.p>
           
           {/* CTA Buttons */}
