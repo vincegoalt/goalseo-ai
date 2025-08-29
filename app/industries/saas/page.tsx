@@ -232,7 +232,7 @@ export default function SaaSIndustryPage() {
                     </div>
                   </div>
                 )
-              }}}
+              })}
             </div>
           </div>
         </div>

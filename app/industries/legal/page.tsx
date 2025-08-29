@@ -169,7 +169,7 @@ export default function LegalIndustryPage() {
                   <p className="text-gray-600">{service.description}</p>
                 </div>
               )
-            }}}
+            })}
           </div>
         </div>
       </section>
