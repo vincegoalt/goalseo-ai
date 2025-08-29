@@ -119,7 +119,7 @@ export default function AboutPage() {
             
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
               GoalSEO was founded with a simple mission: make enterprise-level SEO accessible to every business 
-              through the power of artificial intelligence. We believe great SEO shouldn't cost $5,000/month 
+              through the power of artificial intelligence. We believe great SEO shouldn't cost $3,000/month 
               or require a team of experts.
             </p>
 
@@ -325,7 +325,7 @@ export default function AboutPage() {
               <ul className="space-y-3">
                 <li className="flex items-start gap-2">
                   <CheckCircle className="h-5 w-5 text-success-500 flex-shrink-0 mt-0.5" />
-                  <span className="text-sm text-gray-700">25X cheaper ($199 vs $5,000/mo)</span>
+                  <span className="text-sm text-gray-700">6X cheaper ($499 vs $3,000/mo)</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="h-5 w-5 text-success-500 flex-shrink-0 mt-0.5" />

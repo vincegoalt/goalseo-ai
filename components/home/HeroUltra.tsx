@@ -143,7 +143,7 @@ export default function HeroUltra() {
             transition={{ delay: 0.2 }}
             className="text-xl lg:text-2xl text-gray-600 max-w-3xl mx-auto mb-8"
           >
-            We combine cutting-edge AI with 10+ years of expertise to deliver results agencies charging $5,000/mo can't match.
+            We combine cutting-edge AI with 10+ years of expertise to deliver results agencies charging $3,000/mo can't match.
             <span className="block mt-2 text-lg">
               <span className="font-semibold text-gray-900">387% average ROI</span> in 90 days or your money back.
             </span>

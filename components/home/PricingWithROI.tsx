@@ -48,19 +48,22 @@ const pricingPlans: PricingPlan[] = [
   {
     id: 'growth',
     name: 'Growth Engine',
-    description: 'Complete SEO ecosystem for serious growth',
+    description: 'Complete SEO ecosystem with all next-gen services',
     price: 499,
     originalPrice: 999,
     period: 'month',
     color: 'primary',
     popular: true,
-    badge: 'MOST POPULAR',
+    badge: 'INCLUDES GEO & AEO',
     features: [
+      '🚀 GEO (Generative Engine Optimization)',
+      '🎯 AEO (Answer Engine Optimization)',
+      '📱 Reddit SEO Strategy',
+      'AI Content Optimization',
       'Unlimited pages optimized',
       'Advanced AI SEO automation',
       'Real-time performance tracking',
       'Unlimited keyword tracking',
-      'AI content generation',
       'Smart link building',
       'Competitor intelligence',
       'Technical SEO automation',
@@ -101,7 +104,7 @@ export default function PricingWithROI() {
   const additionalTraffic = newTraffic - monthlyTraffic
   const monthlyRevenue = Math.round((additionalTraffic * (conversionRate / 100)) * avgOrderValue)
   const yearlyRevenue = monthlyRevenue * 12
-  const agencyCost = 5000 // Average agency cost
+  const agencyCost = 3000 // Average agency cost
   const savings = agencyCost - 499 // Growth plan cost
   const totalROI = monthlyRevenue + savings
 

@@ -136,7 +136,7 @@ export default function WhyAIPage() {
             </h1>
 
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              Traditional agencies charge $5,000/month for Excel reports and weekly calls. 
+              Traditional agencies charge $3,000/month for Excel reports and weekly calls. 
               Our AI delivers better results 24/7 for 90% less cost.
             </p>
 
@@ -315,8 +315,8 @@ export default function WhyAIPage() {
               {
                 company: 'E-Store Pro',
                 industry: 'E-commerce',
-                before: '$5,000/mo agency',
-                after: '$199/mo AI',
+                before: '$3,000/mo agency',
+                after: '$499/mo AI',
                 results: '+892% revenue',
                 savings: '$57,600/year saved'
               },

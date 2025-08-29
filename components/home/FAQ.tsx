@@ -18,7 +18,7 @@ const faqs = [
   },
   {
     question: "Do you really save money vs traditional agencies?",
-    answer: "Yes. Our AI handles tasks that would require 5-10 agency employees, passing savings to you. Average client saves $3,000-5,000/month while getting better results. We charge $1,500/month for services agencies charge $5,000+ for."
+    answer: "Yes. Our AI handles tasks that would require 5-10 agency employees, passing savings to you. Average client saves $2,500/month while getting better results. Our Growth Engine at $499/month includes all next-gen services (GEO, AEO, Reddit SEO) that agencies charge $3,000+ for."
   },
   {
     question: "What makes you different from other AI SEO tools?",
