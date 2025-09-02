@@ -83,16 +83,37 @@ export default function DemoPage() {
                 </div>
               </div>
 
-              {/* Video Preview */}
+              {/* Video Preview - Replace VIDEO_ID with your actual YouTube/Vimeo ID */}
               <div className="relative bg-gray-900 rounded-xl overflow-hidden shadow-2xl">
-                <div className="aspect-video flex items-center justify-center">
-                  <button className="group flex items-center gap-3 bg-white/10 backdrop-blur text-white px-8 py-4 rounded-full hover:bg-white/20 transition-all">
-                    <Play className="h-8 w-8 group-hover:scale-110 transition-transform" />
-                    <span className="text-lg font-semibold">Watch 2-Min Overview</span>
-                  </button>
-                </div>
-                <div className="absolute top-4 right-4 bg-red-500 text-white text-xs px-2 py-1 rounded animate-pulse">
-                  LIVE
+                <div className="aspect-video">
+                  {/* Option 1: YouTube Embed */}
+                  <iframe
+                    className="w-full h-full"
+                    src="https://www.youtube.com/embed/VIDEO_ID?rel=0&showinfo=0"
+                    title="GoalSEO AI Demo"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                  
+                  {/* Option 2: Vimeo Embed (comment out YouTube above and uncomment this) */}
+                  {/* <iframe
+                    className="w-full h-full"
+                    src="https://player.vimeo.com/video/VIDEO_ID?badge=0&autopause=0&player_id=0"
+                    frameBorder="0"
+                    allow="autoplay; fullscreen; picture-in-picture"
+                    allowFullScreen
+                  /> */}
+                  
+                  {/* Option 3: Direct Video Upload (uncomment this and comment out iframes above) */}
+                  {/* <video
+                    className="w-full h-full object-cover"
+                    controls
+                    poster="/demo-thumbnail.jpg"
+                  >
+                    <source src="/demo-video.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video> */}
                 </div>
               </div>
             </motion.div>

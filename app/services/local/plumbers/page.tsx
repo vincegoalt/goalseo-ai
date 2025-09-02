@@ -146,45 +146,99 @@ export default function SEOForPlumbers() {
         </div>
       </section>
 
-      {/* Services Beyond SEO */}
+      {/* We Build AND Rank - New Section */}
+      <section className="py-16 bg-gradient-to-br from-blue-50 to-purple-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+            Here's What Makes Us Different: We BUILD Your Website Too
+          </h2>
+          
+          <div className="prose prose-lg max-w-none text-gray-700 mb-12">
+            <p className="text-center text-xl font-semibold text-blue-600 mb-6">
+              Other SEO companies try to polish your broken website. We build you a NEW one that actually works.
+            </p>
+            
+            <div className="bg-white rounded-xl p-6 shadow-lg border border-blue-200">
+              <p className="font-bold text-gray-900 mb-4">The Problem with Most Plumber Websites:</p>
+              <ul className="space-y-2">
+                <li>• Built by cousin's friend in 2008</li>
+                <li>• Takes 30 seconds to load</li>
+                <li>• Dont work on phones</li>
+                <li>• No way for Google to understand what you do</li>
+                <li>• Invisible to voice search and ChatGPT</li>
+              </ul>
+              
+              <p className="font-bold text-gray-900 mt-6 mb-4">What We Do Different:</p>
+              <ul className="space-y-2">
+                <li>• Build you brand NEW WordPress or Shopify site</li>
+                <li>• Lightning fast (loads in 2 seconds)</li>
+                <li>• Perfect on every phone</li>
+                <li>• Built with AI in mind (voice search ready)</li>
+                <li>• THEN we rank it everywhere</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Beyond SEO - Updated */}
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-12">Services Beyond SEO</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-12">Complete Digital Solution for Plumbers</h2>
           
           <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Marketing Agency</h3>
-              <p className="text-gray-700">
-                Some plumbers ask, "why not just pay for ads?" Ads work, but they stop the second you stop paying. SEO keep giving long after. As a marketing agency, we don't just do Google—we help with Facebook ads, Yelp ads, even little postcard mailers if it make sense. But SEO always the base.
+            <div className="bg-blue-50 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Custom Website Development</h3>
+              <p className="text-gray-700 mb-4">
+                We dont just "fix" your old site - we BUILD you a new one. Custom WordPress for service businesses. Online booking, emergency contact forms, service area maps. Everything a plumber needs. Built right from day one.
               </p>
-              <p className="text-gray-600 mt-3">
-                👉 Many plumbers also use <a href="https://www.yelp.com/search?find_desc=plumbers&find_loc=Long+Beach%2C+CA" className="text-blue-600 underline" target="_blank" rel="noopener noreferrer">Yelp Long Beach Plumbers page</a> for leads. SEO makes sure you stand out there too.
+              <p className="text-sm text-blue-600 font-semibold">
+                ✓ WordPress Development<br/>
+                ✓ Mobile-First Design<br/>
+                ✓ AI-Ready Structure<br/>
+                ✓ Voice Search Optimized
+              </p>
+            </div>
+            
+            <div className="bg-purple-50 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Then We Rank It Everywhere</h3>
+              <p className="text-gray-700 mb-4">
+                Once your new site built, we make sure everyone finds it. Google, voice search ("Hey Siri, find plumber near me"), even ChatGPT recommendations. Complete SEO package included.
+              </p>
+              <p className="text-sm text-purple-600 font-semibold">
+                ✓ Local SEO Domination<br/>
+                ✓ Voice Search Ready<br/>
+                ✓ ChatGPT Visibility<br/>
+                ✓ Google Maps #1
               </p>
             </div>
             
             <div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">Marketing Consultant</h3>
               <p className="text-gray-700">
-                I met a plumber in East Long Beach who said, "I don't even know what to ask for." That's normal. As a marketing consultant, I sit down and show you what works. Maybe you need better photos of your work. Maybe your reviews look fake. Maybe your website missing service pages. I give straight talk, no fancy terms.
+                I met a plumber in East Long Beach who said, "I don't even know what to ask for." That's normal. We explain everything plain english. Build your site, rank it, manage it. One team, one invoice, real results.
               </p>
             </div>
             
             <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Website Designer</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Web Hosting & Maintenance</h3>
               <p className="text-gray-700">
-                Let's be real, most plumber websites look like they was built in 2003. Tiny text, blurry pictures, no call button. That kills leads. We design clean sites with big phone buttons, fast loading, maps that actually work. Cuz if a customer gotta pinch zoom to find your number, they gone.
-              </p>
-              <p className="text-gray-600 mt-3">
-                👉 A good example? <a href="https://dlba.org" className="text-blue-600 underline" target="_blank" rel="noopener noreferrer">Downtown Long Beach Alliance</a> has clean design and local info. Plumbers can learn from that.
+                Your new site hosted on lightning-fast servers. Never goes down during emergencies. Automatic backups. Security updates. We handle all the tech stuff so you can focus on fixing pipes.
               </p>
             </div>
-            
-            <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Web Hosting Company</h3>
-              <p className="text-gray-700">
-                This part don't sound sexy, but trust me, it matters. If your site down, you losing jobs. We host plumber sites on fast servers, no downtime. Plus, we set up backups. One plumber told me his old site got hacked. All his leads stopped. Hosting with us fixed that headache.
-              </p>
-            </div>
+          </div>
+          
+          <div className="mt-12 bg-gradient-to-r from-blue-100 to-purple-100 rounded-xl p-6 text-center">
+            <p className="text-lg font-bold text-gray-900 mb-2">
+              Package Deal for Long Beach Plumbers:
+            </p>
+            <p className="text-3xl font-bold text-blue-600 mb-2">$5,000 - $10,000</p>
+            <p className="text-gray-700">
+              New website built + 6 months SEO management + Voice search optimization
+            </p>
+            <p className="text-sm text-gray-600 mt-2">
+              (Most plumbers make this back in first month from new calls)
+            </p>
           </div>
         </div>
       </section>
