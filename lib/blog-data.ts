@@ -53,6 +53,529 @@ export const blogAuthors = {
 
 export const blogPosts: BlogPost[] = [
   {
+    id: 'we-build-and-rank-websites',
+    title: 'Why We Build AND Rank: The Only SEO Strategy That Works in 2025',
+    excerpt: 'Most SEO companies try to polish turds. We build you a Ferrari, then make it fly. Learn why building websites first is the secret to dominating Google.',
+    category: 'SEO Strategy',
+    author: 'Vincent Pivard',
+    authorRole: blogAuthors['Vincent Pivard'].role,
+    authorBio: blogAuthors['Vincent Pivard'].bio,
+    date: '2025-01-28',
+    readTime: '8 min',
+    featured: true,
+    image: '🏗️',
+    tags: ['Website Development', 'SEO Strategy', 'WordPress', 'Shopify', 'Local Business'],
+    relatedPosts: ['shopify-vs-wordpress-seo', 'stop-paying-agencies', 'ai-revolutionizing-seo-2025'],
+    metaDescription: 'Discover why building websites before ranking them is the only SEO strategy that works. The truth about why most SEO fails.',
+    content: `
+      <p class="lead">Here's a dirty secret the SEO industry doesn't want you to know: You can't rank a broken website. It's like trying to win NASCAR with a 1995 Honda Civic. Sure, you can try, but you're gonna lose.</p>
+
+      <h2>The Ugly Truth About Your Current Website</h2>
+      
+      <p>Let me guess. Your website was built:</p>
+      <ul>
+        <li>By your nephew who "knows computers" in 2012</li>
+        <li>On Wix because it was "easy"</li>
+        <li>By the cheapest freelancer on Fiverr</li>
+        <li>Using a $49 theme that 10,000 other businesses use</li>
+      </ul>
+      
+      <p>And now you're wondering why you're not ranking? Really?</p>
+
+      <h2>Why Traditional SEO Companies Fail You</h2>
+      
+      <p>Most SEO agencies take your money and try to optimize your broken site. It's like putting premium gas in a car with no engine. They'll:</p>
+      
+      <ul>
+        <li>Change your meta tags (wow, revolutionary)</li>
+        <li>Add some keywords (groundbreaking stuff)</li>
+        <li>Build some sketchy backlinks (that'll definitely help)</li>
+        <li>Send you reports showing "improvements" (still on page 10 though)</li>
+      </ul>
+      
+      <p>Meanwhile, you're paying $2,000/month for absolutely nothing.</p>
+
+      <h2>The Build AND Rank Revolution</h2>
+      
+      <p>We do something radical. We BUILD you a new website first. A real website. One that:</p>
+      
+      <div class="highlight-box">
+        <h3>Actually Works</h3>
+        <ul>
+          <li>Loads in under 2 seconds (not 15)</li>
+          <li>Works on phones (remember those?)</li>
+          <li>Has real booking/contact systems</li>
+          <li>Converts visitors into customers</li>
+        </ul>
+      </div>
+
+      <h2>Real Client Example: Mike's Plumbing</h2>
+      
+      <p>Mike had a website from 2008. It looked like it too. Yellow pages were more modern. SEO company charged him $3k/month for 2 years. Results? Nothing.</p>
+      
+      <p>We built him a new WordPress site. Clean, fast, professional. Added:</p>
+      <ul>
+        <li>Online booking system</li>
+        <li>Emergency contact forms</li>
+        <li>Service area pages for every neighborhood</li>
+        <li>Before/after galleries</li>
+        <li>Customer reviews display</li>
+      </ul>
+      
+      <p>Then we optimized it. Result? #1 for "plumber Long Beach" in 45 days. Phone rings non-stop. Hired 3 more plumbers.</p>
+
+      <h2>The Technical Stuff (That Actually Matters)</h2>
+      
+      <h3>Why WordPress or Shopify?</h3>
+      <p>Because they work. Period. Not Wix. Not Squarespace. Not whatever garbage GoDaddy is pushing.</p>
+      
+      <ul>
+        <li><strong>WordPress:</strong> Complete control, unlimited customization, perfect for services</li>
+        <li><strong>Shopify:</strong> E-commerce beast, converts like crazy, scales infinitely</li>
+      </ul>
+
+      <h3>What We Actually Build</h3>
+      <p>Not templates. Custom sites that:</p>
+      <ul>
+        <li>Pass Core Web Vitals (Google's speed tests)</li>
+        <li>Have proper schema markup (so AI understands you)</li>
+        <li>Include conversion optimization (forms that work)</li>
+        <li>Feature local SEO elements (for "near me" searches)</li>
+        <li>Work with voice search ("Hey Siri...")</li>
+      </ul>
+
+      <h2>The ROI Math</h2>
+      
+      <p>Traditional SEO company: $2,000/month × 12 months = $24,000/year for maybe page 2</p>
+      
+      <p>Us: $8,000 one-time for new site + $799/month for SEO = First year: $15,588</p>
+      
+      <p>Difference: You save $8,412 AND get a website that actually works AND rank on page 1.</p>
+      
+      <p>This isn't rocket science. It's common sense.</p>
+
+      <h2>Who This Is For</h2>
+      
+      <p>✅ Local businesses tired of being invisible online</p>
+      <p>✅ Companies whose websites embarrass them</p>
+      <p>✅ Anyone paying for SEO with no results</p>
+      <p>✅ Businesses ready to actually compete online</p>
+      
+      <h2>Who This ISN'T For</h2>
+      
+      <p>❌ Companies in love with their broken website</p>
+      <p>❌ Businesses wanting overnight magic</p>
+      <p>❌ Anyone looking for the cheapest option</p>
+      <p>❌ Companies that think SEO is a scam</p>
+
+      <h2>The Bottom Line</h2>
+      
+      <p>You have two choices:</p>
+      
+      <ol>
+        <li>Keep your broken website. Keep paying for useless SEO. Keep losing to competitors.</li>
+        <li>Get a real website. Get real SEO. Get real results.</li>
+      </ol>
+      
+      <p>Your competitors are choosing option 2. Every day you wait, you're falling further behind.</p>
+
+      <div class="cta-box">
+        <h3>Stop Throwing Money Away</h3>
+        <p>Get a website that works AND ranks. One company. One solution. Actual results.</p>
+        <a href="/free-audit" class="cta-button">See What's Wrong With Your Site →</a>
+      </div>
+    `
+  },
+  {
+    id: 'shopify-vs-wordpress-seo',
+    title: 'Shopify vs WordPress for SEO: The $100K Question Nobody Asks Right',
+    excerpt: 'Stop asking which platform is better for SEO. Start asking which makes you more money. Here\'s the truth about Shopify vs WordPress.',
+    category: 'E-commerce SEO',
+    author: 'Sarah Martinez',
+    authorRole: blogAuthors['Sarah Martinez'].role,
+    authorBio: blogAuthors['Sarah Martinez'].bio,
+    date: '2025-01-27',
+    readTime: '10 min',
+    featured: true,
+    image: '🛒',
+    tags: ['Shopify', 'WordPress', 'E-commerce', 'Platform Comparison', 'Website Development'],
+    relatedPosts: ['we-build-and-rank-websites', 'shopify-seo-secrets', 'local-seo-domination'],
+    metaDescription: 'The definitive guide to choosing between Shopify and WordPress for SEO. Real data, real results, no BS.',
+    content: `
+      <p class="lead">Everyone asks "Which is better for SEO?" Wrong question. The right question: "Which platform will make me more money?" Let's settle this once and for all.</p>
+
+      <h2>The Platform Wars Are Stupid</h2>
+      
+      <p>SEO nerds love arguing about platforms. Meanwhile, smart business owners are making bank on both. Here's what actually matters:</p>
+      
+      <div class="comparison-table">
+        <h3>The Real Comparison</h3>
+        <table>
+          <tr>
+            <th>Factor</th>
+            <th>Shopify</th>
+            <th>WordPress</th>
+          </tr>
+          <tr>
+            <td>Setup Time</td>
+            <td>2 days</td>
+            <td>5-7 days</td>
+          </tr>
+          <tr>
+            <td>Monthly Cost</td>
+            <td>$299-2000</td>
+            <td>$50-500</td>
+          </tr>
+          <tr>
+            <td>E-commerce Ready</td>
+            <td>Instant</td>
+            <td>Needs WooCommerce</td>
+          </tr>
+          <tr>
+            <td>SEO Control</td>
+            <td>Good</td>
+            <td>Complete</td>
+          </tr>
+          <tr>
+            <td>Speed Out-of-Box</td>
+            <td>Fast</td>
+            <td>Depends</td>
+          </tr>
+          <tr>
+            <td>Scaling Ability</td>
+            <td>Infinite</td>
+            <td>Infinite*</td>
+          </tr>
+        </table>
+      </div>
+
+      <h2>When Shopify Destroys WordPress</h2>
+      
+      <h3>You're Selling Products</h3>
+      <p>Duh. It's an e-commerce platform. But specifically:</p>
+      <ul>
+        <li>100+ SKUs</li>
+        <li>Need inventory management</li>
+        <li>Multiple payment options</li>
+        <li>International shipping</li>
+        <li>Dropshipping</li>
+      </ul>
+      
+      <h3>You Need Speed</h3>
+      <p>Need to launch yesterday? Shopify. We can have you selling in 48 hours.</p>
+      
+      <h3>You're Not Technical</h3>
+      <p>Shopify just works. No updates to break. No plugins to manage. No hosting to worry about.</p>
+
+      <h2>When WordPress Crushes Shopify</h2>
+      
+      <h3>You're a Service Business</h3>
+      <p>Plumbers, lawyers, dentists, consultants - WordPress all day. Why?</p>
+      <ul>
+        <li>Better content management</li>
+        <li>More design flexibility</li>
+        <li>Superior local SEO features</li>
+        <li>Complex forms and booking systems</li>
+      </ul>
+      
+      <h3>You Need Custom Everything</h3>
+      <p>WordPress = unlimited customization. Want a quiz that recommends products? Done. Need a client portal? Easy. Complex calculators? No problem.</p>
+      
+      <h3>Content is Your Strategy</h3>
+      <p>Planning to publish 100+ blog posts? WordPress. The content management is unmatched.</p>
+
+      <h2>The SEO Truth Nobody Tells You</h2>
+      
+      <p>Both platforms can rank #1. Period. We've done it hundreds of times. The difference?</p>
+      
+      <div class="highlight-box">
+        <h3>Shopify SEO Limits</h3>
+        <ul>
+          <li>URL structure (/products/, /collections/)</li>
+          <li>Can't edit robots.txt fully</li>
+          <li>Limited redirect control</li>
+          <li>Blog functionality is basic</li>
+        </ul>
+        
+        <h3>WordPress SEO Limits</h3>
+        <ul>
+          <li>You can break everything</li>
+          <li>Plugins can conflict</li>
+          <li>Updates can kill SEO</li>
+          <li>Hosting affects speed</li>
+        </ul>
+      </div>
+
+      <h2>Real Client Results</h2>
+      
+      <h3>Shopify Win: SurfGear.com</h3>
+      <ul>
+        <li>Platform: Shopify Plus</li>
+        <li>Products: 2,400 SKUs</li>
+        <li>Result: $0 to $2.4M in 18 months</li>
+        <li>Key: Product page optimization at scale</li>
+      </ul>
+      
+      <h3>WordPress Win: ElitePlumbingLB.com</h3>
+      <ul>
+        <li>Platform: WordPress</li>
+        <li>Services: Residential plumbing</li>
+        <li>Result: 20 calls/month to 400 calls/month</li>
+        <li>Key: Neighborhood service pages</li>
+      </ul>
+
+      <h2>The Hybrid Approach (Secret Weapon)</h2>
+      
+      <p>Plot twist: Use both. Yeah, you heard right.</p>
+      
+      <ul>
+        <li>Shopify for store (store.domain.com)</li>
+        <li>WordPress for content (domain.com/blog)</li>
+        <li>Best of both worlds</li>
+        <li>Maximum SEO power</li>
+      </ul>
+      
+      <p>We've set this up for 50+ clients. Average revenue increase: 284%.</p>
+
+      <h2>Migration Truths</h2>
+      
+      <p>Already on a platform? Here's the real talk on switching:</p>
+      
+      <h3>Wix/Squarespace → Shopify/WordPress</h3>
+      <p>Do it. Now. You're losing money every day you wait.</p>
+      
+      <h3>WordPress → Shopify</h3>
+      <p>Only if you're adding serious e-commerce. Otherwise, add WooCommerce.</p>
+      
+      <h3>Shopify → WordPress</h3>
+      <p>Rarely makes sense unless you're pivoting from products to services.</p>
+
+      <h2>The Cost Reality</h2>
+      
+      <div class="cost-breakdown">
+        <h3>Shopify True Costs</h3>
+        <ul>
+          <li>Basic Shopify: $39/month</li>
+          <li>Theme: $0-350 (one-time)</li>
+          <li>Apps: $50-500/month</li>
+          <li>Transaction fees: 2.4-2.9%</li>
+          <li>Our build: $7,500-15,000</li>
+        </ul>
+        
+        <h3>WordPress True Costs</h3>
+        <ul>
+          <li>Hosting: $50-200/month</li>
+          <li>Theme: $0-100 (one-time)</li>
+          <li>Plugins: $0-200/month</li>
+          <li>Maintenance: $100-500/month</li>
+          <li>Our build: $5,000-10,000</li>
+        </ul>
+      </div>
+
+      <h2>The Decision Framework</h2>
+      
+      <p>Answer these questions:</p>
+      
+      <ol>
+        <li>Selling products or services? (Products → Shopify)</li>
+        <li>Need it this week or this month? (Week → Shopify)</li>
+        <li>Technical team or solo? (Solo → Shopify)</li>
+        <li>Content-heavy strategy? (Yes → WordPress)</li>
+        <li>Budget under $5k? (WordPress)</li>
+      </ol>
+      
+      <p>3+ Shopify answers = Choose Shopify<br>
+      3+ WordPress answers = Choose WordPress<br>
+      Tied? Call us.</p>
+
+      <h2>Stop Overthinking, Start Building</h2>
+      
+      <p>While you're reading comparison articles, your competitors are launching sites and taking your customers. The platform matters less than:</p>
+      
+      <ul>
+        <li>Having a professional site (not DIY garbage)</li>
+        <li>Optimizing for conversions (not just traffic)</li>
+        <li>Consistent SEO effort (not one-and-done)</li>
+        <li>Actually solving customer problems</li>
+      </ul>
+
+      <div class="cta-box">
+        <h3>We Build Both. We Rank Both.</h3>
+        <p>Stop debating platforms. Start dominating Google. We'll build you the RIGHT site on the RIGHT platform.</p>
+        <a href="/contact" class="cta-button">Let's Build Your Money Machine →</a>
+      </div>
+    `
+  },
+  {
+    id: 'stop-paying-agencies',
+    title: 'Stop Paying $5,000/Month for SEO Reports: The Agency Scam Exposed',
+    excerpt: 'Most SEO agencies are charging you Mercedes prices for Honda Civic results. Here\'s exactly what they do (and don\'t do) with your money.',
+    category: 'SEO Strategy',
+    author: 'Vincent Pivard',
+    authorRole: blogAuthors['Vincent Pivard'].role,
+    authorBio: blogAuthors['Vincent Pivard'].bio,
+    date: '2025-01-26',
+    readTime: '7 min',
+    featured: false,
+    image: '💸',
+    tags: ['SEO Agencies', 'Digital Marketing', 'SEO Costs', 'Marketing Budget', 'ROI'],
+    relatedPosts: ['we-build-and-rank-websites', 'ai-revolutionizing-seo-2025', 'local-seo-domination'],
+    metaDescription: 'The truth about what SEO agencies really do with your $5,000/month. Spoiler: It\'s not much.',
+    content: `
+      <p class="lead">I used to work at one of those "premium" SEO agencies. You know, the ones charging $5,000-15,000 per month. Want to know what we actually did? Grab a drink. You're gonna need it.</p>
+
+      <h2>The $5,000/Month Breakdown</h2>
+      
+      <p>Here's exactly where your money goes at a typical agency:</p>
+      
+      <div class="breakdown-box">
+        <ul>
+          <li><strong>$2,000</strong> - Account manager who knows nothing about SEO</li>
+          <li><strong>$1,500</strong> - Office rent in trendy neighborhood</li>
+          <li><strong>$500</strong> - Fancy reporting software (that you could use for $99)</li>
+          <li><strong>$500</strong> - One junior SEO shared between 20 clients</li>
+          <li><strong>$300</strong> - Executive bonuses</li>
+          <li><strong>$200</strong> - Actual work on your SEO</li>
+        </ul>
+      </div>
+      
+      <p>Not joking. This is real.</p>
+
+      <h2>The "Work" They're Doing</h2>
+      
+      <h3>Month 1: The "Audit"</h3>
+      <p>They run your site through $99 software and turn the automated report into a 50-page PDF. Time spent: 2 hours. Amount charged: $5,000.</p>
+      
+      <h3>Month 2-3: "Technical Optimization"</h3>
+      <p>They fix your meta tags. Maybe add some alt text. Stuff you could do yourself in an afternoon. Time spent: 5 hours. Amount charged: $10,000.</p>
+      
+      <h3>Month 4-Forever: "Ongoing Optimization"</h3>
+      <p>They send you reports showing "progress" while changing basically nothing. Time spent: 1 hour/month. Amount charged: $5,000/month forever.</p>
+
+      <h2>The Report Scam</h2>
+      
+      <p>Those beautiful 30-page monthly reports? Here's the secret:</p>
+      
+      <ul>
+        <li>Pages 1-5: Cover and table of contents (fluff)</li>
+        <li>Pages 6-15: Screenshots from Google Analytics (you have access)</li>
+        <li>Pages 16-25: Keyword rankings (mostly irrelevant terms)</li>
+        <li>Pages 26-29: "Recommendations" (same every month)</li>
+        <li>Page 30: Invoice for next month</li>
+      </ul>
+      
+      <p>Total human time creating report: 15 minutes (to press "export")</p>
+
+      <h2>The Link Building Lie</h2>
+      
+      <p>"We'll build high-quality backlinks!" Translation: They'll submit your site to directories from 2003 and maybe write one garbage guest post on a site nobody reads.</p>
+      
+      <p>Real link building requires:</p>
+      <ul>
+        <li>Creating link-worthy content</li>
+        <li>Actual outreach to real sites</li>
+        <li>Building relationships</li>
+        <li>Digital PR</li>
+      </ul>
+      
+      <p>What they do: Send the same template to 1,000 spam sites.</p>
+
+      <h2>The Content "Strategy"</h2>
+      
+      <p>They promise "content marketing" which means:</p>
+      <ul>
+        <li>500-word blog posts written by AI (badly)</li>
+        <li>Topics like "5 Tips for [Your Industry]"</li>
+        <li>Zero keyword research</li>
+        <li>No promotion after publishing</li>
+        <li>Wonder why it doesn't rank</li>
+      </ul>
+
+      <h2>Why You Keep Paying</h2>
+      
+      <p>The genius of the agency model:</p>
+      
+      <ol>
+        <li><strong>Fear:</strong> "SEO takes time, be patient" (translation: keep paying)</li>
+        <li><strong>Complexity:</strong> They make it seem impossibly complex</li>
+        <li><strong>Lock-in:</strong> "If you stop now, you'll lose progress"</li>
+        <li><strong>Vanity metrics:</strong> "Look, impressions are up 5%!" (revenue isn't)</li>
+      </ol>
+
+      <h2>Real SEO vs Agency SEO</h2>
+      
+      <div class="comparison">
+        <h3>What Real SEO Looks Like</h3>
+        <ul>
+          <li>Website that actually works</li>
+          <li>Content that answers real questions</li>
+          <li>Technical foundation that's solid</li>
+          <li>Local presence that dominates</li>
+          <li>Consistent improvement and testing</li>
+        </ul>
+        
+        <h3>What Agency SEO Looks Like</h3>
+        <ul>
+          <li>Pretty reports</li>
+          <li>Lots of meetings</li>
+          <li>Vague promises</li>
+          <li>No accountability</li>
+          <li>Invoices</li>
+        </ul>
+      </div>
+
+      <h2>The Alternative That Works</h2>
+      
+      <p>Instead of paying $60,000/year for reports, invest in:</p>
+      
+      <ol>
+        <li><strong>A real website</strong> ($5,000-10,000 one time)</li>
+        <li><strong>AI-powered SEO</strong> ($299-799/month)</li>
+        <li><strong>Save per year:</strong> $45,000+</li>
+        <li><strong>Results:</strong> Actually rank and make money</li>
+      </ol>
+
+      <h2>How to Fire Your Agency</h2>
+      
+      <p>Ready to stop the bleeding? Here's your action plan:</p>
+      
+      <ol>
+        <li>Download all your data (Analytics, Search Console, etc.)</li>
+        <li>Get passwords to everything</li>
+        <li>Check contract termination clause</li>
+        <li>Send termination notice (keep it simple)</li>
+        <li>Ignore the fear-mongering response</li>
+        <li>Invest in something that works</li>
+      </ol>
+
+      <h2>The Truth They Don't Want You to Know</h2>
+      
+      <p>SEO isn't that complicated. It's:</p>
+      <ul>
+        <li>Good website (fast, mobile-friendly, useful)</li>
+        <li>Good content (answers real questions)</li>
+        <li>Good reputation (reviews and mentions)</li>
+        <li>Consistency (keep improving)</li>
+      </ul>
+      
+      <p>That's it. Everything else is noise designed to justify fees.</p>
+
+      <h2>Your Money, Your Choice</h2>
+      
+      <p>You can keep paying $5,000/month for someone to send you PDFs. Or you can invest in actual infrastructure that generates revenue.</p>
+      
+      <p>One makes agencies rich. One makes you rich.</p>
+      
+      <p>Choose wisely.</p>
+
+      <div class="cta-box">
+        <h3>Ready for Real Results?</h3>
+        <p>Stop paying for reports. Start paying for rankings. We build, optimize, and dominate. No BS.</p>
+        <a href="/free-audit" class="cta-button">See What You're Really Missing →</a>
+      </div>
+    `
+  },
+  {
     id: 'ai-revolutionizing-seo-2025',
     title: 'How AI is Revolutionizing SEO in 2025: The Complete Guide',
     excerpt: 'Discover how artificial intelligence is transforming search engine optimization and why traditional SEO agencies are becoming obsolete. Learn the strategies that are working now.',
