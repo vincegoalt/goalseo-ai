@@ -150,45 +150,101 @@ export default function SEOForHVAC() {
         </div>
       </section>
 
-      {/* Services Beyond SEO */}
+      {/* We Build AND Rank - New Section */}
+      <section className="py-16 bg-gradient-to-br from-orange-50 to-purple-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+            Stop Trying to Fix Your Broken Website - We'll Build You a NEW One
+          </h2>
+          
+          <div className="prose prose-lg max-w-none text-gray-700 mb-12">
+            <p className="text-center text-xl font-semibold text-orange-600 mb-6">
+              Other SEO companies polish turds. We build you a website that actually works, then rank it everywhere.
+            </p>
+            
+            <div className="bg-white rounded-xl p-6 shadow-lg border border-orange-200">
+              <p className="font-bold text-gray-900 mb-4">Why Most HVAC Websites Fail:</p>
+              <ul className="space-y-2">
+                <li>• Built by "web guy" who disappeared</li>
+                <li>• Takes forever to load during heat waves</li>
+                <li>• Impossible to update service areas</li>
+                <li>• No emergency booking system</li>
+                <li>• Google cant understand what you do</li>
+                <li>• Voice search? Forget about it</li>
+              </ul>
+              
+              <p className="font-bold text-gray-900 mt-6 mb-4">What We Do Different:</p>
+              <ul className="space-y-2">
+                <li>• Build NEW WordPress site from scratch</li>
+                <li>• Emergency service forms that work 24/7</li>
+                <li>• Service area pages for every neighborhood</li>
+                <li>• Maintenance plan signup system</li>
+                <li>• Voice search optimized ("Hey Siri, AC repair near me")</li>
+                <li>• Then we RANK it everywhere</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Complete Digital Solution */}
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-12">Services Beyond SEO</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-12">Complete Digital Package for HVAC Companies</h2>
           
           <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Marketing Agency</h3>
-              <p className="text-gray-700">
-                Look, Yellow Pages dead. Radio expensive. As a marketing agency, we put you where people actually looking - Google. But we also help with Facebook for them maintenance plan customers, email for service reminders, even them door hangers if you want. But SEO is the foundation cuz thats where emergency calls come from.
+            <div className="bg-orange-50 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">We BUILD Your New Site</h3>
+              <p className="text-gray-700 mb-4">
+                Custom WordPress development specifically for HVAC. Emergency contact forms, service calculators, maintenance plan signups, financing applications. Everything integrated and working perfect from day one.
               </p>
-              <p className="text-gray-600 mt-3">
-                👉 Check <a href="https://www.acca.org/" className="text-orange-600 underline" target="_blank" rel="noopener noreferrer">ACCA resources</a> for HVAC marketing best practices.
+              <p className="text-sm text-orange-600 font-semibold">
+                ✓ Custom WordPress Site<br/>
+                ✓ Mobile-First Design<br/>
+                ✓ Booking System Built-In<br/>
+                ✓ Service Area Mapping
+              </p>
+            </div>
+            
+            <div className="bg-purple-50 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Then We RANK It</h3>
+              <p className="text-gray-700 mb-4">
+                Your new site built to dominate. Local SEO for every neighborhood. Voice search for emergencies. Even show up in ChatGPT recommendations. Complete optimization package included.
+              </p>
+              <p className="text-sm text-purple-600 font-semibold">
+                ✓ Google Maps Domination<br/>
+                ✓ Voice Search Ready<br/>
+                ✓ ChatGPT Visibility<br/>
+                ✓ 24/7 Emergency Rankings
               </p>
             </div>
             
             <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Marketing Consultant</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">One Team, One Solution</h3>
               <p className="text-gray-700">
-                Had an HVAC owner tell me "I fix air conditioners, I dont know marketing." Fair enough. As a marketing consultant, I explain stuff plain. Why reviews matter. Why your website needs to load fast. Why before and after photos get clicks. No fancy marketing speak, just what works for HVAC companies.
+                Stop juggling web developers who cant do SEO and SEO companies who cant fix websites. We do BOTH. Build it right, rank it everywhere, manage it forever. Simple.
               </p>
             </div>
             
             <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Website Designer</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Hosting That Never Fails</h3>
               <p className="text-gray-700">
-                Most HVAC websites look like they from 2005. Tiny phone number, no emergency button, cant find service areas. We design sites that convert. Big "EMERGENCY? CALL NOW" button. Clear pricing (if you show pricing). Service area map. Fast loading cuz nobody waiting when their AC broke.
-              </p>
-              <p className="text-gray-600 mt-3">
-                👉 See what <a href="https://www.energystar.gov/products/ask-the-expert/hvac-tips" className="text-orange-600 underline" target="_blank" rel="noopener noreferrer">Energy Star recommends</a> - we add this trust content too.
+                When its 110 degrees and everyone's AC breaking, your site better work. Lightning-fast servers, automatic backups, security updates. We handle all the tech so you can handle the service calls.
               </p>
             </div>
-            
-            <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Web Hosting Company</h3>
-              <p className="text-gray-700">
-                Your cousin hosting your site on GoDaddy? That's why it crashes during heat waves when everyone trying to find AC repair. As a web hosting company, we keep your site running when you need it most. Fast servers, automatic backups, security so nobody hacking your customer list.
-              </p>
-            </div>
+          </div>
+          
+          <div className="mt-12 bg-gradient-to-r from-orange-100 to-purple-100 rounded-xl p-6 text-center">
+            <p className="text-lg font-bold text-gray-900 mb-2">
+              HVAC Digital Transformation Package:
+            </p>
+            <p className="text-3xl font-bold text-orange-600 mb-2">$7,500 - $12,000</p>
+            <p className="text-gray-700">
+              New WordPress site + 6 months SEO + Emergency ranking priority + Voice search
+            </p>
+            <p className="text-sm text-gray-600 mt-2">
+              (Most HVAC companies make this back in first heat wave)
+            </p>
           </div>
         </div>
       </section>

@@ -151,45 +151,101 @@ export default function SEOForRestaurants() {
         </div>
       </section>
 
-      {/* Services Beyond SEO */}
+      {/* We Build AND Rank - New Section */}
+      <section className="py-16 bg-gradient-to-br from-orange-50 to-red-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+            Stop Paying 30% to DoorDash - We Build Your OWN Online Ordering
+          </h2>
+          
+          <div className="prose prose-lg max-w-none text-gray-700 mb-12">
+            <p className="text-center text-xl font-semibold text-orange-600 mb-6">
+              We build restaurant websites with YOUR ordering system, then make sure hungry people find YOU first.
+            </p>
+            
+            <div className="bg-white rounded-xl p-6 shadow-lg border border-orange-200">
+              <p className="font-bold text-gray-900 mb-4">Why Most Restaurant Websites Suck:</p>
+              <ul className="space-y-2">
+                <li>• PDF menu nobody can read on phones</li>
+                <li>• No online ordering (losing 30% to apps)</li>
+                <li>• Can't update specials or sold-out items</li>
+                <li>• No table reservations</li>
+                <li>• Missing from "food near me" searches</li>
+                <li>• Voice search? Forget about it</li>
+              </ul>
+              
+              <p className="font-bold text-gray-900 mt-6 mb-4">What We Build for You:</p>
+              <ul className="space-y-2">
+                <li>• Custom WordPress with YOUR online ordering</li>
+                <li>• Mobile-first menu (80% order on phones)</li>
+                <li>• Table reservation system built-in</li>
+                <li>• Daily specials you can update yourself</li>
+                <li>• Voice search ready ("Hey Siri, pizza near me")</li>
+                <li>• ChatGPT recommendations for your food</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Complete Restaurant Solution */}
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-12">Services Beyond SEO</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-12">Complete Digital Package for Restaurants</h2>
           
           <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Marketing Agency</h3>
-              <p className="text-gray-700">
-                Restaurants need whole package. As marketing agency, we handle Instagram cuz food is visual. Facebook for events and specials. Email for loyalty programs. But SEO brings consistent foot traffic. One Mexican place said 70% of first-time customers found them through Google.
+            <div className="bg-orange-50 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">We BUILD Your Ordering Site</h3>
+              <p className="text-gray-700 mb-4">
+                Stop giving 30% to delivery apps! Custom WordPress with integrated ordering, table reservations, loyalty programs. Keep ALL your profit.
               </p>
-              <p className="text-gray-600 mt-3">
-                👉 Get listed on <a href="https://www.opentable.com/" className="text-orange-600 underline" target="_blank" rel="noopener noreferrer">OpenTable</a> and <a href="https://www.yelp.com/" className="text-orange-600 underline" target="_blank" rel="noopener noreferrer">Yelp</a> - we optimize those too.
+              <p className="text-sm text-orange-600 font-semibold">
+                ✓ Online Ordering System<br/>
+                ✓ Table Reservations<br/>
+                ✓ Menu Management<br/>
+                ✓ Customer Database
+              </p>
+            </div>
+            
+            <div className="bg-red-50 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Then We RANK It</h3>
+              <p className="text-gray-700 mb-4">
+                Get found for "[your food] near me" searches. Dominate lunch and dinner rushes. Show up in voice search. Even get ChatGPT recommending you.
+              </p>
+              <p className="text-sm text-red-600 font-semibold">
+                ✓ "Near Me" Domination<br/>
+                ✓ Voice Search Ready<br/>
+                ✓ Review Management<br/>
+                ✓ Neighborhood SEO
               </p>
             </div>
             
             <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Marketing Consultant</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Save Thousands Monthly</h3>
               <p className="text-gray-700">
-                Restaurant owners busy cooking, not marketing. As marketing consultant, I make it simple. Which keywords bring dinner rush vs lunch crowd. Why your Google hours MUST be accurate. How menu photos affect click-through rates. Real advice, not theory.
+                DoorDash charging 30%? On $10,000 monthly orders, that's $3,000 gone. Our system pays for itself in first month. You keep all the profit.
               </p>
             </div>
             
             <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Website Designer</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Never Crash on Busy Nights</h3>
               <p className="text-gray-700">
-                Restaurant websites usually terrible. PDF menus nobody can read on phone. No prices. Cant find hours or location. We build sites that convert lookers to diners. Mobile-first (everyone browsing on phone), online ordering integrated, reservation system, clear menus with prices. Beautiful food photos that load fast.
-              </p>
-              <p className="text-gray-600 mt-3">
-                👉 Integrate with <a href="https://www.toasttab.com/" className="text-orange-600 underline" target="_blank" rel="noopener noreferrer">Toast</a> or <a href="https://squareup.com/" className="text-orange-600 underline" target="_blank" rel="noopener noreferrer">Square</a> for online ordering.
+                Friday night rush? Grand Prix weekend? Your site stays up. Fast hosting, image optimization, bulletproof reliability when you need it most.
               </p>
             </div>
-            
-            <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Web Hosting Company</h3>
-              <p className="text-gray-700">
-                Friday night, everyone searching where to eat. Your site crashes. You just lost hundreds of customers. As web hosting company, we keep you online during rush times. Fast servers, image optimization (food photos are huge files), reliable uptime. Your kitchen dont close randomly, neither should your website.
-              </p>
-            </div>
+          </div>
+          
+          <div className="mt-12 bg-gradient-to-r from-orange-100 to-red-100 rounded-xl p-6 text-center">
+            <p className="text-lg font-bold text-gray-900 mb-2">
+              Restaurant Digital Transformation:
+            </p>
+            <p className="text-3xl font-bold text-orange-600 mb-2">$7,500 - $12,000</p>
+            <p className="text-gray-700">
+              Custom site with ordering + Local SEO + Review management + Voice search
+            </p>
+            <p className="text-sm text-gray-600 mt-2">
+              (Save $3,000+/month vs delivery apps - pays for itself immediately)
+            </p>
           </div>
         </div>
       </section>

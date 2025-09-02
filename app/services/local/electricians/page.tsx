@@ -150,45 +150,101 @@ export default function SEOForElectricians() {
         </div>
       </section>
 
-      {/* Services Beyond SEO */}
+      {/* We Build AND Rank - New Section */}
+      <section className="py-16 bg-gradient-to-br from-yellow-50 to-purple-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+            We Don't Just SEO Your Old Site - We BUILD You a New One
+          </h2>
+          
+          <div className="prose prose-lg max-w-none text-gray-700 mb-12">
+            <p className="text-center text-xl font-semibold text-yellow-600 mb-6">
+              Other SEO companies try to rank your broken website. We build you a NEW one that works, then dominate Google.
+            </p>
+            
+            <div className="bg-white rounded-xl p-6 shadow-lg border border-yellow-200">
+              <p className="font-bold text-gray-900 mb-4">Why Most Electrician Websites Fail:</p>
+              <ul className="space-y-2">
+                <li>• DIY website from 2010 that barely works</li>
+                <li>• No mobile version for on-the-go searches</li>
+                <li>• Can't handle emergency service requests</li>
+                <li>• No EV charger installation pages</li>
+                <li>• Invisible to voice search</li>
+                <li>• ChatGPT doesn't know you exist</li>
+              </ul>
+              
+              <p className="font-bold text-gray-900 mt-6 mb-4">What We Do Different:</p>
+              <ul className="space-y-2">
+                <li>• Brand NEW WordPress site built for electricians</li>
+                <li>• 24/7 emergency contact system</li>
+                <li>• EV charger installation calculator</li>
+                <li>• Service area pages for every neighborhood</li>
+                <li>• Voice search optimized ("Hey Siri, electrician near me")</li>
+                <li>• AI-ready architecture for future</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Complete Digital Solution */}
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-12">Services Beyond SEO</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-12">Complete Digital Package for Electricians</h2>
           
           <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Marketing Agency</h3>
-              <p className="text-gray-700">
-                Electricians used to get work from contractor referrals. That still works but its slow. As a marketing agency, we get you direct customers. Google Ads for emergency calls, Facebook for residential work, LinkedIn for commercial projects. But SEO is foundation cuz once you rank, them calls keep coming without paying per click.
+            <div className="bg-yellow-50 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">We BUILD Your New Site</h3>
+              <p className="text-gray-700 mb-4">
+                Custom WordPress development for electrical contractors. Emergency forms, service calculators, EV charger pages, commercial project galleries. Everything an electrician needs, built right.
               </p>
-              <p className="text-gray-600 mt-3">
-                👉 See <a href="https://www.neca-ibew.org/" className="text-yellow-600 underline" target="_blank" rel="noopener noreferrer">NECA-IBEW standards</a> - we highlight your certifications.
+              <p className="text-sm text-yellow-600 font-semibold">
+                ✓ Custom WordPress Site<br/>
+                ✓ Mobile-First Design<br/>
+                ✓ Emergency Service Forms<br/>
+                ✓ EV Market Ready
+              </p>
+            </div>
+            
+            <div className="bg-purple-50 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Then We RANK It</h3>
+              <p className="text-gray-700 mb-4">
+                Your new site built to dominate searches. Emergency electrician rankings, EV installer visibility, commercial project SEO. Voice search and ChatGPT optimized.
+              </p>
+              <p className="text-sm text-purple-600 font-semibold">
+                ✓ Emergency SEO Priority<br/>
+                ✓ Voice Search Ready<br/>
+                ✓ EV Market Targeting<br/>
+                ✓ Google Maps #1
               </p>
             </div>
             
             <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Marketing Consultant</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Stop Juggling Vendors</h3>
               <p className="text-gray-700">
-                Had an electrician say "I know watts and volts, not websites and Google." I get it. As a marketing consultant, I translate. Why your Google reviews matter more than BBB rating. Why before/after photos of panel upgrades get clicks. Why you need separate pages for residential and commercial. Plain English, no marketing BS.
+                Web developer can't do SEO. SEO company can't fix websites. We do BOTH. Build it perfect, rank it everywhere, one team, one invoice.
               </p>
             </div>
             
             <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Website Designer</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Always-On Hosting</h3>
               <p className="text-gray-700">
-                Most electrician websites look scary - dark colors, lightning bolts, complicated navigation. We design sites that build trust. Clean, professional, easy to find what you need. Big "24/7 EMERGENCY" button. Service area map. License number prominent (builds trust). Fast loading cuz nobody waiting when lights are out.
-              </p>
-              <p className="text-gray-600 mt-3">
-                👉 Add <a href="https://www.cslb.ca.gov/" className="text-yellow-600 underline" target="_blank" rel="noopener noreferrer">CSLB license verification</a> - instant credibility.
+                Power outages mean emergency calls. Your site better work. Lightning-fast servers, automatic backups, bulletproof security. We keep you online 24/7.
               </p>
             </div>
-            
-            <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Web Hosting Company</h3>
-              <p className="text-gray-700">
-                Your nephew hosting your site on cheap hosting? That's why it goes down during storms when everyone searching for emergency electricians. As a web hosting company, we keep you online when it matters. CDN for speed, backups for safety, SSL for security. Your electrical work is reliable, your website should be too.
-              </p>
-            </div>
+          </div>
+          
+          <div className="mt-12 bg-gradient-to-r from-yellow-100 to-purple-100 rounded-xl p-6 text-center">
+            <p className="text-lg font-bold text-gray-900 mb-2">
+              Electrician Digital Package:
+            </p>
+            <p className="text-3xl font-bold text-yellow-600 mb-2">$6,000 - $10,000</p>
+            <p className="text-gray-700">
+              New WordPress site + Local SEO + EV market targeting + Voice search
+            </p>
+            <p className="text-sm text-gray-600 mt-2">
+              (ROI from just 2-3 panel upgrades or 1 EV charger install)
+            </p>
           </div>
         </div>
       </section>
