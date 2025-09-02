@@ -151,45 +151,101 @@ export default function SEOForRoofing() {
         </div>
       </section>
 
-      {/* Services Beyond SEO */}
+      {/* We Build AND Rank - New Section */}
+      <section className="py-16 bg-gradient-to-br from-red-50 to-orange-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+            Storm Season Is Coming - Is Your Website Ready?
+          </h2>
+          
+          <div className="prose prose-lg max-w-none text-gray-700 mb-12">
+            <p className="text-center text-xl font-semibold text-red-600 mb-6">
+              We build roofing websites that capture emergency calls and insurance jobs.
+            </p>
+            
+            <div className="bg-white rounded-xl p-6 shadow-lg border border-red-200">
+              <p className="font-bold text-gray-900 mb-4">Why Roofing Websites Fail:</p>
+              <ul className="space-y-2">
+                <li>• No website or one that crashes in storms</li>
+                <li>• Missing emergency service info</li>
+                <li>• No insurance claim help</li>
+                <li>• Can't showcase past work</li>
+                <li>• Not found for storm damage</li>
+                <li>• Voice search invisible</li>
+              </ul>
+              
+              <p className="font-bold text-gray-900 mt-6 mb-4">What We Build for Roofers:</p>
+              <ul className="space-y-2">
+                <li>• Storm-proof WordPress hosting</li>
+                <li>• Emergency service priority</li>
+                <li>• Insurance claim assistance pages</li>
+                <li>• Before/after galleries</li>
+                <li>• Storm damage SEO</li>
+                <li>• Voice search optimization</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Complete Roofing Solution */}
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-12">Services Beyond SEO</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-12">Complete Digital Solution for Roofing Contractors</h2>
           
           <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Marketing Agency</h3>
-              <p className="text-gray-700">
-                Roofing is visual business. As marketing agency, we handle before/after photos for Instagram, Facebook ads for storm damage, Google Ads for emergency calls. But SEO is foundation - once you rank, them organic calls keep coming without paying per click. One storm can pay for whole year of SEO.
+            <div className="bg-red-50 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">We BUILD Your Lead Machine</h3>
+              <p className="text-gray-700 mb-4">
+                Custom WordPress that handles storm traffic. Emergency forms, insurance guidance, financing calculators. Before/after galleries, drone footage showcase. Everything to convert searches to calls.
               </p>
-              <p className="text-gray-600 mt-3">
-                👉 Get certified with <a href="https://www.gaf.com/" className="text-red-600 underline" target="_blank" rel="noopener noreferrer">GAF</a> or <a href="https://www.owenscorning.com/" className="text-red-600 underline" target="_blank" rel="noopener noreferrer">Owens Corning</a> - manufacturer badges help SEO.
+              <p className="text-sm text-red-600 font-semibold">
+                ✓ Custom WordPress Development<br/>
+                ✓ Emergency Contact System<br/>
+                ✓ Insurance Claim Forms<br/>
+                ✓ Storm-Proof Hosting
+              </p>
+            </div>
+            
+            <div className="bg-orange-50 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Then We DOMINATE Storm Season</h3>
+              <p className="text-gray-700 mb-4">
+                Rank for "roof repair Long Beach" before storms hit. Emergency damage, insurance claims, specific materials. Voice search for urgent needs.
+              </p>
+              <p className="text-sm text-orange-600 font-semibold">
+                ✓ Storm Damage SEO<br/>
+                ✓ Insurance Keywords<br/>
+                ✓ Material Specialization<br/>
+                ✓ Voice Search Ready
               </p>
             </div>
             
             <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Marketing Consultant</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Insurance Jobs Pay More</h3>
               <p className="text-gray-700">
-                Roofers know roofs, not marketing. As marketing consultant, I explain why "roof repair" too competitive but "clay tile repair Long Beach" is goldmine. How financing options affect SEO. Why drone footage gets more clicks. Real advice based on what works for roofers, not generic marketing BS.
+                Insurance claim roofs worth 2-3x cash jobs. Professional website with claim assistance builds trust with adjusters and homeowners.
               </p>
             </div>
             
             <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Website Designer</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Weather-Proof Infrastructure</h3>
               <p className="text-gray-700">
-                Most roofer websites look sketchy - dark backgrounds, lightning graphics, hard to read. We design sites that build trust. Clean, professional, easy navigation. Big "EMERGENCY SERVICE" button. Before/after galleries. Financing calculator. Insurance claim help. Sites that convert visitors to calls.
-              </p>
-              <p className="text-gray-600 mt-3">
-                👉 Include <a href="https://www.bbb.org/" className="text-red-600 underline" target="_blank" rel="noopener noreferrer">BBB rating</a> and insurance verification.
+                When storms hit and everyone's checking your site, it won't crash. CDN hosting, automatic scaling, 99.9% uptime guarantee.
               </p>
             </div>
-            
-            <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Web Hosting Company</h3>
-              <p className="text-gray-700">
-                Storm hits, everyone checking your site for emergency service. Cant have it crashing when you need it most. As web hosting company, we provide storm-proof hosting. Fast loading for photo galleries, reliable uptime, automatic backups. Your crew works in any weather, your website should too.
-              </p>
-            </div>
+          </div>
+          
+          <div className="mt-12 bg-gradient-to-r from-red-100 to-orange-100 rounded-xl p-6 text-center">
+            <p className="text-lg font-bold text-gray-900 mb-2">
+              Roofing Storm-Ready Package:
+            </p>
+            <p className="text-3xl font-bold text-red-600 mb-2">$6,000 - $10,000</p>
+            <p className="text-gray-700">
+              Roofing website + Emergency SEO + Insurance targeting + Storm preparation
+            </p>
+            <p className="text-sm text-gray-600 mt-2">
+              (One insurance job pays for everything)
+            </p>
           </div>
         </div>
       </section>

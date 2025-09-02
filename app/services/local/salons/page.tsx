@@ -151,45 +151,101 @@ export default function SEOForSalons() {
         </div>
       </section>
 
-      {/* Services Beyond SEO */}
+      {/* We Build AND Rank - New Section */}
+      <section className="py-16 bg-gradient-to-br from-rose-50 to-pink-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+            Instagram Isn't Enough - You Need a Website That Books Appointments
+          </h2>
+          
+          <div className="prose prose-lg max-w-none text-gray-700 mb-12">
+            <p className="text-center text-xl font-semibold text-rose-600 mb-6">
+              We build salon websites that turn browsers into bookings, then rank you everywhere.
+            </p>
+            
+            <div className="bg-white rounded-xl p-6 shadow-lg border border-rose-200">
+              <p className="font-bold text-gray-900 mb-4">Why Salon Websites Fail:</p>
+              <ul className="space-y-2">
+                <li>• Relying only on Instagram for marketing</li>
+                <li>• No online booking system</li>
+                <li>• Can't showcase stylist portfolios</li>
+                <li>• Missing from "salon near me"</li>
+                <li>• Lost to chains on Google</li>
+                <li>• No price transparency</li>
+              </ul>
+              
+              <p className="font-bold text-gray-900 mt-6 mb-4">What We Build for Salons:</p>
+              <ul className="space-y-2">
+                <li>• Beautiful WordPress with booking</li>
+                <li>• Stylist portfolio galleries</li>
+                <li>• Service menu with pricing</li>
+                <li>• Instagram integration</li>
+                <li>• Neighborhood salon pages</li>
+                <li>• Voice search ready</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Complete Salon Solution */}
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-12">Services Beyond SEO</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-12">Complete Digital Solution for Salons & Spas</h2>
           
           <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Marketing Agency</h3>
-              <p className="text-gray-700">
-                Salons NEED Instagram - its visual portfolio. As marketing agency, we handle social media, email campaigns for rebooking, SMS reminders. But SEO brings new clients who never heard of you. One salon said 60% of new clients find them through Google, not social.
+            <div className="bg-rose-50 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">We BUILD Your Booking Machine</h3>
+              <p className="text-gray-700 mb-4">
+                Custom WordPress that showcases your work. Stylist profiles, service menus, Instagram galleries. Online booking that syncs with your calendar. Everything to fill your chairs.
               </p>
-              <p className="text-gray-600 mt-3">
-                👉 Get featured on <a href="https://www.allure.com/" className="text-rose-600 underline" target="_blank" rel="noopener noreferrer">Allure Best of Beauty</a> lists.
+              <p className="text-sm text-rose-600 font-semibold">
+                ✓ Custom WordPress Development<br/>
+                ✓ Online Booking System<br/>
+                ✓ Portfolio Galleries<br/>
+                ✓ Instagram Integration
+              </p>
+            </div>
+            
+            <div className="bg-pink-50 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Then We DOMINATE Beauty Search</h3>
+              <p className="text-gray-700 mb-4">
+                Rank for "hair salon near me" and specific services. Beat the chains. Voice search optimized for "Hey Siri, find a salon."
+              </p>
+              <p className="text-sm text-pink-600 font-semibold">
+                ✓ Service-Specific SEO<br/>
+                ✓ Neighborhood Targeting<br/>
+                ✓ Voice Search Ready<br/>
+                ✓ Review Management
               </p>
             </div>
             
             <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Marketing Consultant</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Stop Relying on Walk-Ins</h3>
               <p className="text-gray-700">
-                Stylists are artists, not marketers. As marketing consultant, I explain pricing psychology, rebooking strategies, retail sales techniques. Why "color correction specialist" can charge 3x more than "hair colorist." How to turn one-time clients into monthly memberships.
+                SEO brings clients actively searching for your services. Balayage, extensions, keratin - they find you when they're ready to book.
               </p>
             </div>
             
             <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Website Designer</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Vagaro & StyleSeat Ready</h3>
               <p className="text-gray-700">
-                Salon websites gotta be gorgeous AND functional. We design sites with online booking, service menus with pricing, stylist portfolios, before/after galleries. Instagram feed integration. Fast loading cuz clients browsing on phones between appointments.
-              </p>
-              <p className="text-gray-600 mt-3">
-                👉 Integrate with <a href="https://squareup.com/appointments" className="text-rose-600 underline" target="_blank" rel="noopener noreferrer">Square Appointments</a> for easy booking.
+                Integrated with all major booking platforms. Real-time availability, automated reminders, deposit collection. Modern salon management.
               </p>
             </div>
-            
-            <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Web Hosting Company</h3>
-              <p className="text-gray-700">
-                Saturday your busiest day. Website crashes, you losing bookings. As web hosting company, we provide reliable hosting that handles traffic. Image optimization for all them before/after photos. SSL security for payment processing. Keep your site beautiful and fast.
-              </p>
-            </div>
+          </div>
+          
+          <div className="mt-12 bg-gradient-to-r from-rose-100 to-pink-100 rounded-xl p-6 text-center">
+            <p className="text-lg font-bold text-gray-900 mb-2">
+              Salon Digital Beauty Package:
+            </p>
+            <p className="text-3xl font-bold text-rose-600 mb-2">$5,000 - $8,000</p>
+            <p className="text-gray-700">
+              Salon website + Booking system + Portfolio galleries + Local SEO
+            </p>
+            <p className="text-sm text-gray-600 mt-2">
+              (10 new clients a month pays for everything)
+            </p>
           </div>
         </div>
       </section>

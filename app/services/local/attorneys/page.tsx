@@ -151,45 +151,101 @@ export default function SEOForAttorneys() {
         </div>
       </section>
 
-      {/* Services Beyond SEO */}
+      {/* We Build AND Rank - New Section */}
+      <section className="py-16 bg-gradient-to-br from-purple-50 to-indigo-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+            Your Website Looks Like Every Other Law Firm - We'll Fix That
+          </h2>
+          
+          <div className="prose prose-lg max-w-none text-gray-700 mb-12">
+            <p className="text-center text-xl font-semibold text-purple-600 mb-6">
+              Stop losing cases to firms with better websites. We build sites that convert visitors to clients, then dominate Google.
+            </p>
+            
+            <div className="bg-white rounded-xl p-6 shadow-lg border border-purple-200">
+              <p className="font-bold text-gray-900 mb-4">Why Law Firm Websites Fail:</p>
+              <ul className="space-y-2">
+                <li>• Template site that looks like 100 other firms</li>
+                <li>• No individual practice area pages</li>
+                <li>• Missing case results and testimonials</li>
+                <li>• No intake forms or client portal</li>
+                <li>• Not found for "lawyer near me" searches</li>
+                <li>• Invisible to voice search and ChatGPT</li>
+              </ul>
+              
+              <p className="font-bold text-gray-900 mt-6 mb-4">What We Build for Law Firms:</p>
+              <ul className="space-y-2">
+                <li>• Custom WordPress with authority design</li>
+                <li>• Practice area landing pages for each service</li>
+                <li>• Secure intake forms with encryption</li>
+                <li>• Case results showcase (bar compliant)</li>
+                <li>• Attorney bio pages that build trust</li>
+                <li>• Voice search ("Hey Siri, injury lawyer near me")</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Complete Legal Solution */}
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-12">Services Beyond SEO</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-12">Complete Digital Solution for Law Firms</h2>
           
           <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Marketing Agency</h3>
-              <p className="text-gray-700">
-                Law firms need more than SEO but SEO is foundation. As marketing agency, we handle Google Ads for immediate cases while SEO builds. Facebook for brand awareness. LinkedIn for corporate clients. YouTube for education content. But organic SEO brings best ROI cuz people trust organic results for lawyers.
+            <div className="bg-purple-50 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">We BUILD Your Authority Site</h3>
+              <p className="text-gray-700 mb-4">
+                Custom WordPress that establishes expertise. Practice area pages, attorney profiles, case results, client resources. Bar compliant, ADA compliant, built for conversions.
               </p>
-              <p className="text-gray-600 mt-3">
-                👉 See <a href="https://www.martindale.com/" className="text-purple-600 underline" target="_blank" rel="noopener noreferrer">Martindale-Hubbell</a> ratings - we integrate these trust signals.
+              <p className="text-sm text-purple-600 font-semibold">
+                ✓ Custom WordPress Development<br/>
+                ✓ Practice Area Pages<br/>
+                ✓ Secure Intake System<br/>
+                ✓ Client Portal Access
+              </p>
+            </div>
+            
+            <div className="bg-indigo-50 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Then We DOMINATE Search</h3>
+              <p className="text-gray-700 mb-4">
+                Rank for high-value keywords like "personal injury lawyer Long Beach." Beat the billboard lawyers online. Voice search and AI optimized.
+              </p>
+              <p className="text-sm text-indigo-600 font-semibold">
+                ✓ High-Value Keyword SEO<br/>
+                ✓ Voice Search Optimization<br/>
+                ✓ Local Pack Domination<br/>
+                ✓ Review Management
               </p>
             </div>
             
             <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Marketing Consultant</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Stop Paying $500/Click</h3>
               <p className="text-gray-700">
-                Lawyers think different about marketing. Ethics rules, bar restrictions, professional image. As marketing consultant who understands legal marketing, I navigate these waters. What you can and cant say. How to show expertise without guaranteeing results. Building trust without being salesy.
+                Google Ads for lawyers cost $200-500 per click. One organic ranking brings unlimited clicks FREE. Better ROI than any advertising.
               </p>
             </div>
             
             <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Website Designer</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Bank-Level Security</h3>
               <p className="text-gray-700">
-                Law firm websites gotta balance professional with approachable. Not too corporate, not too casual. We design sites that convert visitors to clients. Clear practice areas, attorney bios that build trust, easy contact forms, client portal access. Fast loading cuz people in crisis dont wait.
-              </p>
-              <p className="text-gray-600 mt-3">
-                👉 Follow <a href="https://www.ada.gov/" className="text-purple-600 underline" target="_blank" rel="noopener noreferrer">ADA compliance</a> - required for law firms.
+                Client data protected with encryption, daily backups, HIPAA compliance available. Your website as secure as your case files.
               </p>
             </div>
-            
-            <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Web Hosting Company</h3>
-              <p className="text-gray-700">
-                Law firms need serious security. Client data, case files, confidential info. As web hosting company, we provide encrypted hosting, daily backups, SSL certificates. HIPAA compliant if you do personal injury. Your hosting as secure as your client files should be.
-              </p>
-            </div>
+          </div>
+          
+          <div className="mt-12 bg-gradient-to-r from-purple-100 to-indigo-100 rounded-xl p-6 text-center">
+            <p className="text-lg font-bold text-gray-900 mb-2">
+              Law Firm Digital Authority Package:
+            </p>
+            <p className="text-3xl font-bold text-purple-600 mb-2">$8,000 - $15,000</p>
+            <p className="text-gray-700">
+              Professional site + Practice area SEO + Voice search + Intake system
+            </p>
+            <p className="text-sm text-gray-600 mt-2">
+              (One case from Google pays for everything)
+            </p>
           </div>
         </div>
       </section>

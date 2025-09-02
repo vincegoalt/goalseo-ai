@@ -151,45 +151,101 @@ export default function SEOForRealEstate() {
         </div>
       </section>
 
-      {/* Services Beyond SEO */}
+      {/* We Build AND Rank - New Section */}
+      <section className="py-16 bg-gradient-to-br from-indigo-50 to-purple-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+            Stop Paying $3,000/Month to Zillow - Build Your OWN Lead Machine
+          </h2>
+          
+          <div className="prose prose-lg max-w-none text-gray-700 mb-12">
+            <p className="text-center text-xl font-semibold text-indigo-600 mb-6">
+              We build real estate websites that generate YOUR leads, not Zillow's. Then rank you everywhere.
+            </p>
+            
+            <div className="bg-white rounded-xl p-6 shadow-lg border border-indigo-200">
+              <p className="font-bold text-gray-900 mb-4">Why Agent Websites Fail:</p>
+              <ul className="space-y-2">
+                <li>• Generic brokerage template everyone uses</li>
+                <li>• No IDX/MLS property search</li>
+                <li>• Missing neighborhood landing pages</li>
+                <li>• No lead capture system</li>
+                <li>• Can't compete with Zillow/Realtor.com</li>
+                <li>• Invisible to "homes near me" searches</li>
+              </ul>
+              
+              <p className="font-bold text-gray-900 mt-6 mb-4">What We Build for You:</p>
+              <ul className="space-y-2">
+                <li>• Custom WordPress with FULL IDX integration</li>
+                <li>• Neighborhood specialist pages (Belmont Shore expert)</li>
+                <li>• Advanced property search that rivals Zillow</li>
+                <li>• Smart lead capture forms</li>
+                <li>• Seller valuation tools</li>
+                <li>• Voice search ("Hey Siri, homes for sale near me")</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Complete Real Estate Solution */}
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-12">Services Beyond SEO</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-12">Complete Digital Solution for Real Estate Agents</h2>
           
           <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Marketing Agency</h3>
-              <p className="text-gray-700">
-                Real estate agents need full marketing. As marketing agency, we handle Facebook for neighborhood targeting, Instagram for property showcases, YouTube for virtual tours. But SEO brings the serious buyers - people actually searching to buy, not just dreaming.
+            <div className="bg-indigo-50 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">We BUILD Your Lead Gen Site</h3>
+              <p className="text-gray-700 mb-4">
+                Stop paying Zillow! Custom WordPress with full IDX/MLS integration. Property search, neighborhood pages, school data, market reports. Your own lead generation machine.
               </p>
-              <p className="text-gray-600 mt-3">
-                👉 Integrate with <a href="https://www.realtor.com/" className="text-indigo-600 underline" target="_blank" rel="noopener noreferrer">Realtor.com</a> and MLS for maximum exposure.
+              <p className="text-sm text-indigo-600 font-semibold">
+                ✓ IDX/MLS Integration<br/>
+                ✓ Property Search Tool<br/>
+                ✓ Lead Capture System<br/>
+                ✓ CRM Integration
+              </p>
+            </div>
+            
+            <div className="bg-purple-50 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Then We RANK It</h3>
+              <p className="text-gray-700 mb-4">
+                Dominate "homes for sale [neighborhood]" searches. Show up for buyers AND sellers. Voice search optimized. Even get recommended by ChatGPT.
+              </p>
+              <p className="text-sm text-purple-600 font-semibold">
+                ✓ Neighborhood SEO<br/>
+                ✓ Buyer & Seller Keywords<br/>
+                ✓ Voice Search Ready<br/>
+                ✓ Google Maps Visibility
               </p>
             </div>
             
             <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Marketing Consultant</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Save $36,000/Year</h3>
               <p className="text-gray-700">
-                Most agents know houses, not marketing. As marketing consultant, I translate. Why neighborhood pages beat general "homes for sale" pages. How seller keywords different than buyer keywords. Why blog posts about local events bring clients. Plain english, real strategies.
+                Zillow Premier Agent costs $3,000/month. That's $36,000/year for trash leads. Our system generates better leads for a one-time investment. Do the math.
               </p>
             </div>
             
             <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Website Designer</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Professional Presence</h3>
               <p className="text-gray-700">
-                Agent websites usually template garbage from their broker. No personality, no local focus, no SEO. We build custom sites that convert. IDX integration for property search, neighborhood guides, school info, mortgage calculators. Beautiful property galleries that load fast.
-              </p>
-              <p className="text-gray-600 mt-3">
-                👉 IDX integration with <a href="https://www.crmls.org/" className="text-indigo-600 underline" target="_blank" rel="noopener noreferrer">CRMLS</a> for live listings.
+                When sellers Google you before listing appointment, they see YOU dominating search, not relying on Zillow. Instant credibility. Higher conversion rates.
               </p>
             </div>
-            
-            <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Web Hosting Company</h3>
-              <p className="text-gray-700">
-                Sunday afternoon, everyone browsing homes online. Your site crashes. Lost leads forever. As web hosting company, we keep you online when it matters. Fast servers for property photos, reliable uptime, SSL security for lead forms. Professional hosting for professional agents.
-              </p>
-            </div>
+          </div>
+          
+          <div className="mt-12 bg-gradient-to-r from-indigo-100 to-purple-100 rounded-xl p-6 text-center">
+            <p className="text-lg font-bold text-gray-900 mb-2">
+              Real Estate Digital Domination Package:
+            </p>
+            <p className="text-3xl font-bold text-indigo-600 mb-2">$7,500 - $12,000</p>
+            <p className="text-gray-700">
+              Custom site with IDX + Lead generation + Neighborhood SEO + Voice search
+            </p>
+            <p className="text-sm text-gray-600 mt-2">
+              (One extra closing pays for everything - then pure profit)
+            </p>
           </div>
         </div>
       </section>

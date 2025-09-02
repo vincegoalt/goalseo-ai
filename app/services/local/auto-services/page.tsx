@@ -151,45 +151,101 @@ export default function SEOForAutoServices() {
         </div>
       </section>
 
-      {/* Services Beyond SEO */}
+      {/* We Build AND Rank - New Section */}
+      <section className="py-16 bg-gradient-to-br from-slate-50 to-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+            Your Auto Shop Website Is Broken - We'll Build One That Brings Cars In
+          </h2>
+          
+          <div className="prose prose-lg max-w-none text-gray-700 mb-12">
+            <p className="text-center text-xl font-semibold text-slate-600 mb-6">
+              Stop losing to dealerships. We build mechanic websites that build trust and bring customers.
+            </p>
+            
+            <div className="bg-white rounded-xl p-6 shadow-lg border border-slate-200">
+              <p className="font-bold text-gray-900 mb-4">Why Auto Shop Websites Fail:</p>
+              <ul className="space-y-2">
+                <li>• Ancient website that looks sketchy</li>
+                <li>• No service pricing information</li>
+                <li>• Can't book appointments online</li>
+                <li>• Missing from emergency searches</li>
+                <li>• No mobile version</li>
+                <li>• Reviews not displayed</li>
+              </ul>
+              
+              <p className="font-bold text-gray-900 mt-6 mb-4">What We Build for Auto Shops:</p>
+              <ul className="space-y-2">
+                <li>• Professional WordPress for auto shops</li>
+                <li>• Online appointment scheduling</li>
+                <li>• Service pricing calculator</li>
+                <li>• Emergency service pages</li>
+                <li>• Mobile-first design</li>
+                <li>• Review showcase system</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Complete Auto Solution */}
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-12">Services Beyond SEO</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-12">Complete Digital Solution for Auto Repair Shops</h2>
           
           <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Marketing Agency</h3>
-              <p className="text-gray-700">
-                Auto shops need complete marketing. As marketing agency, we handle Google Ads for emergency searches, Facebook for community presence, email for service reminders. But SEO brings steady flow of regular maintenance customers - oil changes, tune-ups, inspections.
+            <div className="bg-slate-50 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">We BUILD Your Trust Machine</h3>
+              <p className="text-gray-700 mb-4">
+                Custom WordPress that builds confidence. Service pricing, mechanic certifications, warranty info. Online scheduling, fleet services, emergency contact. Everything to convert searches to service.
               </p>
-              <p className="text-gray-600 mt-3">
-                👉 List on <a href="https://www.repairpal.com/" className="text-slate-600 underline" target="_blank" rel="noopener noreferrer">RepairPal</a> and <a href="https://www.carfax.com/" className="text-slate-600 underline" target="_blank" rel="noopener noreferrer">Carfax</a> service shops.
+              <p className="text-sm text-slate-600 font-semibold">
+                ✓ Custom WordPress Development<br/>
+                ✓ Appointment Booking System<br/>
+                ✓ Service Price Calculator<br/>
+                ✓ Review Display System
+              </p>
+            </div>
+            
+            <div className="bg-gray-50 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Then We DOMINATE Auto Search</h3>
+              <p className="text-gray-700 mb-4">
+                Rank for "mechanic near me" and beat dealerships. Emergency repairs, specific makes/models, fleet services. Voice search for roadside help.
+              </p>
+              <p className="text-sm text-gray-600 font-semibold">
+                ✓ Emergency Service SEO<br/>
+                ✓ Make/Model Specialization<br/>
+                ✓ Fleet Service Focus<br/>
+                ✓ Voice Search Ready
               </p>
             </div>
             
             <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Marketing Consultant</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Build Customer Trust</h3>
               <p className="text-gray-700">
-                Mechanics fix cars, not marketing problems. As marketing consultant, I explain customer lifetime value, service package pricing, warranty marketing. Why "free inspection" brings more than "10% off." How to turn oil changes into transmission jobs.
+                People scared of getting ripped off. Professional website with transparent pricing, certifications, and reviews builds confidence before they call.
               </p>
             </div>
             
             <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Website Designer</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">ShopMonkey & Carfax Ready</h3>
               <p className="text-gray-700">
-                Auto shop websites usually terrible or non-existent. We design sites with online appointment booking, service pricing, mechanic certifications, real customer reviews. Live chat for quotes. Mobile-first cuz people searching from roadside.
-              </p>
-              <p className="text-gray-600 mt-3">
-                👉 Integrate with <a href="https://www.shopmonkey.io/" className="text-slate-600 underline" target="_blank" rel="noopener noreferrer">Shop Monkey</a> for shop management.
+                Integrated with shop management systems. Digital inspections, service history, automated reminders. Modern auto shop operations.
               </p>
             </div>
-            
-            <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Web Hosting Company</h3>
-              <p className="text-gray-700">
-                When cars break, people need help NOW. Site cant be down. As web hosting company, we provide reliable hosting, fast loading, secure customer data. Your website as dependable as your repairs should be.
-              </p>
-            </div>
+          </div>
+          
+          <div className="mt-12 bg-gradient-to-r from-slate-100 to-gray-100 rounded-xl p-6 text-center">
+            <p className="text-lg font-bold text-gray-900 mb-2">
+              Auto Shop Digital Trust Package:
+            </p>
+            <p className="text-3xl font-bold text-slate-600 mb-2">$5,000 - $8,000</p>
+            <p className="text-gray-700">
+              Auto shop website + Booking system + Local SEO + Emergency rankings
+            </p>
+            <p className="text-sm text-gray-600 mt-2">
+              (10 new customers a month pays for everything)
+            </p>
           </div>
         </div>
       </section>

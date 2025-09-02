@@ -151,45 +151,101 @@ export default function SEOForCPAs() {
         </div>
       </section>
 
-      {/* Services Beyond SEO */}
+      {/* We Build AND Rank - New Section */}
+      <section className="py-16 bg-gradient-to-br from-emerald-50 to-green-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+            Stop Losing to TurboTax - Build Your Digital Presence
+          </h2>
+          
+          <div className="prose prose-lg max-w-none text-gray-700 mb-12">
+            <p className="text-center text-xl font-semibold text-emerald-600 mb-6">
+              We build CPA websites that establish expertise and attract year-round clients, not just tax season.
+            </p>
+            
+            <div className="bg-white rounded-xl p-6 shadow-lg border border-emerald-200">
+              <p className="font-bold text-gray-900 mb-4">Why CPA Websites Fail:</p>
+              <ul className="space-y-2">
+                <li>• Generic template site with no personality</li>
+                <li>• No service pages beyond tax prep</li>
+                <li>• Can't showcase expertise areas</li>
+                <li>• Missing business client features</li>
+                <li>• Only busy during tax season</li>
+                <li>• Not found for specialty searches</li>
+              </ul>
+              
+              <p className="font-bold text-gray-900 mt-6 mb-4">What We Build for CPAs:</p>
+              <ul className="space-y-2">
+                <li>• Professional WordPress for CPAs</li>
+                <li>• Service pages for all offerings</li>
+                <li>• Client portal integration</li>
+                <li>• Business service calculators</li>
+                <li>• Year-round SEO strategy</li>
+                <li>• Voice search for tax questions</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Complete CPA Solution */}
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-12">Services Beyond SEO</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-12">Complete Digital Solution for Accounting Firms</h2>
           
           <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Marketing Agency</h3>
-              <p className="text-gray-700">
-                CPAs need sophisticated marketing. As marketing agency, we handle LinkedIn for B2B connections, email campaigns for tax deadlines, webinars for new tax laws. But SEO brings the consistent leads - business owners searching for help dont stop just cuz tax season over.
+            <div className="bg-emerald-50 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">We BUILD Your Professional Site</h3>
+              <p className="text-gray-700 mb-4">
+                Custom WordPress that establishes expertise. Service pages for bookkeeping, payroll, CFO services. Client portal, document upload, tax calculators. Everything businesses expect.
               </p>
-              <p className="text-gray-600 mt-3">
-                👉 List on <a href="https://www.expertise.com/" className="text-emerald-600 underline" target="_blank" rel="noopener noreferrer">Expertise.com</a> and <a href="https://www.thumbtack.com/" className="text-emerald-600 underline" target="_blank" rel="noopener noreferrer">Thumbtack</a> for leads.
+              <p className="text-sm text-emerald-600 font-semibold">
+                ✓ Custom WordPress Development<br/>
+                ✓ Client Portal Integration<br/>
+                ✓ Service Calculators<br/>
+                ✓ Secure Document Upload
+              </p>
+            </div>
+            
+            <div className="bg-green-50 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Then We DOMINATE Year-Round</h3>
+              <p className="text-gray-700 mb-4">
+                Rank for bookkeeping, payroll, business consulting - not just tax prep. Beat TurboTax and H&R Block. Voice search optimized for tax questions.
+              </p>
+              <p className="text-sm text-green-600 font-semibold">
+                ✓ Year-Round Service SEO<br/>
+                ✓ Business Client Focus<br/>
+                ✓ Industry Specialization<br/>
+                ✓ Voice Search Ready
               </p>
             </div>
             
             <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Marketing Consultant</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Build Recurring Revenue</h3>
               <p className="text-gray-700">
-                CPAs understand numbers, not marketing. As marketing consultant, I translate. Why "tax prep" too competitive but "enrolled agent Long Beach" is opportunity. How to market without giving tax advice online. Building trust through education content. Real strategies for accounting firms.
+                Stop the feast-or-famine cycle. Monthly bookkeeping and CFO clients found through SEO. Steady income all year, not just April.
               </p>
             </div>
             
             <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Website Designer</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Bank-Level Security</h3>
               <p className="text-gray-700">
-                CPA websites usually boring or intimidating. We design sites that feel approachable but professional. Client portal integration, tax calculators, document upload systems, appointment scheduling. Clear service descriptions with pricing (yes, show prices - builds trust).
-              </p>
-              <p className="text-gray-600 mt-3">
-                👉 Integrate with <a href="https://www.taxdome.com/" className="text-emerald-600 underline" target="_blank" rel="noopener noreferrer">TaxDome</a> for client management.
+                SOC 2 compliant hosting, encrypted transfers, secure client portals. Your website as secure as your practice management software.
               </p>
             </div>
-            
-            <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Web Hosting Company</h3>
-              <p className="text-gray-700">
-                Tax data is sensitive. As web hosting company, we provide bank-level security, encrypted file transfers, SOC 2 compliance. Your hosting as secure as your client files. Fast loading during tax season rush when everyone hitting your site.
-              </p>
-            </div>
+          </div>
+          
+          <div className="mt-12 bg-gradient-to-r from-emerald-100 to-green-100 rounded-xl p-6 text-center">
+            <p className="text-lg font-bold text-gray-900 mb-2">
+              CPA Digital Authority Package:
+            </p>
+            <p className="text-3xl font-bold text-emerald-600 mb-2">$5,000 - $8,000</p>
+            <p className="text-gray-700">
+              CPA website + Service expansion + Local SEO + Business client focus
+            </p>
+            <p className="text-sm text-gray-600 mt-2">
+              (5 monthly bookkeeping clients pays for everything)
+            </p>
           </div>
         </div>
       </section>

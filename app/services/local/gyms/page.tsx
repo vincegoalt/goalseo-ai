@@ -151,45 +151,101 @@ export default function SEOForGyms() {
         </div>
       </section>
 
-      {/* Services Beyond SEO */}
+      {/* We Build AND Rank - New Section */}
+      <section className="py-16 bg-gradient-to-br from-pink-50 to-rose-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+            January Isn't Your Only Month - We Build Sites That Convert Year-Round
+          </h2>
+          
+          <div className="prose prose-lg max-w-none text-gray-700 mb-12">
+            <p className="text-center text-xl font-semibold text-pink-600 mb-6">
+              Stop depending on New Year's resolutions. We build gym websites that bring members every month.
+            </p>
+            
+            <div className="bg-white rounded-xl p-6 shadow-lg border border-pink-200">
+              <p className="font-bold text-gray-900 mb-4">Why Gym Websites Fail:</p>
+              <ul className="space-y-2">
+                <li>• Basic site with outdated class schedules</li>
+                <li>• No online membership signup</li>
+                <li>• Can't showcase trainers/classes</li>
+                <li>• Missing from "gym near me" searches</li>
+                <li>• Lost to big chains on Google</li>
+                <li>• No virtual tour capability</li>
+              </ul>
+              
+              <p className="font-bold text-gray-900 mt-6 mb-4">What We Build for Gyms:</p>
+              <ul className="space-y-2">
+                <li>• Dynamic WordPress with class booking</li>
+                <li>• Online membership registration</li>
+                <li>• Trainer profiles and specialties</li>
+                <li>• Virtual gym tour feature</li>
+                <li>• Local neighborhood targeting</li>
+                <li>• Voice search optimization</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Complete Gym Solution */}
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-12">Services Beyond SEO</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-12">Complete Digital Solution for Fitness Centers</h2>
           
           <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Marketing Agency</h3>
-              <p className="text-gray-700">
-                Gyms need visual marketing - transformation photos, class videos, member testimonials. As marketing agency, we handle Instagram for daily motivation, Facebook for community building, TikTok for viral workouts. But SEO brings people actively looking to join, not just browsing.
+            <div className="bg-pink-50 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">We BUILD Your Member Hub</h3>
+              <p className="text-gray-700 mb-4">
+                Custom WordPress with class booking, trainer profiles, virtual tours. Member portal, challenge tracking, transformation galleries. Everything to convert visitors to members.
               </p>
-              <p className="text-gray-600 mt-3">
-                👉 Get listed on <a href="https://www.classpass.com/" className="text-pink-600 underline" target="_blank" rel="noopener noreferrer">ClassPass</a> and <a href="https://www.mindbodyonline.com/" className="text-pink-600 underline" target="_blank" rel="noopener noreferrer">MindBody</a>.
+              <p className="text-sm text-pink-600 font-semibold">
+                ✓ Custom WordPress Development<br/>
+                ✓ Class Booking System<br/>
+                ✓ Member Portal Access<br/>
+                ✓ Virtual Tour Feature
+              </p>
+            </div>
+            
+            <div className="bg-rose-50 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Then We DOMINATE Local Search</h3>
+              <p className="text-gray-700 mb-4">
+                Rank for "gym near me" and beat the chains. Corporate wellness programs, specialty fitness, seasonal campaigns. Voice search for fitness queries.
+              </p>
+              <p className="text-sm text-rose-600 font-semibold">
+                ✓ Neighborhood Gym SEO<br/>
+                ✓ Class-Specific Pages<br/>
+                ✓ Corporate Wellness Focus<br/>
+                ✓ Voice Search Ready
               </p>
             </div>
             
             <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Marketing Consultant</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Year-Round Members</h3>
               <p className="text-gray-700">
-                Gym owners know fitness, not marketing. As marketing consultant, I explain retention strategies, referral programs, seasonal campaigns. Why "free trial" converts better than "discount." How class schedules affect SEO. Real gym marketing, not generic advice.
+                Stop the January spike and February crash. SEO brings steady members all year - summer prep, holiday fitness, corporate accounts.
               </p>
             </div>
             
             <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Website Designer</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">ClassPass & MindBody Ready</h3>
               <p className="text-gray-700">
-                Gym websites gotta inspire action. We design sites with class schedules, trainer bios, virtual tours, easy signup. Before/after galleries that load fast. Mobile-first cuz everyone checking gym websites on phone. Integrated booking for classes and training.
-              </p>
-              <p className="text-gray-600 mt-3">
-                👉 Integrate with <a href="https://www.zenplanner.com/" className="text-pink-600 underline" target="_blank" rel="noopener noreferrer">Zen Planner</a> for member management.
+                Integrated with all major fitness platforms. Online booking, app integration, automated class updates. Modern gym management.
               </p>
             </div>
-            
-            <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Web Hosting Company</h3>
-              <p className="text-gray-700">
-                January 1st, everyone hitting gym websites. Yours better not crash. As web hosting company, we provide reliable hosting that handles traffic spikes. Fast loading for video content. Secure member portals. Your site as strong as your members gonna be.
-              </p>
-            </div>
+          </div>
+          
+          <div className="mt-12 bg-gradient-to-r from-pink-100 to-rose-100 rounded-xl p-6 text-center">
+            <p className="text-lg font-bold text-gray-900 mb-2">
+              Gym Digital Transformation Package:
+            </p>
+            <p className="text-3xl font-bold text-pink-600 mb-2">$6,000 - $10,000</p>
+            <p className="text-gray-700">
+              Gym website + Class booking + Member portal + Local SEO + Voice search
+            </p>
+            <p className="text-sm text-gray-600 mt-2">
+              (20 new members pays for everything)
+            </p>
           </div>
         </div>
       </section>

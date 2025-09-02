@@ -151,45 +151,101 @@ export default function SEOForDentists() {
         </div>
       </section>
 
-      {/* Services Beyond SEO */}
+      {/* We Build AND Rank - New Section */}
+      <section className="py-16 bg-gradient-to-br from-teal-50 to-cyan-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+            Your Dental Website Is Scaring Patients Away - We'll Fix That
+          </h2>
+          
+          <div className="prose prose-lg max-w-none text-gray-700 mb-12">
+            <p className="text-center text-xl font-semibold text-teal-600 mb-6">
+              We build welcoming dental websites that actually get new patients booking appointments.
+            </p>
+            
+            <div className="bg-white rounded-xl p-6 shadow-lg border border-teal-200">
+              <p className="font-bold text-gray-900 mb-4">Why Dental Websites Fail:</p>
+              <ul className="space-y-2">
+                <li>• Outdated site with stock photos from 2005</li>
+                <li>• No online appointment booking</li>
+                <li>• Can't show insurance accepted</li>
+                <li>• Missing emergency dental pages</li>
+                <li>• Not showing up for "dentist near me"</li>
+                <li>• Voice search invisible</li>
+              </ul>
+              
+              <p className="font-bold text-gray-900 mt-6 mb-4">What We Build for Dentists:</p>
+              <ul className="space-y-2">
+                <li>• Modern WordPress site that builds trust</li>
+                <li>• Online appointment scheduling</li>
+                <li>• Insurance verification system</li>
+                <li>• Service pages for every procedure</li>
+                <li>• Emergency dental optimization</li>
+                <li>• Voice and AI search ready</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Complete Dental Solution */}
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-12">Services Beyond SEO</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-12">Complete Digital Solution for Dental Practices</h2>
           
           <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Marketing Agency</h3>
-              <p className="text-gray-700">
-                Dental practices need full marketing. As marketing agency, we handle Instagram for before/after photos, Facebook for patient testimonials, Google Ads for immediate needs. But SEO foundation brings consistent new patients without paying per click. One dentist said 70% of new patients now finding him through organic search.
+            <div className="bg-teal-50 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">We BUILD Your Patient-Friendly Site</h3>
+              <p className="text-gray-700 mb-4">
+                Custom WordPress that doesn't feel scary. Virtual office tour, meet-the-team pages, before/after galleries. HIPAA compliant forms. Insurance checker. All the features patients expect.
               </p>
-              <p className="text-gray-600 mt-3">
-                👉 Get verified on <a href="https://www.healthgrades.com/" className="text-teal-600 underline" target="_blank" rel="noopener noreferrer">Healthgrades</a> and <a href="https://www.zocdoc.com/" className="text-teal-600 underline" target="_blank" rel="noopener noreferrer">ZocDoc</a>.
+              <p className="text-sm text-teal-600 font-semibold">
+                ✓ Custom WordPress Development<br/>
+                ✓ Online Appointment Booking<br/>
+                ✓ Insurance Verification<br/>
+                ✓ Patient Portal Access
+              </p>
+            </div>
+            
+            <div className="bg-cyan-50 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Then We DOMINATE Local Search</h3>
+              <p className="text-gray-700 mb-4">
+                Rank for "emergency dentist Long Beach" and every insurance provider. Beat corporate chains in Google Maps. Voice search optimized for pain searches.
+              </p>
+              <p className="text-sm text-cyan-600 font-semibold">
+                ✓ Emergency Dental SEO<br/>
+                ✓ Insurance Provider Pages<br/>
+                ✓ Google Maps Domination<br/>
+                ✓ Voice Search Ready
               </p>
             </div>
             
             <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Marketing Consultant</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Stop Paying $250/Patient</h3>
               <p className="text-gray-700">
-                Dentists went to dental school, not marketing school. As marketing consultant, I explain why "teeth whitening" too competitive but "zoom whitening Long Beach" is goldmine. How patient reviews affect rankings. Why you need separate pages for each insurance provider. Real dental marketing advice, not generic stuff.
+                Facebook and Google Ads cost fortune for dentists. One good ranking brings unlimited new patients FREE. Better ROI than any advertising.
               </p>
             </div>
             
             <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Website Designer</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">HIPAA Compliant Everything</h3>
               <p className="text-gray-700">
-                Most dental websites look dated or too medical. We design sites that feel welcoming, not scary. Online appointment booking, insurance checker, virtual office tour, patient portal. Before/after galleries that load fast. Mobile-first cuz everyone searching on phones.
-              </p>
-              <p className="text-gray-600 mt-3">
-                👉 Integrate with <a href="https://www.patientfusion.com/" className="text-teal-600 underline" target="_blank" rel="noopener noreferrer">Patient Fusion</a> for scheduling.
+                Patient data protected with bank-level encryption. Secure forms, daily backups, SSL certificates. Your website as secure as your patient records.
               </p>
             </div>
-            
-            <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Web Hosting Company</h3>
-              <p className="text-gray-700">
-                Patient data needs serious security. As web hosting company, we provide HIPAA-compliant hosting, SSL certificates, daily backups. Your site fast and secure. When someone searching for emergency dentist, your site loads instantly. No crashes during busy times.
-              </p>
-            </div>
+          </div>
+          
+          <div className="mt-12 bg-gradient-to-r from-teal-100 to-cyan-100 rounded-xl p-6 text-center">
+            <p className="text-lg font-bold text-gray-900 mb-2">
+              Dental Practice Digital Package:
+            </p>
+            <p className="text-3xl font-bold text-teal-600 mb-2">$6,000 - $10,000</p>
+            <p className="text-gray-700">
+              Dental website + Patient booking system + Local SEO + Voice optimization
+            </p>
+            <p className="text-sm text-gray-600 mt-2">
+              (10 new patients a month pays for everything)
+            </p>
           </div>
         </div>
       </section>
