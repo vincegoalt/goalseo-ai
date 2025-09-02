@@ -42,7 +42,7 @@ export const services: Service[] = [
     ],
     category: 'specialized',
     price: {
-      starting: 1999,
+      starting: 499,
       currency: 'USD',
       period: 'month'
     }
@@ -72,7 +72,7 @@ export const services: Service[] = [
     ],
     category: 'specialized',
     price: {
-      starting: 1499,
+      starting: 499,
       currency: 'USD',
       period: 'month'
     }
@@ -102,7 +102,7 @@ export const services: Service[] = [
     ],
     category: 'marketing',
     price: {
-      starting: 999,
+      starting: 499,
       currency: 'USD',
       period: 'month'
     }
@@ -132,7 +132,7 @@ export const services: Service[] = [
     ],
     category: 'marketing',
     price: {
-      starting: 1299,
+      starting: 499,
       currency: 'USD',
       period: 'month'
     }
@@ -213,7 +213,7 @@ export const services: Service[] = [
     ],
     category: 'core',
     price: {
-      starting: 2999,
+      starting: 499,
       currency: 'USD',
       period: 'month'
     }
