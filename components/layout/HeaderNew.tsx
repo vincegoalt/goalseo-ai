@@ -9,7 +9,8 @@ import {
   Code, Database, Gauge, Brain, FileText, Link2,
   ShoppingBag, Palette, Home, Gamepad2, Heart, Pizza,
   Gem, Leaf, Dog, Mountain, Briefcase, X, Menu, Award,
-  User, LogOut
+  User, LogOut, MapPin, Wrench, DollarSign, Scale,
+  Utensils, Store, Dumbbell, Scissors, Car
 } from 'lucide-react'
 import { authClient } from "@/lib/auth-client"
 import { useRouter } from 'next/navigation'
@@ -103,6 +104,27 @@ export default function HeaderNew() {
     { title: 'Contact', desc: 'Get in touch', href: '/contact' }
   ]
   
+  const localServices = {
+    emergency: [
+      { icon: Wrench, title: 'Plumbers', desc: '24/7 emergency plumbing services', href: '/services/local/plumbers' },
+      { icon: Zap, title: 'Electricians', desc: 'Electrical contractors & repairs', href: '/services/local/electricians' },
+      { icon: Home, title: 'HVAC', desc: 'AC repair & heating services', href: '/services/local/hvac' },
+      { icon: Shield, title: 'Roofing', desc: 'Roofing contractors & repairs', href: '/services/local/roofing' }
+    ],
+    professional: [
+      { icon: Scale, title: 'Attorneys', desc: 'Personal injury, DUI, family law', href: '/services/local/attorneys' },
+      { icon: Heart, title: 'Dentists', desc: 'General & cosmetic dentistry', href: '/services/local/dentists' },
+      { icon: DollarSign, title: 'Real Estate', desc: 'Agents & brokers', href: '/services/local/real-estate' },
+      { icon: Briefcase, title: 'CPAs', desc: 'Accountants & tax services', href: '/services/local/cpas' }
+    ],
+    lifestyle: [
+      { icon: Utensils, title: 'Restaurants', desc: 'Local dining & catering', href: '/services/local/restaurants' },
+      { icon: Dumbbell, title: 'Gyms', desc: 'Fitness studios & trainers', href: '/services/local/gyms' },
+      { icon: Scissors, title: 'Salons', desc: 'Beauty & wellness services', href: '/services/local/salons' },
+      { icon: Car, title: 'Auto Services', desc: 'Mechanics & body shops', href: '/services/local/auto' }
+    ]
+  }
+  
   return (
     <>
       <header className={`fixed w-full top-0 z-50 transition-all duration-300 ${
@@ -126,6 +148,19 @@ export default function HeaderNew() {
             
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center gap-1">
+              {/* Local Services */}
+              <div className="relative">
+                <button
+                  onMouseEnter={() => setActiveDropdown('local')}
+                  onMouseLeave={() => setActiveDropdown(null)}
+                  className="flex items-center gap-1 px-4 py-2 text-gray-700 hover:text-gray-900 font-medium transition-colors"
+                >
+                  <MapPin className="h-4 w-4" />
+                  Local Services
+                  <ChevronDown className={`h-4 w-4 transition-transform ${activeDropdown === 'local' ? 'rotate-180' : ''}`} />
+                </button>
+              </div>
+              
               {/* Why GoalSEO */}
               <div className="relative">
                 <button
@@ -298,6 +333,142 @@ export default function HeaderNew() {
                       Get Free Audit
                       <ArrowRight className="h-4 w-4" />
                     </Link>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          )}
+          
+          {/* Local Services Mega Menu */}
+          {activeDropdown === 'local' && (
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              onMouseEnter={() => setActiveDropdown('local')}
+              onMouseLeave={() => setActiveDropdown(null)}
+              className="absolute left-0 right-0 bg-white border-t border-gray-100 shadow-xl"
+            >
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                <div className="grid lg:grid-cols-4 gap-8">
+                  {/* Emergency Services */}
+                  <div>
+                    <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-4">
+                      🚨 EMERGENCY & HOME SERVICES
+                    </h3>
+                    <div className="space-y-2">
+                      {localServices.emergency.map((item) => {
+                        const Icon = item.icon
+                        return (
+                          <Link
+                            key={item.title}
+                            href={item.href}
+                            className="block p-3 rounded-lg hover:bg-blue-50 transition-colors group"
+                          >
+                            <div className="flex items-start gap-3">
+                              <div className="p-1.5 bg-blue-100 rounded-lg group-hover:bg-blue-200 transition-colors">
+                                <Icon className="h-4 w-4 text-blue-600" />
+                              </div>
+                              <div>
+                                <div className="text-sm font-medium text-gray-900">{item.title}</div>
+                                <div className="text-xs text-gray-600 mt-0.5">{item.desc}</div>
+                              </div>
+                            </div>
+                          </Link>
+                        )
+                      })}
+                    </div>
+                  </div>
+                  
+                  {/* Professional Services */}
+                  <div>
+                    <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-4">
+                      💼 PROFESSIONAL SERVICES
+                    </h3>
+                    <div className="space-y-2">
+                      {localServices.professional.map((item) => {
+                        const Icon = item.icon
+                        return (
+                          <Link
+                            key={item.title}
+                            href={item.href}
+                            className="block p-3 rounded-lg hover:bg-purple-50 transition-colors group"
+                          >
+                            <div className="flex items-start gap-3">
+                              <div className="p-1.5 bg-purple-100 rounded-lg group-hover:bg-purple-200 transition-colors">
+                                <Icon className="h-4 w-4 text-purple-600" />
+                              </div>
+                              <div>
+                                <div className="text-sm font-medium text-gray-900">{item.title}</div>
+                                <div className="text-xs text-gray-600 mt-0.5">{item.desc}</div>
+                              </div>
+                            </div>
+                          </Link>
+                        )
+                      })}
+                    </div>
+                  </div>
+                  
+                  {/* Lifestyle Services */}
+                  <div>
+                    <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-4">
+                      🌟 LIFESTYLE & LOCAL
+                    </h3>
+                    <div className="space-y-2">
+                      {localServices.lifestyle.map((item) => {
+                        const Icon = item.icon
+                        return (
+                          <Link
+                            key={item.title}
+                            href={item.href}
+                            className="block p-3 rounded-lg hover:bg-green-50 transition-colors group"
+                          >
+                            <div className="flex items-start gap-3">
+                              <div className="p-1.5 bg-green-100 rounded-lg group-hover:bg-green-200 transition-colors">
+                                <Icon className="h-4 w-4 text-green-600" />
+                              </div>
+                              <div>
+                                <div className="text-sm font-medium text-gray-900">{item.title}</div>
+                                <div className="text-xs text-gray-600 mt-0.5">{item.desc}</div>
+                              </div>
+                            </div>
+                          </Link>
+                        )
+                      })}
+                    </div>
+                  </div>
+                  
+                  {/* Local CTA */}
+                  <div>
+                    <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6">
+                      <MapPin className="h-8 w-8 text-blue-600 mb-3" />
+                      <h3 className="font-semibold text-gray-900 mb-2">Long Beach Local SEO</h3>
+                      <p className="text-sm text-gray-600 mb-4">
+                        We know your neighborhoods: Belmont Shore, Bixby Knolls, Naples, 
+                        Downtown, and everywhere in between.
+                      </p>
+                      <div className="space-y-2 text-xs text-gray-600 mb-4">
+                        <div className="flex items-center gap-2">
+                          <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
+                          <span>500+ local businesses ranked</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
+                          <span>2,847+ calls generated monthly</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
+                          <span>387% average ROI</span>
+                        </div>
+                      </div>
+                      <Link
+                        href="/free-audit"
+                        className="inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 transition-all w-full justify-center"
+                      >
+                        Get Free Local SEO Audit
+                        <ArrowRight className="h-4 w-4" />
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>
