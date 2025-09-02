@@ -239,12 +239,12 @@ export default function SEOForDentists() {
             <p className="text-lg font-bold text-gray-900 mb-2">
               Dental Practice Digital Package:
             </p>
-            <p className="text-3xl font-bold text-teal-600 mb-2">$6,000 - $10,000</p>
+            <p className="text-3xl font-bold text-teal-600 mb-2">Starting at $499/month</p>
             <p className="text-gray-700">
               Dental website + Patient booking system + Local SEO + Voice optimization
             </p>
             <p className="text-sm text-gray-600 mt-2">
-              (10 new patients a month pays for everything)
+              (Investment pays for itself quickly)
             </p>
           </div>
         </div>

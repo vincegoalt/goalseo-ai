@@ -239,12 +239,12 @@ export default function SEOForSalons() {
             <p className="text-lg font-bold text-gray-900 mb-2">
               Salon Digital Beauty Package:
             </p>
-            <p className="text-3xl font-bold text-rose-600 mb-2">$5,000 - $8,000</p>
+            <p className="text-3xl font-bold text-rose-600 mb-2">Starting at $499/month</p>
             <p className="text-gray-700">
               Salon website + Booking system + Portfolio galleries + Local SEO
             </p>
             <p className="text-sm text-gray-600 mt-2">
-              (10 new clients a month pays for everything)
+              (Investment pays for itself quickly)
             </p>
           </div>
         </div>

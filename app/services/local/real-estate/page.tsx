@@ -239,7 +239,7 @@ export default function SEOForRealEstate() {
             <p className="text-lg font-bold text-gray-900 mb-2">
               Real Estate Digital Domination Package:
             </p>
-            <p className="text-3xl font-bold text-indigo-600 mb-2">$7,500 - $12,000</p>
+            <p className="text-3xl font-bold text-indigo-600 mb-2">Starting at $499/month</p>
             <p className="text-gray-700">
               Custom site with IDX + Lead generation + Neighborhood SEO + Voice search
             </p>

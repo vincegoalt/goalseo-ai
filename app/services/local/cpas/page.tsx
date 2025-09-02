@@ -239,12 +239,12 @@ export default function SEOForCPAs() {
             <p className="text-lg font-bold text-gray-900 mb-2">
               CPA Digital Authority Package:
             </p>
-            <p className="text-3xl font-bold text-emerald-600 mb-2">$5,000 - $8,000</p>
+            <p className="text-3xl font-bold text-emerald-600 mb-2">Starting at $499/month</p>
             <p className="text-gray-700">
               CPA website + Service expansion + Local SEO + Business client focus
             </p>
             <p className="text-sm text-gray-600 mt-2">
-              (5 monthly bookkeeping clients pays for everything)
+              (Investment pays for itself quickly)
             </p>
           </div>
         </div>

@@ -239,7 +239,7 @@ export default function SEOForAttorneys() {
             <p className="text-lg font-bold text-gray-900 mb-2">
               Law Firm Digital Authority Package:
             </p>
-            <p className="text-3xl font-bold text-purple-600 mb-2">$8,000 - $15,000</p>
+            <p className="text-3xl font-bold text-purple-600 mb-2">Starting at $499/month</p>
             <p className="text-gray-700">
               Professional site + Practice area SEO + Voice search + Intake system
             </p>

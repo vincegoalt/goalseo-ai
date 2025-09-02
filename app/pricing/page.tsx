@@ -1,19 +1,17 @@
-import PricingWithROI from '@/components/home/PricingWithROI'
-import Comparison from '@/components/home/Comparison'
+import SimplePricing from '@/components/home/SimplePricing'
 import FAQ from '@/components/home/FAQ'
 import CTA from '@/components/home/CTA'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Pricing - GoalSEO AI | Simple, Transparent SEO Pricing',
-  description: 'No contracts, no setup fees, just pure ROI. Save $60k+/year while getting 3x better results than traditional agencies. See our pricing and calculate your ROI.',
+  title: 'Pricing - GoalSEO.ai | SEO Services Starting at $499/month',
+  description: 'Simple, transparent pricing. SEO services starting at $499/month. Custom websites from $1,997. No contracts, no setup fees, just results.',
 }
 
 export default function PricingPage() {
   return (
     <div className="pt-20">
-      <PricingWithROI />
-      <Comparison />
+      <SimplePricing />
       <FAQ />
       <CTA />
     </div>

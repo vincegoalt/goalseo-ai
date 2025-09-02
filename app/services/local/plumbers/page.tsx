@@ -232,7 +232,7 @@ export default function SEOForPlumbers() {
             <p className="text-lg font-bold text-gray-900 mb-2">
               Package Deal for Long Beach Plumbers:
             </p>
-            <p className="text-3xl font-bold text-blue-600 mb-2">$5,000 - $10,000</p>
+            <p className="text-3xl font-bold text-blue-600 mb-2">Starting at $499/month</p>
             <p className="text-gray-700">
               New website built + 6 months SEO management + Voice search optimization
             </p>

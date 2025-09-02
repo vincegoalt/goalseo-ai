@@ -239,12 +239,12 @@ export default function SEOForGyms() {
             <p className="text-lg font-bold text-gray-900 mb-2">
               Gym Digital Transformation Package:
             </p>
-            <p className="text-3xl font-bold text-pink-600 mb-2">$6,000 - $10,000</p>
+            <p className="text-3xl font-bold text-pink-600 mb-2">Starting at $499/month</p>
             <p className="text-gray-700">
               Gym website + Class booking + Member portal + Local SEO + Voice search
             </p>
             <p className="text-sm text-gray-600 mt-2">
-              (20 new members pays for everything)
+              (Investment pays for itself quickly)
             </p>
           </div>
         </div>

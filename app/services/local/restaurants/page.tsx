@@ -239,7 +239,7 @@ export default function SEOForRestaurants() {
             <p className="text-lg font-bold text-gray-900 mb-2">
               Restaurant Digital Transformation:
             </p>
-            <p className="text-3xl font-bold text-orange-600 mb-2">$7,500 - $12,000</p>
+            <p className="text-3xl font-bold text-orange-600 mb-2">Starting at $499/month</p>
             <p className="text-gray-700">
               Custom site with ordering + Local SEO + Review management + Voice search
             </p>

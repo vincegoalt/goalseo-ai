@@ -3,7 +3,7 @@ import LocalTestimonials from '@/components/home/LocalTestimonials'
 import LocalServices from '@/components/home/LocalServices'
 import LiveSEOAnalyzer from '@/components/home/LiveSEOAnalyzer'
 import ComparisonAdvanced from '@/components/home/ComparisonAdvanced'
-import PricingWithROI from '@/components/home/PricingWithROI'
+import SimplePricing from '@/components/home/SimplePricing'
 import Services from '@/components/home/Services'
 import Metrics from '@/components/home/Metrics'
 import Process from '@/components/home/Process'
@@ -20,7 +20,7 @@ export default function HomePage() {
       <LocalServices />
       <LiveSEOAnalyzer />
       <ComparisonAdvanced />
-      <PricingWithROI />
+      <SimplePricing />
       <Metrics />
       <Services />
       <Process />

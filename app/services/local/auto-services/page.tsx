@@ -239,12 +239,12 @@ export default function SEOForAutoServices() {
             <p className="text-lg font-bold text-gray-900 mb-2">
               Auto Shop Digital Trust Package:
             </p>
-            <p className="text-3xl font-bold text-slate-600 mb-2">$5,000 - $8,000</p>
+            <p className="text-3xl font-bold text-slate-600 mb-2">Starting at $499/month</p>
             <p className="text-gray-700">
               Auto shop website + Booking system + Local SEO + Emergency rankings
             </p>
             <p className="text-sm text-gray-600 mt-2">
-              (10 new customers a month pays for everything)
+              (Investment pays for itself quickly)
             </p>
           </div>
         </div>

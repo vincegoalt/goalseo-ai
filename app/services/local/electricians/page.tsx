@@ -238,7 +238,7 @@ export default function SEOForElectricians() {
             <p className="text-lg font-bold text-gray-900 mb-2">
               Electrician Digital Package:
             </p>
-            <p className="text-3xl font-bold text-yellow-600 mb-2">$6,000 - $10,000</p>
+            <p className="text-3xl font-bold text-yellow-600 mb-2">Starting at $499/month</p>
             <p className="text-gray-700">
               New WordPress site + Local SEO + EV market targeting + Voice search
             </p>

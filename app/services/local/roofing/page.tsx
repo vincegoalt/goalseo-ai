@@ -239,7 +239,7 @@ export default function SEOForRoofing() {
             <p className="text-lg font-bold text-gray-900 mb-2">
               Roofing Storm-Ready Package:
             </p>
-            <p className="text-3xl font-bold text-red-600 mb-2">$6,000 - $10,000</p>
+            <p className="text-3xl font-bold text-red-600 mb-2">Starting at $499/month</p>
             <p className="text-gray-700">
               Roofing website + Emergency SEO + Insurance targeting + Storm preparation
             </p>
