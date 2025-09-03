@@ -236,21 +236,12 @@ export default function HeaderNew() {
                     </button>
                   </>
                 ) : (
-                  <>
-                    <Link
-                      href="/login"
-                      className="px-4 py-2 text-gray-700 hover:text-gray-900 font-medium transition-colors"
-                    >
-                      Login
-                    </Link>
-                    <Link
-                      href="/signup?plan=growth&trial=true"
-                      className="px-6 py-2.5 bg-gradient-to-r from-primary-500 to-electric-500 text-white rounded-full font-semibold hover:from-primary-600 hover:to-electric-600 transition-all shadow-md hover:shadow-lg"
-                    >
-                      Start Free Trial
-                      <ArrowRight className="inline-block ml-2 h-4 w-4" />
-                    </Link>
-                  </>
+                  <Link
+                    href="/login"
+                    className="px-4 py-2 text-gray-700 hover:text-gray-900 font-medium transition-colors"
+                  >
+                    Login
+                  </Link>
                 )
               )}
             </div>
@@ -1033,22 +1024,13 @@ export default function HeaderNew() {
                           </button>
                         </>
                       ) : (
-                        <>
-                          <Link
-                            href="/login"
-                            className="block py-2 text-lg font-medium text-gray-900"
-                            onClick={() => setIsMobileMenuOpen(false)}
-                          >
-                            Login
-                          </Link>
-                          <Link
-                            href="/signup?plan=growth&trial=true"
-                            className="block mt-4 w-full py-3 bg-gradient-to-r from-primary-500 to-electric-500 text-white text-center rounded-full font-semibold"
-                            onClick={() => setIsMobileMenuOpen(false)}
-                          >
-                            Start Free Trial
-                          </Link>
-                        </>
+                        <Link
+                          href="/login"
+                          className="block py-2 text-lg font-medium text-gray-900"
+                          onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                          Login
+                        </Link>
                       )
                     )}
                   </div>
