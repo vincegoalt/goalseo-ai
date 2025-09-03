@@ -162,6 +162,7 @@ export default function ContactForm() {
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors"
             >
               <option value="">Select a service</option>
+              <option value="web-development">Web Development</option>
               <option value="local-seo">Local SEO</option>
               <option value="national-seo">National SEO</option>
               <option value="ecommerce-seo">E-commerce SEO</option>
