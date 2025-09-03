@@ -18,7 +18,7 @@ export async function GET(req: NextRequest) {
       cohere: !!process.env.COHERE_API_KEY,
       cohere_length: process.env.COHERE_API_KEY?.length || 0,
     },
-    test_results: {}
+    test_results: {} as Record<string, any>
   }
 
   // Test Groq if configured
