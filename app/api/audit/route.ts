@@ -32,7 +32,7 @@ function getRateLimitKey(req: NextRequest): string {
 
 function checkRateLimit(key: string): { allowed: boolean; remaining: number } {
   const now = Date.now()
-  const limit = 3 // 3 audits per hour per user
+  const limit = 5 // Increased to 5 audits per hour per user
   const window = 3600000 // 1 hour in ms
   
   const record = rateLimitStore.get(key)
@@ -53,14 +53,222 @@ function checkRateLimit(key: string): { allowed: boolean; remaining: number } {
   return { allowed: true, remaining: limit - record.count }
 }
 
-async function analyzeSEO(url: string): Promise<any> {
-  // Use Groq API (free and fast)
-  const GROQ_API_KEY = process.env.GROQ_API_KEY || ''
+// Multiple free LLM providers for fallback
+async function analyzeWithGroq(prompt: string): Promise<any> {
+  const GROQ_API_KEY = process.env.GROQ_API_KEY
   
   if (!GROQ_API_KEY) {
-    throw new Error('GROQ_API_KEY not configured')
+    throw new Error('Groq API not configured')
   }
 
+  const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+    method: 'POST',
+    headers: {
+      'Authorization': `Bearer ${GROQ_API_KEY}`,
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      model: 'llama-3.3-70b-versatile',
+      messages: [
+        {
+          role: 'system',
+          content: 'You are an expert SEO analyst. Always respond with valid JSON only, no markdown formatting.'
+        },
+        {
+          role: 'user',
+          content: prompt
+        }
+      ],
+      temperature: 0.3,
+      max_tokens: 2000,
+      response_format: { type: "json_object" }
+    })
+  })
+
+  if (!response.ok) {
+    throw new Error('Groq API failed')
+  }
+
+  const data = await response.json()
+  return JSON.parse(data.choices[0].message.content)
+}
+
+async function analyzeWithHuggingFace(prompt: string): Promise<any> {
+  const HF_API_KEY = process.env.HUGGINGFACE_API_KEY
+  
+  if (!HF_API_KEY) {
+    throw new Error('HuggingFace API not configured')
+  }
+
+  // Using Mistral-7B-Instruct via HuggingFace Inference API (free tier)
+  const response = await fetch('https://api-inference.huggingface.co/models/mistralai/Mistral-7B-Instruct-v0.2', {
+    method: 'POST',
+    headers: {
+      'Authorization': `Bearer ${HF_API_KEY}`,
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      inputs: `<s>[INST] ${prompt} \n\nRespond with valid JSON only. [/INST]`,
+      parameters: {
+        max_new_tokens: 1500,
+        temperature: 0.3,
+        return_full_text: false
+      }
+    })
+  })
+
+  if (!response.ok) {
+    throw new Error('HuggingFace API failed')
+  }
+
+  const data = await response.json()
+  const text = data[0]?.generated_text || data.generated_text || ''
+  
+  // Extract JSON from response
+  const jsonMatch = text.match(/\{[\s\S]*\}/)
+  if (jsonMatch) {
+    return JSON.parse(jsonMatch[0])
+  }
+  throw new Error('Invalid response format from HuggingFace')
+}
+
+async function analyzeWithCohere(prompt: string): Promise<any> {
+  const COHERE_API_KEY = process.env.COHERE_API_KEY
+  
+  if (!COHERE_API_KEY) {
+    throw new Error('Cohere API not configured')
+  }
+
+  const response = await fetch('https://api.cohere.ai/v1/generate', {
+    method: 'POST',
+    headers: {
+      'Authorization': `Bearer ${COHERE_API_KEY}`,
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      model: 'command-light',
+      prompt: `${prompt}\n\nProvide your response as valid JSON only:`,
+      max_tokens: 1500,
+      temperature: 0.3,
+      k: 0,
+      stop_sequences: [],
+      return_likelihoods: 'NONE'
+    })
+  })
+
+  if (!response.ok) {
+    throw new Error('Cohere API failed')
+  }
+
+  const data = await response.json()
+  const text = data.generations[0].text
+  
+  // Extract JSON from response
+  const jsonMatch = text.match(/\{[\s\S]*\}/)
+  if (jsonMatch) {
+    return JSON.parse(jsonMatch[0])
+  }
+  throw new Error('Invalid response format from Cohere')
+}
+
+// Fallback analysis when all APIs fail
+function generateBasicAnalysis(url: string, siteTitle: string, metaDescription: string, siteContent: string): any {
+  const titleLength = siteTitle.length
+  const descLength = metaDescription.length
+  const hasDescription = descLength > 0
+  
+  // Calculate basic scores
+  const titleScore = titleLength > 30 && titleLength < 60 ? 20 : 10
+  const descScore = hasDescription && descLength > 120 && descLength < 160 ? 20 : hasDescription ? 10 : 0
+  const contentScore = siteContent.length > 500 ? 20 : 10
+  const baseScore = 30 // Base score for having a website
+  
+  const overallScore = baseScore + titleScore + descScore + contentScore
+
+  return {
+    url,
+    title: siteTitle,
+    meta_description: metaDescription,
+    overall_score: overallScore,
+    issues: [
+      titleLength > 60 ? {
+        severity: 'warning',
+        issue: `Title tag is ${titleLength} characters (recommended: 50-60)`,
+        recommendation: 'Shorten your title tag to under 60 characters while keeping primary keywords'
+      } : titleLength < 30 ? {
+        severity: 'critical',
+        issue: `Title tag is only ${titleLength} characters`,
+        recommendation: 'Expand your title to include primary keywords and brand name'
+      } : {
+        severity: 'info',
+        issue: 'Title tag length is good',
+        recommendation: 'Consider A/B testing different title variations'
+      },
+      !hasDescription ? {
+        severity: 'critical',
+        issue: 'Missing meta description',
+        recommendation: 'Add a compelling 150-160 character meta description with call-to-action'
+      } : descLength > 160 ? {
+        severity: 'warning',
+        issue: `Meta description is ${descLength} characters (will be truncated)`,
+        recommendation: 'Shorten to under 160 characters to prevent truncation in search results'
+      } : {
+        severity: 'info',
+        issue: 'Meta description present',
+        recommendation: 'Include primary keywords and unique value proposition'
+      },
+      {
+        severity: 'info',
+        issue: 'Mobile responsiveness not verified',
+        recommendation: 'Ensure your site is mobile-friendly with responsive design'
+      }
+    ],
+    opportunities: [
+      {
+        impact: 'high',
+        opportunity: 'Implement Generative Engine Optimization (GEO)',
+        action: 'Add structured data and entity markup to appear in AI-powered search results'
+      },
+      {
+        impact: 'high',
+        opportunity: 'Optimize for Answer Engines (AEO)',
+        action: 'Create FAQ sections and implement Q&A schema markup'
+      },
+      {
+        impact: 'medium',
+        opportunity: 'Improve Core Web Vitals',
+        action: 'Optimize images, minimize JavaScript, and improve server response time'
+      },
+      {
+        impact: 'medium',
+        opportunity: 'Build topical authority',
+        action: 'Create comprehensive content clusters around your main topics'
+      }
+    ],
+    quick_wins: [
+      'Add alt text to all images for better accessibility and SEO',
+      'Create and submit an XML sitemap to Google Search Console',
+      'Implement breadcrumb navigation with schema markup',
+      'Add Open Graph tags for better social media sharing',
+      'Set up Google Business Profile if you serve local customers',
+      'Install Google Analytics 4 and Search Console'
+    ],
+    geo_aeo_readiness: {
+      geo_score: 25,
+      aeo_score: 20,
+      recommendations: [
+        'Add comprehensive schema markup (Organization, Product, FAQ, etc.)',
+        'Create entity-focused content that defines your brand and offerings',
+        'Implement speakable schema for voice search optimization',
+        'Build authoritative backlinks to increase E-E-A-T signals',
+        'Create detailed About and Author pages with expertise credentials'
+      ]
+    },
+    timestamp: new Date().toISOString()
+  }
+}
+
+async function analyzeSEO(url: string): Promise<any> {
   // First, fetch basic site data
   let siteContent = ''
   let siteTitle = ''
@@ -82,7 +290,7 @@ async function analyzeSEO(url: string): Promise<any> {
     
     // Extract meta description
     const metaMatch = html.match(/<meta\s+name=["']description["'][^>]*content=["'](.*?)["']/i)
-    metaDescription = metaMatch ? metaMatch[1].trim() : 'No meta description found'
+    metaDescription = metaMatch ? metaMatch[1].trim() : ''
     
     // Extract visible text (first 5000 chars)
     const bodyMatch = html.match(/<body[^>]*>([\s\S]*?)<\/body>/i)
@@ -97,10 +305,9 @@ async function analyzeSEO(url: string): Promise<any> {
     }
   } catch (error) {
     console.error('Error fetching site:', error)
-    throw new Error('Could not access website. Please check the URL.')
+    throw new Error('Could not access website. Please check the URL and try again.')
   }
 
-  // Now analyze with Groq
   const prompt = `As an SEO expert, analyze this website and provide actionable recommendations.
 
 URL: ${url}
@@ -125,98 +332,35 @@ Focus on:
 
 Keep it practical and actionable. Format as valid JSON.`
 
-  try {
-    const groqResponse = await fetch('https://api.groq.com/openai/v1/chat/completions', {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${GROQ_API_KEY}`,
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        model: 'llama-3.3-70b-versatile',
-        messages: [
-          {
-            role: 'system',
-            content: 'You are an expert SEO analyst. Always respond with valid JSON only, no markdown formatting.'
-          },
-          {
-            role: 'user',
-            content: prompt
-          }
-        ],
-        temperature: 0.3,
-        max_tokens: 2000,
-        response_format: { type: "json_object" }
-      })
-    })
+  // Try multiple LLM providers with fallback
+  const providers = [
+    { name: 'Groq', fn: () => analyzeWithGroq(prompt) },
+    { name: 'HuggingFace', fn: () => analyzeWithHuggingFace(prompt) },
+    { name: 'Cohere', fn: () => analyzeWithCohere(prompt) }
+  ]
 
-    if (!groqResponse.ok) {
-      const error = await groqResponse.text()
-      console.error('Groq API error:', error)
-      throw new Error('Analysis service temporarily unavailable')
-    }
-
-    const data = await groqResponse.json()
-    const analysis = JSON.parse(data.choices[0].message.content)
-    
-    // Add metadata
-    analysis.url = url
-    analysis.title = siteTitle
-    analysis.meta_description = metaDescription
-    analysis.timestamp = new Date().toISOString()
-    
-    return analysis
-  } catch (error) {
-    console.error('Groq analysis error:', error)
-    
-    // Fallback to basic analysis if API fails
-    return {
-      url,
-      title: siteTitle,
-      meta_description: metaDescription,
-      overall_score: Math.floor(Math.random() * 30) + 40, // 40-70 range
-      issues: [
-        {
-          severity: 'warning',
-          issue: siteTitle.length > 60 ? 'Title tag too long' : 'Title could be more descriptive',
-          recommendation: 'Optimize title to 50-60 characters with primary keyword'
-        },
-        {
-          severity: metaDescription ? 'info' : 'critical',
-          issue: metaDescription ? 'Meta description could be improved' : 'Missing meta description',
-          recommendation: metaDescription ? 'Enhance meta description with call-to-action' : 'Add a compelling meta description (150-160 chars)'
-        }
-      ],
-      opportunities: [
-        {
-          impact: 'high',
-          opportunity: 'Implement GEO optimization',
-          action: 'Add structured data and entity markup for AI engines'
-        },
-        {
-          impact: 'medium',
-          opportunity: 'Improve AEO readiness',
-          action: 'Create FAQ schema and answer-focused content'
-        }
-      ],
-      quick_wins: [
-        'Add missing alt text to images',
-        'Implement breadcrumb navigation',
-        'Create XML sitemap',
-        'Add Open Graph tags'
-      ],
-      geo_aeo_readiness: {
-        geo_score: 30,
-        aeo_score: 25,
-        recommendations: [
-          'Add comprehensive schema markup',
-          'Create entity-focused content',
-          'Implement FAQ and Q&A schemas'
-        ]
-      },
-      timestamp: new Date().toISOString()
+  for (const provider of providers) {
+    try {
+      console.log(`Trying ${provider.name}...`)
+      const analysis = await provider.fn()
+      
+      // Add metadata
+      analysis.url = url
+      analysis.title = siteTitle
+      analysis.meta_description = metaDescription
+      analysis.timestamp = new Date().toISOString()
+      analysis.analyzed_with = provider.name
+      
+      return analysis
+    } catch (error) {
+      console.log(`${provider.name} failed:`, error)
+      continue
     }
   }
+
+  // If all providers fail, use basic analysis
+  console.log('All LLM providers failed, using basic analysis')
+  return generateBasicAnalysis(url, siteTitle, metaDescription, siteContent)
 }
 
 export async function POST(req: NextRequest) {
