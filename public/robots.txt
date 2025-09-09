@@ -5,14 +5,40 @@ Allow: /
 
 # Sitemaps
 Sitemap: https://goalseo.ai/sitemap.xml
+Sitemap: https://goalseo.ai/sitemap-main.xml
+Sitemap: https://goalseo.ai/sitemap-locations.xml
 
 # Allow important pages for SEO
 Allow: /locations/
 Allow: /services/
+Allow: /services-by-location
 Allow: /blog/
 Allow: /case-studies/
 Allow: /tools/
 Allow: /free-audit
+
+# Allow all location-based SEO service pages
+Allow: /belmont-shore/
+Allow: /naples/
+Allow: /bixby-knolls/
+Allow: /downtown-long-beach/
+Allow: /signal-hill/
+Allow: /lakewood/
+Allow: /seal-beach/
+Allow: /torrance/
+Allow: /manhattan-beach/
+Allow: /*/plumbers-seo
+Allow: /*/electricians-seo
+Allow: /*/hvac-seo
+Allow: /*/roofing-seo
+Allow: /*/attorneys-seo
+Allow: /*/dentists-seo
+Allow: /*/real-estate-seo
+Allow: /*/restaurants-seo
+Allow: /*/auto-services-seo
+Allow: /*/gyms-seo
+Allow: /*/salons-seo
+Allow: /*/cpas-seo
 
 # Block admin and private areas (if any exist)
 Disallow: /api/
