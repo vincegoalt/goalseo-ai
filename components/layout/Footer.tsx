@@ -12,6 +12,15 @@ const footerLinks = {
     { name: 'Technical SEO', href: '/services/technical-seo' },
     { name: 'Link Building', href: '/services/link-building' },
   ],
+  locations: [
+    { name: 'SEO Services by Location', href: '/services-by-location' },
+    { name: 'Belmont Shore', href: '/belmont-shore/plumbers-seo' },
+    { name: 'Signal Hill', href: '/signal-hill/electricians-seo' },
+    { name: 'Lakewood', href: '/lakewood/hvac-seo' },
+    { name: 'Seal Beach', href: '/seal-beach/attorneys-seo' },
+    { name: 'Torrance', href: '/torrance/dentists-seo' },
+    { name: 'View All Locations →', href: '/services-by-location' },
+  ],
   industries: [
     { name: 'E-commerce', href: '/industries/e-commerce' },
     { name: 'SaaS', href: '/industries/saas' },
@@ -69,7 +78,7 @@ export default function Footer() {
 
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <Link href="/" className="inline-block mb-6">
@@ -111,6 +120,20 @@ export default function Footer() {
               {footerLinks.services.map((link) => (
                 <li key={link.name}>
                   <Link href={link.href} className="text-gray-400 hover:text-white transition-colors">
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Locations */}
+          <div>
+            <h3 className="text-lg font-semibold mb-6">Locations</h3>
+            <ul className="space-y-3">
+              {footerLinks.locations.map((link) => (
+                <li key={link.name}>
+                  <Link href={link.href} className={`text-gray-400 hover:text-white transition-colors ${link.name.includes('→') ? 'font-semibold text-blue-400 hover:text-blue-300' : ''}`}>
                     {link.name}
                   </Link>
                 </li>

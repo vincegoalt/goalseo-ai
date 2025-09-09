@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import locationData from '@/lib/location-data/location-services.json'
-import LocationServicePageUnique from '@/components/LocationServicePageUnique'
+import LocationServicePageEnhanced from '@/components/LocationServicePageEnhanced'
 
 interface PageProps {
   params: {
@@ -116,7 +116,7 @@ export default function Page({ params }: PageProps) {
   }
   
   return (
-    <LocationServicePageUnique
+    <LocationServicePageEnhanced
       location={locationObj.name}
       service={serviceDisplayNames[service] || serviceObj.service}
       metaTitle={serviceObj.metaTitle}
