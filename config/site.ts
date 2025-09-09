@@ -1,8 +1,8 @@
 export const siteConfig = {
   name: "GoalSEO.ai",
-  description: "AI-Powered SEO That Achieves Your Goals - Enterprise SEO Solutions with Measurable Results",
+  description: "Long Beach SEO Agency | #1 Local SEO Services in Long Beach, CA - Serving Belmont Shore, Signal Hill, Lakewood & 35+ Cities. Get More Customers with AI-Powered SEO. Call (562) 682-9403",
   url: "https://goalseo.ai",
-  tagline: "AI-Powered SEO That Achieves Your Goals",
+  tagline: "Long Beach's #1 AI-Powered SEO Agency",
   email: "info@goalseo.ai",
   phone: "(562) 682-9403",
   address: {
