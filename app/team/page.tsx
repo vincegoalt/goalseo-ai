@@ -11,72 +11,41 @@ import {
 export default function TeamPage() {
   const team = [
     {
-      name: "Vincent Chen",
+      name: "Vincent Pivard",
       role: "Founder & CEO",
-      bio: "10+ years in SEO with a focus on technical innovation. Former Director of SEO at a Fortune 500 company. Speaker at SMX, Pubcon, and BrightonSEO.",
-      specialties: ["E-commerce SEO", "Technical SEO", "GEO Strategy"],
-      certifications: ["Google Partner", "Shopify Plus Partner"],
+      bio: "15+ years in SEO and digital marketing. Founded GoalSEO to bring enterprise-level SEO to Long Beach businesses. Expert in local SEO strategy and technical implementation.",
+      specialties: ["Local SEO", "Technical SEO", "Business Strategy"],
+      certifications: ["Google Partner", "Google Analytics Certified"],
       linkedin: "#",
       twitter: "#"
     },
     {
-      name: "Sarah Chen",
-      role: "Head of Content Strategy",
-      bio: "8+ years in content marketing and SEO. Published in Search Engine Journal, Moz, and Search Engine Land. Expert in E-E-A-T optimization.",
-      specialties: ["Content Strategy", "GEO", "AEO"],
-      certifications: ["Content Marketing Institute", "HubSpot Content Marketing"],
+      name: "Sarah Martinez",
+      role: "Director of SEO",
+      bio: "10+ years optimizing websites for search engines. Specializes in content strategy and local search optimization for Southern California markets.",
+      specialties: ["Content Strategy", "Local SEO", "Link Building"],
+      certifications: ["SEMrush Certified", "HubSpot Content Marketing"],
       linkedin: "#",
       twitter: "#"
     },
     {
-      name: "Mike Rodriguez",
-      role: "Technical SEO Lead",
-      bio: "Full-stack developer turned SEO specialist. Expert in JavaScript SEO, Core Web Vitals, and enterprise technical implementations.",
-      specialties: ["JavaScript SEO", "Core Web Vitals", "Site Architecture"],
-      certifications: ["Google Cloud Certified", "AWS Solutions Architect"],
+      name: "Michael Chen",
+      role: "Technical SEO Manager",
+      bio: "Full-stack developer with 8+ years in technical SEO. Expert in site architecture, Core Web Vitals, and JavaScript SEO for modern web applications.",
+      specialties: ["Technical SEO", "Core Web Vitals", "Site Architecture"],
+      certifications: ["Google Cloud Certified", "Schema.org Expert"],
       linkedin: "#",
       twitter: "#"
-    },
-    {
-      name: "Emily Thompson",
-      role: "Link Building Director",
-      bio: "7+ years building relationships and earning high-quality links. Developed proprietary outreach strategies that achieve 73% success rates.",
-      specialties: ["Digital PR", "Outreach", "Relationship Building"],
-      certifications: ["PRSA Certified", "Google Analytics"],
-      linkedin: "#",
-      twitter: "#"
-    },
-    {
-      name: "David Park",
-      role: "Local SEO Specialist",
-      bio: "Long Beach native with 6+ years helping local businesses dominate search. Expert in Google Business Profile optimization and local link building.",
-      specialties: ["Local SEO", "GMB Optimization", "Citation Building"],
-      certifications: ["Google My Business Product Expert", "Moz Local Certified"],
-      linkedin: "#",
-      twitter: "#"
-    },
-    {
-      name: "GOAL",
-      role: "AI Team Lead",
-      bio: "Our proprietary AI system that processes 1M+ keywords daily, monitors 10,000+ ranking factors, and never stops learning. Works alongside our human team 24/7.",
-      specialties: ["Data Analysis", "Pattern Recognition", "Predictive Analytics"],
-      certifications: ["Always Learning", "Never Sleeping"],
-      isAI: true
     }
   ]
 
   const stats = [
-    { label: "Combined Years Experience", value: "50+", icon: Award },
-    { label: "Certifications", value: "25+", icon: GraduationCap },
-    { label: "Conference Speaking", value: "100+", icon: MessageSquare },
-    { label: "Published Articles", value: "500+", icon: TrendingUp }
+    { label: "Combined Years Experience", value: "33+", icon: Award },
+    { label: "Clients Served", value: "500+", icon: Users },
+    { label: "Cities in SoCal", value: "35+", icon: Globe },
+    { label: "Average ROI", value: "387%", icon: TrendingUp }
   ]
 
-  const humanExpertise = [
-    { icon: Brain, title: "Strategic Thinking", desc: "Understanding your business goals and creating custom strategies that align SEO with your broader objectives." },
-    { icon: Users, title: "Relationship Building", desc: "Creating genuine partnerships for link building and fostering relationships that machines simply cannot replicate." },
-    { icon: Sparkles, title: "Creative Innovation", desc: "Developing unique content angles and creative campaigns that stand out in crowded markets." }
-  ]
 
   return (
     <div className="pt-20">
@@ -99,14 +68,14 @@ export default function TeamPage() {
             </div>
             
             <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
-              The Experts Behind{' '}
+              Meet Your{' '}
               <span className="bg-gradient-to-r from-primary-500 to-electric-500 bg-clip-text text-transparent">
-                the AI
+                SEO Experts
               </span>
             </h1>
             
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
-              While AI handles the data, our team brings the strategy, creativity, and expertise that delivers real results.
+              Our Long Beach-based team combines decades of SEO expertise with cutting-edge strategies to deliver exceptional results for local businesses.
             </p>
 
             {/* Team Stats */}
@@ -244,7 +213,7 @@ export default function TeamPage() {
         </div>
       </section>
 
-      {/* Why Human Expertise Matters */}
+      {/* Our Expertise */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -254,15 +223,19 @@ export default function TeamPage() {
             className="text-center mb-12"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Why Human Expertise Matters
+              What Sets Us Apart
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              AI is powerful, but these are the things only humans can bring to your SEO strategy
+              Our unique combination of local market knowledge and technical expertise
             </p>
           </motion.div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {humanExpertise.map((item, index) => {
+            {[
+              { icon: Globe, title: "Local Market Knowledge", desc: "Deep understanding of Long Beach and Southern California markets, from Belmont Shore to Signal Hill." },
+              { icon: Code, title: "Technical Excellence", desc: "Expert implementation of technical SEO, Core Web Vitals, and modern JavaScript frameworks." },
+              { icon: TrendingUp, title: "Proven Results", desc: "Track record of 387% average ROI with over 500 successful client campaigns." }
+            ].map((item, index) => {
               const Icon = item.icon
               return (
                 <motion.div
@@ -295,19 +268,19 @@ export default function TeamPage() {
             className="text-center mb-12"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              How We Work Together
+              Our SEO Process
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Our team collaborates seamlessly with AI to deliver exceptional results
+              Our proven 4-step process that drives consistent results
             </p>
           </motion.div>
 
           <div className="grid md:grid-cols-4 gap-6">
             {[
-              { step: 1, title: "Strategy", desc: "Humans define goals and strategy", icon: Brain },
-              { step: 2, title: "Analysis", desc: "AI processes data and finds patterns", icon: Bot },
-              { step: 3, title: "Creation", desc: "Humans craft content and campaigns", icon: Users },
-              { step: 4, title: "Optimization", desc: "AI monitors and optimizes 24/7", icon: TrendingUp }
+              { step: 1, title: "Audit", desc: "Comprehensive analysis of your current SEO", icon: Shield },
+              { step: 2, title: "Strategy", desc: "Custom strategy for your business goals", icon: Brain },
+              { step: 3, title: "Implementation", desc: "Execute on-page, technical, and content SEO", icon: Code },
+              { step: 4, title: "Growth", desc: "Monitor, optimize, and scale your results", icon: TrendingUp }
             ].map((item, index) => (
               <motion.div
                 key={index}
@@ -350,7 +323,7 @@ export default function TeamPage() {
               Ready to Work with Real Experts?
             </h2>
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Our team is ready to combine their expertise with AI power to transform your SEO results.
+              Our Long Beach team is ready to help your business dominate local search results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

@@ -8,53 +8,53 @@ export default function AwardsPage() {
   const awards = [
     {
       year: '2024',
-      title: 'Best AI SEO Platform',
-      organization: 'SaaS Awards',
+      title: 'Best Local SEO Agency',
+      organization: 'Long Beach Business Journal',
       icon: Trophy,
-      description: 'Recognized for innovation in AI-powered SEO automation'
+      description: 'Recognized as Long Beach's top SEO agency for local businesses'
     },
     {
       year: '2024',
-      title: 'Fastest Growing SEO Tool',
-      organization: 'G2 Crowd',
-      icon: TrendingUp,
-      description: 'Highest growth rate among SEO platforms'
+      title: 'Top Digital Marketing Firm',
+      organization: 'Southern California Business Awards',
+      icon: Award,
+      description: 'Excellence in digital marketing services across SoCal'
     },
     {
       year: '2023',
-      title: 'Innovation Excellence Award',
-      organization: 'AI Breakthrough',
-      icon: Sparkles,
-      description: 'Outstanding achievement in machine learning for SEO'
-    },
-    {
-      year: '2023',
-      title: 'Best ROI Platform',
-      organization: 'MarTech Breakthrough',
-      icon: Target,
-      description: 'Highest return on investment for customers'
-    },
-    {
-      year: '2023',
-      title: 'Customer Choice Award',
-      organization: 'Capterra',
-      icon: Star,
-      description: 'Voted #1 by over 10,000 users'
-    },
-    {
-      year: '2023',
-      title: 'Enterprise Ready',
-      organization: 'SOC 2 Certified',
+      title: 'Small Business Champion',
+      organization: 'Long Beach Chamber of Commerce',
       icon: Medal,
-      description: 'Enterprise-grade security and compliance'
+      description: 'Outstanding support for local small business growth'
+    },
+    {
+      year: '2023',
+      title: 'Best ROI for Clients',
+      organization: 'California Marketing Association',
+      icon: Target,
+      description: 'Highest return on investment for SEO services'
+    },
+    {
+      year: '2023',
+      title: '5-Star Agency Rating',
+      organization: 'Google Business Profile',
+      icon: Star,
+      description: 'Perfect 5.0 rating from over 100 client reviews'
+    },
+    {
+      year: '2022',
+      title: 'Community Impact Award',
+      organization: 'City of Long Beach',
+      icon: Crown,
+      description: 'Helping local businesses thrive in digital economy'
     }
   ]
   
   const recognition = [
-    { metric: '4.9/5', label: 'Average Rating', platform: 'G2 Crowd' },
-    { metric: '#1', label: 'SEO Tool', platform: 'Product Hunt' },
-    { metric: '50K+', label: 'Happy Customers', platform: 'Worldwide' },
-    { metric: '387%', label: 'Avg Traffic Increase', platform: 'Customer Results' }
+    { metric: '5.0/5', label: 'Google Rating', platform: 'Client Reviews' },
+    { metric: '#1', label: 'Long Beach SEO', platform: 'Local Rankings' },
+    { metric: '500+', label: 'Happy Clients', platform: 'Southern California' },
+    { metric: '387%', label: 'Avg Traffic Increase', platform: 'Client Results' }
   ]
   
   return (
@@ -80,13 +80,13 @@ export default function AwardsPage() {
             <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
               Award-Winning{' '}
               <span className="bg-gradient-to-r from-yellow-500 to-primary-500 bg-clip-text text-transparent">
-                SEO Platform
+                SEO Agency
               </span>
             </h1>
             
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Recognized by industry leaders for innovation, performance, and customer success. 
-              See why GoalSEO is the most awarded AI SEO platform.
+              Recognized by Long Beach business community and industry leaders for exceptional 
+              SEO results and commitment to local business success.
             </p>
           </motion.div>
         </div>

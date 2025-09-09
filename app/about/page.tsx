@@ -10,14 +10,9 @@ import {
 
 const values = [
   {
-    icon: Brain,
-    title: 'AI-First Innovation',
-    description: 'We leverage cutting-edge AI to deliver SEO results that were impossible just years ago.'
-  },
-  {
     icon: Target,
-    title: 'Results Obsessed',
-    description: 'We measure success by your growth. Every strategy is data-driven and ROI-focused.'
+    title: 'Local SEO Expertise',
+    description: 'Deep knowledge of Long Beach and Southern California markets with proven local ranking strategies.'
   },
   {
     icon: Users,
@@ -26,28 +21,33 @@ const values = [
   },
   {
     icon: Shield,
-    title: 'Transparency',
-    description: 'No black-box tactics. We explain everything we do and why it works.'
+    title: 'White-Hat Only',
+    description: 'We use only Google-approved tactics that build sustainable, long-term rankings.'
   },
   {
-    icon: Zap,
-    title: 'Speed & Agility',
-    description: 'While agencies take months, our AI implements changes in hours and adapts in real-time.'
+    icon: TrendingUp,
+    title: 'Results Driven',
+    description: 'Every strategy is data-driven and ROI-focused. We measure success by your growth.'
+  },
+  {
+    icon: Globe,
+    title: 'Full-Service SEO',
+    description: 'From technical SEO to content marketing and link building - we handle everything.'
   },
   {
     icon: Heart,
-    title: 'Passion for Growth',
-    description: 'We genuinely care about helping businesses grow and succeed online.'
+    title: 'Community Focused',
+    description: 'Proud to serve Long Beach businesses since 2020. Your local success is our mission.'
   }
 ]
 
 const milestones = [
-  { year: '2020', event: 'GoalSEO founded with a mission to democratize enterprise SEO' },
-  { year: '2021', event: 'Launched AI-powered SEO platform, serving 50+ clients' },
-  { year: '2022', event: 'Reached 200 clients, $50M in client revenue generated' },
-  { year: '2023', event: 'Introduced 24/7 AI automation, 400+ active clients' },
-  { year: '2024', event: 'Achieved 500+ clients, $127M total revenue generated' },
-  { year: '2025', event: 'Leading the AI SEO revolution with 387% average client ROI' }
+  { year: '2020', event: 'GoalSEO founded in Long Beach to serve local businesses' },
+  { year: '2021', event: 'Expanded to serve all of Southern California, 50+ clients' },
+  { year: '2022', event: 'Reached 200 clients, specialized in 12 industry verticals' },
+  { year: '2023', event: 'Opened Belmont Shore office, serving 35+ local cities' },
+  { year: '2024', event: 'Achieved 500+ clients across California' },
+  { year: '2025', event: 'Leading Long Beach SEO agency with 387% average client ROI' }
 ]
 
 const team = [
@@ -106,21 +106,21 @@ export default function AboutPage() {
             className="text-center"
           >
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-primary-100 to-electric-100 text-primary-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
-              <Bot className="h-4 w-4" />
-              <span>About GoalSEO AI</span>
+              <Building className="h-4 w-4" />
+              <span>Long Beach SEO Agency</span>
             </div>
             
             <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
-              We're Building the{' '}
+              Long Beach's Premier{' '}
               <span className="bg-gradient-to-r from-primary-500 to-electric-500 bg-clip-text text-transparent">
-                Future of SEO
+                SEO Agency
               </span>
             </h1>
             
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
-              GoalSEO was founded with a simple mission: make enterprise-level SEO accessible to every business 
-              through the power of artificial intelligence. We believe great SEO shouldn't cost $3,000/month 
-              or require a team of experts.
+              GoalSEO is Long Beach's leading SEO agency, specializing in local search optimization 
+              for businesses across Southern California. We combine deep local market knowledge with 
+              proven SEO strategies to deliver exceptional results at affordable prices.
             </p>
 
             {/* Stats */}
@@ -138,8 +138,8 @@ export default function AboutPage() {
                 <div className="text-sm text-gray-600">Average ROI</div>
               </div>
               <div className="bg-white rounded-xl p-6 border border-gray-200">
-                <div className="text-3xl font-bold text-accent-600">24/7</div>
-                <div className="text-sm text-gray-600">AI Working</div>
+                <div className="text-3xl font-bold text-accent-600">35+</div>
+                <div className="text-sm text-gray-600">Cities Served</div>
               </div>
             </div>
           </motion.div>
@@ -159,23 +159,23 @@ export default function AboutPage() {
               
               <div className="space-y-4 text-gray-600">
                 <p>
-                  In 2020, our founder Vincent Pivard left Google with a vision: democratize SEO through AI. 
-                  After years of seeing businesses struggle with overpriced agencies delivering mediocre results, 
-                  he knew there had to be a better way.
+                  In 2020, our founder Vincent Pivard established GoalSEO in Long Beach with a vision: 
+                  provide enterprise-level SEO services to local businesses at affordable prices. After years 
+                  in the industry, he saw too many businesses struggling with overpriced agencies.
                 </p>
                 <p>
-                  We started by building an AI that could understand SEO the way experts do - but work 24/7 
-                  without the human limitations. Our first client saw a 312% traffic increase in 3 months. 
-                  Word spread quickly.
+                  We started by focusing on Long Beach businesses, understanding the unique challenges and 
+                  opportunities of our local market. Our first client, a Belmont Shore restaurant, saw a 
+                  312% traffic increase in 3 months. Word spread quickly throughout the community.
                 </p>
                 <p>
-                  Today, GoalSEO powers SEO for over 500 businesses, from local shops to enterprise brands. 
-                  Our AI has generated over $127M in revenue for our clients, proving that great SEO doesn't 
-                  need to cost a fortune.
+                  Today, GoalSEO serves over 500 businesses across 35+ cities in Southern California, from 
+                  local shops in Signal Hill to growing brands in Lakewood. We've generated over $127M in 
+                  revenue for our clients through strategic SEO that actually works.
                 </p>
                 <p className="font-semibold text-gray-900">
-                  We're not just another SEO tool or agency. We're building AI that makes world-class SEO 
-                  accessible to every business that wants to grow online.
+                  We're not just another SEO agency. We're your local Long Beach partners committed to 
+                  helping businesses dominate search results and grow their customer base.
                 </p>
               </div>
 
@@ -410,10 +410,10 @@ export default function AboutPage() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-              Ready to Transform Your SEO?
+              Ready to Dominate Local Search?
             </h2>
             <p className="text-xl mb-8 text-white/90">
-              Join 500+ businesses achieving extraordinary results with AI-powered SEO
+              Join 500+ Southern California businesses ranking #1 in their markets
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

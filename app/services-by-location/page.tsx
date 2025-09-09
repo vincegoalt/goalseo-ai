@@ -30,7 +30,7 @@ export default function ServicesByLocationPage() {
   const services = locationData.services.map(s => s.name)
   
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-20">
       {/* Hero Section */}
       <section className="relative py-20 px-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="container mx-auto max-w-7xl">

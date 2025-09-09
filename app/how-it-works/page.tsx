@@ -16,88 +16,88 @@ export default function HowItWorksPage() {
   const steps = [
     {
       id: 1,
-      title: 'AI Analysis',
+      title: 'SEO Audit',
       icon: Search,
-      description: 'Our AI crawls your entire website and analyzes competitors',
+      description: 'Comprehensive analysis of your website and local market',
       details: [
-        'Complete technical audit in minutes',
-        'Competitor keyword analysis',
-        'Content gap identification',
-        'Backlink opportunity discovery'
+        'Complete technical SEO audit',
+        'Local competitor analysis',
+        'Keyword opportunity research',
+        'Current ranking assessment'
       ],
-      time: '5 minutes'
+      time: '24-48 hours'
     },
     {
       id: 2,
-      title: 'Strategy Creation',
+      title: 'Custom Strategy',
       icon: Brain,
-      description: 'AI creates a custom SEO strategy for your business',
+      description: 'Tailored SEO strategy for your business and market',
       details: [
-        'Keyword prioritization',
-        'Content calendar generation',
-        'Link building roadmap',
-        'Technical fixes priority list'
+        'Local keyword targeting',
+        'Content roadmap creation',
+        'Link building strategy',
+        'Technical improvements plan'
       ],
-      time: '10 minutes'
+      time: '3-5 days'
     },
     {
       id: 3,
-      title: 'Automated Implementation',
+      title: 'Implementation',
       icon: Zap,
-      description: 'AI agents start optimizing your site automatically',
+      description: 'Our team executes your SEO strategy',
       details: [
-        'Meta tag optimization',
-        'Content creation & publishing',
-        'Schema markup implementation',
-        'Site speed optimization'
+        'On-page optimization',
+        'Content creation & optimization',
+        'Local citation building',
+        'Technical SEO fixes'
       ],
-      time: '24/7 ongoing'
+      time: 'Ongoing'
     },
     {
       id: 4,
-      title: 'Continuous Learning',
+      title: 'Monitor & Optimize',
       icon: Activity,
-      description: 'AI monitors results and adapts strategies in real-time',
+      description: 'Track results and continuously improve',
       details: [
-        'Rank tracking & adjustments',
-        'A/B testing optimizations',
-        'Algorithm update adaptation',
-        'Performance improvement loops'
+        'Weekly rank tracking',
+        'Monthly performance reports',
+        'Strategy adjustments',
+        'Conversion optimization'
       ],
-      time: 'Real-time'
+      time: 'Continuous'
     }
   ]
 
-  const aiAgents = [
+  const services = [
     {
-      name: 'Content Creator',
-      icon: FileText,
-      role: 'Writes SEO-optimized content',
-      tasks: ['Blog posts', 'Product descriptions', 'Meta tags', 'Landing pages']
+      name: 'Local SEO',
+      icon: Globe,
+      role: 'Dominate local search results',
+      tasks: ['Google Business Profile', 'Local citations', 'Review management', 'Local content']
     },
     {
-      name: 'Link Builder',
-      icon: Link2,
-      role: 'Builds high-quality backlinks',
-      tasks: ['Outreach automation', 'Guest posting', 'Digital PR', 'Brand mentions']
-    },
-    {
-      name: 'Technical Optimizer',
+      name: 'Technical SEO',
       icon: Code,
-      role: 'Fixes technical SEO issues',
-      tasks: ['Core Web Vitals', 'Mobile optimization', 'Crawl errors', 'Site architecture']
+      role: 'Optimize site performance',
+      tasks: ['Core Web Vitals', 'Mobile optimization', 'Site architecture', 'Schema markup']
     },
     {
-      name: 'Rank Tracker',
-      icon: TrendingUp,
-      role: 'Monitors keyword rankings',
-      tasks: ['Daily rank checks', 'Competitor tracking', 'SERP features', 'Local rankings']
+      name: 'Content Marketing',
+      icon: FileText,
+      role: 'Create engaging content',
+      tasks: ['Blog writing', 'Service pages', 'Landing pages', 'Meta descriptions']
     },
     {
-      name: 'Analytics Expert',
+      name: 'Link Building',
+      icon: Link2,
+      role: 'Build authority & trust',
+      tasks: ['Local partnerships', 'Guest posting', 'Digital PR', 'Directory submissions']
+    },
+    {
+      name: 'Analytics & Reporting',
       icon: BarChart3,
-      role: 'Analyzes performance data',
-      tasks: ['Traffic analysis', 'Conversion tracking', 'User behavior', 'ROI calculation']
+      role: 'Track and measure success',
+      tasks: ['Traffic analysis', 'Conversion tracking', 'Rank monitoring', 'ROI reporting']
     },
     {
       name: 'Strategy Advisor',
@@ -287,7 +287,7 @@ export default function HowItWorksPage() {
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {aiAgents.map((agent, index) => {
+            {services.map((agent, index) => {
               const Icon = agent.icon
               return (
                 <motion.div

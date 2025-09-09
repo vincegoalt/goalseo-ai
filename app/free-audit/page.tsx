@@ -2,8 +2,7 @@
 
 import { useState } from 'react'
 import { ArrowRight, CheckCircle, AlertCircle, TrendingUp, Globe, Search, Zap, Shield, Brain, Target } from 'lucide-react'
-import Header from '@/components/layout/Header'
-import Footer from '@/components/layout/Footer'
+// Header and Footer are provided by the layout
 
 interface AuditIssue {
   severity: 'critical' | 'warning' | 'info'
@@ -101,9 +100,7 @@ export default function FreeAuditPage() {
   }
 
   return (
-    <>
-      <Header />
-      <main className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
+    <main className="min-h-screen bg-gradient-to-b from-slate-50 to-white pt-20">
         {/* Hero Section */}
         <section className="relative py-20 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-primary-50 via-white to-electric-50 opacity-50" />
@@ -424,8 +421,6 @@ export default function FreeAuditPage() {
             </div>
           </section>
         )}
-      </main>
-      <Footer />
-    </>
+    </main>
   )
 }
