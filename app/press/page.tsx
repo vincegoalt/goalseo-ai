@@ -369,7 +369,7 @@ export default function PressPage() {
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
               <h3 className="text-xl font-bold mb-2">Investor Relations</h3>
               <p className="text-white/90">investors@goalseo.ai</p>
-              <p className="text-white/90">(562) 682-9404</p>
+              <p className="text-white/90">(562) 682-9403</p>
             </div>
           </div>
         </div>

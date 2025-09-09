@@ -52,7 +52,7 @@ export default function LocationServicePageUnique({
     "name": `GoalSEO - ${service} SEO Services in ${location}`,
     "description": metaDescription,
     "url": `https://goalseo.ai${slug}`,
-    "telephone": "+1-562-501-3366",
+    "telephone": "+1-562-682-9403",
     "email": "info@goalseo.ai",
     "address": {
       "@type": "PostalAddress",
@@ -134,7 +134,7 @@ export default function LocationServicePageUnique({
                     className="inline-flex items-center justify-center px-6 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-colors"
                   >
                     <Phone className="mr-2 h-5 w-5" />
-                    Call (562) 501-3366
+                    Call (562) 682-9403
                   </Link>
                 </div>
               </div>
@@ -335,11 +335,11 @@ export default function LocationServicePageUnique({
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <a
-                href="tel:5625013366"
+                href="tel:5626829403"
                 className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-colors text-lg"
               >
                 <Phone className="mr-2 h-5 w-5" />
-                (562) 501-3366
+                (562) 682-9403
               </a>
             </div>
           </div>

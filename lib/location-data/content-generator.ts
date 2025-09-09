@@ -199,13 +199,13 @@ export function generateMetaDescription(location: string, service: string): stri
   }
   
   const templates = [
-    `${serviceData.name} SEO in ${locationData.name} near ${locationData.landmarks[0]}. Target ${locationData.demographics.primary.toLowerCase()} with proven strategies. ${serviceData.benefits[0]}. Call (562) 501-3366.`,
+    `${serviceData.name} SEO in ${locationData.name} near ${locationData.landmarks[0]}. Target ${locationData.demographics.primary.toLowerCase()} with proven strategies. ${serviceData.benefits[0]}. Call (562) 682-9403.`,
     
     `Dominate ${locationData.name} searches for ${serviceData.keywords[0]}. Specialized SEO for ${serviceData.name.toLowerCase()} serving ${locationData.neighborhoods.slice(0, 2).join(', ')}. ${serviceData.averageTicket} average value services.`,
     
     `${locationData.businessCount} businesses compete in ${locationData.name}. Stand out with expert ${serviceData.name.toLowerCase()} SEO. ${serviceData.strategies[0]} and ${serviceData.metrics[0]} optimization.`,
     
-    `Professional ${serviceData.name} SEO for ${locationData.name}'s ${locationData.characteristics[0].toLowerCase()} market. Overcome ${locationData.localChallenges[0].toLowerCase()}. Free audit: (562) 501-3366.`,
+    `Professional ${serviceData.name} SEO for ${locationData.name}'s ${locationData.characteristics[0].toLowerCase()} market. Overcome ${locationData.localChallenges[0].toLowerCase()}. Free audit: (562) 682-9403.`,
     
     `${serviceData.competitionLevel} competition in ${locationData.name}? We help ${serviceData.name.toLowerCase()} rank #1 for ${serviceData.keywords.slice(0, 2).join(', ')}. Serving ${locationData.county} County.`
   ]

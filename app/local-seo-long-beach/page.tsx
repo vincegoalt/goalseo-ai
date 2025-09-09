@@ -142,7 +142,7 @@ export default function LocalSEOLongBeachPage() {
                 className="inline-flex items-center gap-2 bg-white text-blue-600 border-2 border-blue-200 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-all"
               >
                 <Phone className="h-5 w-5" />
-                Call a Local Expert: (562) XXX-XXXX
+                Call a Local Expert: (562) 682-9403
               </Link>
             </div>
 
@@ -442,11 +442,11 @@ export default function LocalSEOLongBeachPage() {
             </Link>
             
             <a
-              href="tel:562-XXX-XXXX"
+              href="tel:5626829403"
               className="inline-flex items-center gap-2 bg-blue-600 text-white border-2 border-white/20 px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-all"
             >
               <Phone className="h-5 w-5" />
-              Call Now: (562) XXX-XXXX
+              Call Now: (562) 682-9403
             </a>
           </div>
         </div>

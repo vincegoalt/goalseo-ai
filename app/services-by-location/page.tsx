@@ -191,10 +191,10 @@ export default function ServicesByLocationPage() {
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
             <a
-              href="tel:5625013366"
+              href="tel:5626829403"
               className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-colors text-lg"
             >
-              Call (562) 501-3366
+              Call (562) 682-9403
             </a>
           </div>
         </div>

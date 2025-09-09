@@ -107,7 +107,7 @@ export default function LocationServicePage({
                   className="inline-flex items-center justify-center px-6 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-colors"
                 >
                   <Phone className="mr-2 h-5 w-5" />
-                  Call (562) 501-3366
+                  Call (562) 682-9403
                 </Link>
               </div>
             </div>
@@ -249,11 +249,11 @@ export default function LocationServicePage({
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
             <a
-              href="tel:5625013366"
+              href="tel:5626829403"
               className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-colors text-lg"
             >
               <Phone className="mr-2 h-5 w-5" />
-              (562) 501-3366
+              (562) 682-9403
             </a>
           </div>
         </div>
@@ -288,7 +288,7 @@ export default function LocationServicePage({
               </h3>
               <p className="text-gray-600">
                 Email: info@goalseo.ai<br />
-                Phone: (562) 501-3366
+                Phone: (562) 682-9403
               </p>
             </div>
           </div>
