@@ -11,7 +11,7 @@ export default function AwardsPage() {
       title: 'Best Local SEO Agency',
       organization: 'Long Beach Business Journal',
       icon: Trophy,
-      description: 'Recognized as Long Beach's top SEO agency for local businesses'
+      description: 'Recognized as Long Beach top SEO agency for local businesses'
     },
     {
       year: '2024',

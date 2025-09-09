@@ -112,26 +112,13 @@ export default function TeamPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className={`bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all ${
-                  member.isAI ? 'border-2 border-primary-200 bg-gradient-to-br from-primary-50 to-electric-50' : ''
-                }`}
+                className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all"
               >
                 {/* Image Placeholder */}
                 <div className="h-64 bg-gradient-to-br from-gray-200 to-gray-300 relative">
-                  {member.isAI ? (
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <Bot className="h-24 w-24 text-primary-500" />
-                    </div>
-                  ) : (
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <Users className="h-24 w-24 text-gray-400" />
-                    </div>
-                  )}
-                  {member.isAI && (
-                    <div className="absolute top-4 right-4 bg-primary-500 text-white px-3 py-1 rounded-full text-sm font-semibold animate-pulse">
-                      AI System
-                    </div>
-                  )}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <Users className="h-24 w-24 text-gray-400" />
+                  </div>
                 </div>
 
                 <div className="p-6">
@@ -175,37 +162,22 @@ export default function TeamPage() {
                   </div>
 
                   {/* Social Links */}
-                  {!member.isAI && (
-                    <div className="flex gap-3 pt-4 border-t border-gray-200">
-                      <a 
-                        href={member.linkedin} 
-                        className="text-gray-400 hover:text-primary-600 transition-colors"
-                        aria-label="LinkedIn"
-                      >
-                        <Linkedin className="h-5 w-5" />
-                      </a>
-                      <a 
-                        href={member.twitter} 
-                        className="text-gray-400 hover:text-primary-600 transition-colors"
-                        aria-label="Twitter"
-                      >
-                        <Twitter className="h-5 w-5" />
-                      </a>
-                    </div>
-                  )}
-
-                  {member.isAI && (
-                    <div className="flex items-center gap-2 pt-4 border-t border-gray-200">
-                      <div className="flex items-center gap-1">
-                        <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-                        <span className="text-sm text-gray-600">Active 24/7</span>
-                      </div>
-                      <div className="flex items-center gap-1">
-                        <Brain className="h-4 w-4 text-primary-500" />
-                        <span className="text-sm text-gray-600">Always Learning</span>
-                      </div>
-                    </div>
-                  )}
+                  <div className="flex gap-3 pt-4 border-t border-gray-200">
+                    <a 
+                      href={member.linkedin} 
+                      className="text-gray-400 hover:text-primary-600 transition-colors"
+                      aria-label="LinkedIn"
+                    >
+                      <Linkedin className="h-5 w-5" />
+                    </a>
+                    <a 
+                      href={member.twitter} 
+                      className="text-gray-400 hover:text-primary-600 transition-colors"
+                      aria-label="Twitter"
+                    >
+                      <Twitter className="h-5 w-5" />
+                    </a>
+                  </div>
                 </div>
               </motion.div>
             ))}
